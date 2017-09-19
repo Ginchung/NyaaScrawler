@@ -24,18 +24,38 @@ class NyaaSpider(scrapy.Spider):
         filename='cataline.log',
         filemode='w')
 
-    def start_requests(self):
-        url = 'https://sukebei.nyaa.si/?q=&f=0&c=2_0&p=%s'
-        # 取得前兩頁的頁面
-        for page in range(1,3):
-            yield scrapy.Request(url=url % page, callback=self.parse)
+    # 參數page:選擇要取得幾頁資料
+    # 用法:scrapy crawl NyaaSpider -a page=5
+    def __init__(self, page=2, *args, **kwargs):
+        super(NyaaSpider, self).__init__(*args, **kwargs)
+        self.page = page
 
-    def parse(self, response):
+    def start_requests(self):
+        NyaadevUrl = 'https://sukebei.nyaa.si/?q=&f=0&c=2_0&p=%s'
+        NyaacatUrl = 'https://sukebei.pantsu.cat/search/%s'
+        # 取得前兩頁的頁面
+        for page in range(1, self.page):
+            yield scrapy.Request(url=NyaadevUrl % page, callback=self.parseNyaadev)
+            # yield scrapy.Request(url=NyaacatUrl % page, callback=self.parseNyaacat)
+
+    # search NyaaDev
+    def parseNyaadev(self, response):
         # 匹配目前頁數
-        m = re.search("p=(\d)", response.url)
+        m = re.search("p=(\d+)", response.url)
         if m:
             page = m.group(1)
-        filename = 'Nyaa-ArticleList-page(%s).html' % page
+        filename = 'NyaaDev-ArticleList-page(%s).html' % page
+        # 將html存至html檔
+        with open(filename, 'wb') as f:
+            f.write(response.body)
+
+    # search NyaaCat
+    def parseNyaacat(self,response):
+        # 匹配目前頁數
+        m = re.search("search/(\d+)", response.url)
+        if m:
+            page = m.group(1)
+        filename = 'NyaaCat-ArticleList-page(%s).html' % page
         # 將html存至html檔
         with open(filename, 'wb') as f:
             f.write(response.body)

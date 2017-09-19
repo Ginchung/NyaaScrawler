@@ -1,4 +1,11 @@
-這是此專案的Python版本
+This project is the python version of the project below
 https://github.com/vi000246/NyaaDownloader
 
-使用Python3.6
+use Python3.6 + mongoDB + Flask
+
+tree view
+
+NyaaCrawler
+ |
+ |__spiders (crawler)
+ |__webview (show data in web)
