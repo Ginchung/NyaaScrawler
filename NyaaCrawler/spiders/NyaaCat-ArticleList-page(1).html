@@ -18,9 +18,9 @@
 <meta property="og:image" content="/img/favicon.png" />
 <meta property="og:description" content="Nyaa Pantsu Homepage" />
 
-<link rel="alternate" type="application/rss+xml" title="Nyaa Pantsu - Latest torrents RSS Feed" href="/feed?" />
-<link rel="alternate" type="application/rss+xml" title="Nyaa Pantsu - Latest torrents Torznab RSS Feed" href="/feed/torznab?&t=search" />
-<link rel="alternate" type="application/rss+xml" title="Nyaa Pantsu - Latest torrents EZTV RSS Feed" href="/feed/eztv?" />
+<link rel="alternate" type="application/rss+xml" title="Nyaa Pantsu - Latest torrents RSS Feed" href="/feed?sort=&fromDate=&toDate=&maxage=&order=&minSize=&maxSize=&c=" />
+<link rel="alternate" type="application/rss+xml" title="Nyaa Pantsu - Latest torrents Torznab RSS Feed" href="/feed/torznab?sort=&fromDate=&toDate=&maxage=&order=&minSize=&maxSize=&c=&t=search" />
+<link rel="alternate" type="application/rss+xml" title="Nyaa Pantsu - Latest torrents EZTV RSS Feed" href="/feed/eztv?sort=&fromDate=&toDate=&maxage=&order=&minSize=&maxSize=&c=" />
 
 <link rel="stylesheet" href="/css/simplemde.min.css?v=1.1.3" />
 
@@ -53,7 +53,7 @@
 <div class="icon-upload visible-md"></div>
 <span class="hide-md">Upload</span>
 </a>
-<a href="/feed?" class="nav-btn">
+<a href="/feed?sort=&fromDate=&toDate=&maxage=&order=&minSize=&maxSize=&c=" class="nav-btn">
 <div class="icon-rss-squared visible-md"></div>
 <span class="hide-md">RSS</span>
 </a>
@@ -69,7 +69,7 @@
 </div>
 <div class="h-right">
 <div class="h-user">
-<a href="/login?redirectTo=/search/1" class="nav-btn log-in" style="width:auto;" title="Sign In">
+<a href="/login?redirectTo=/search/1?sort=&amp;fromDate=&amp;toDate=&amp;maxage=&amp;order=&amp;minSize=&amp;maxSize=&amp;c=" class="nav-btn log-in" style="width:auto;" title="Sign In">
 <div class="icon-user"></div>
 <span>Sign In</span>
 </a>
@@ -260,41 +260,389 @@ Exclude: <input type="text" name="nuserID" placeholder="UserID" value="" class="
 <tr>
 <th class="tr-cat">Category</th>
 <th class="tr-name">
-<a href="/search?order=false&amp;sort=1">
+<a href="/search?c=&amp;fromDate=&amp;maxSize=&amp;maxage=&amp;minSize=&amp;order=false&amp;sort=1&amp;toDate=">
 Name
 <span class="sort-arrows"><span class="sortarrowleft sortarrowdim">▼</span><span class="sortarrowdim">▲</span></span>
 </a>
 </th>
 <th class="tr-cs" style="font-size: 0px;">Msg</th>
 <th class="tr-links"></th>
-<th class="tr-size hide-xs"><a href="/search?order=false&amp;sort=4">Size<span class="sort-arrows"><span class="sortarrowleft sortarrowdim">▼</span><span class="sortarrowdim">▲</span></span></a></th>
+<th class="tr-size hide-xs"><a href="/search?c=&amp;fromDate=&amp;maxSize=&amp;maxage=&amp;minSize=&amp;order=false&amp;sort=4&amp;toDate=">Size<span class="sort-arrows"><span class="sortarrowleft sortarrowdim">▼</span><span class="sortarrowdim">▲</span></span></a></th>
 <th class="tr-se hide-smol">
-<a href="/search?order=false&amp;sort=5">
+<a href="/search?c=&amp;fromDate=&amp;maxSize=&amp;maxage=&amp;minSize=&amp;order=false&amp;sort=5&amp;toDate=">
 S
 <span class="sort-arrows"><span class="sortarrowleft sortarrowdim">▼</span><span class="sortarrowdim">▲</span></span>
 </a>
 </th>
 <th class="tr-le hide-smol">
-<a href="/search?order=false&amp;sort=6">
+<a href="/search?c=&amp;fromDate=&amp;maxSize=&amp;maxage=&amp;minSize=&amp;order=false&amp;sort=6&amp;toDate=">
 L
 <span class="sort-arrows"><span class="sortarrowleft sortarrowdim">▼</span><span class="sortarrowdim">▲</span></span>
 </a>
 </th>
 <th class="tr-dl hide-xs">
-<a href="/search?order=false&amp;sort=7">
+<a href="/search?c=&amp;fromDate=&amp;maxSize=&amp;maxage=&amp;minSize=&amp;order=false&amp;sort=7&amp;toDate=">
 D
 <span class="sort-arrows"><span class="sortarrowleft sortarrowdim">▼</span><span class="sortarrowdim">▲</span></span>
 </a>
 </th>
 
-<th class="tr-date hide-xs"><a href="/search?order=true&amp;sort=2">
+<th class="tr-date hide-xs"><a href="/search?c=&amp;fromDate=&amp;maxSize=&amp;maxage=&amp;minSize=&amp;order=false&amp;sort=2&amp;toDate=">
 Date
-<span class="sort-arrows"><span class="sortarrowleft ">▼</span><span class="sortarrowdim">▲</span></span>
+<span class="sort-arrows"><span class="sortarrowleft sortarrowdim">▼</span><span class="sortarrowdim">▲</span></span>
 </a>
 </th>
 </tr>
 </thead>
 <tbody id="torrentListResults" class="alt-colors">
+<tr id="torrent_2351054" class="torrent-info ">
+<td class="tr-cat home-td">
+<div class="nyaa-cat sukebei-cat-22">
+<a href="/search?c=2_2" title="Real Life - Videos" class="category">
+</a>
+<a href="/search?c=2_2&amp;lang=ja">
+<img src="/img/blank.gif" alt="Japanese" class="flag flag-ja" title="Japanese" />
+</a>
+</div>
+</td>
+<td class="tr-name home-td" colspan="2">
+<a href="/view/2351054">
+カリビアンコム 072217-466 恋オチ ～彼氏がいないから寂しいです～ 朝比奈みなみ
+</a>
+</td>
+<td class="tr-links home-td">
+<a href="magnet:?xt=urn:btih:F0CCACAB27AEBBC74996CA06D825D09CCE0BE15C&amp;dn=%E3%82%AB%E3%83%AA%E3%83%93%E3%82%A2%E3%83%B3%E3%82%B3%E3%83%A0+072217-466+%E6%81%8B%E3%82%AA%E3%83%81+%EF%BD%9E%E5%BD%BC%E6%B0%8F%E3%81%8C%E3%81%84%E3%81%AA%E3%81%84%E3%81%8B%E3%82%89%E5%AF%82%E3%81%97%E3%81%84%E3%81%A7%E3%81%99%EF%BD%9E+%E6%9C%9D%E6%AF%94%E5%A5%88%E3%81%BF%E3%81%AA%E3%81%BF&amp;tr=http://sukebei.tracker.wf:8888/announce&amp;tr=http://sukebei.tracker.wf:8888/announce&amp;tr=udp://zer0day.to:1337/announce&amp;tr=udp://tracker.leechers-paradise.org:6969&amp;tr=udp://explodie.org:6969&amp;tr=udp://tracker.opentrackr.org:1337&amp;tr=udp://tracker.internetwarriors.net:1337/announce&amp;tr=http://anidex.moe:6969/announce&amp;tr=udp://tracker.doko.moe:6969&amp;tr=udp://tracker.uw0.xyz:6969/announce" title="Magnet Link">
+<div class="icon-magnet"></div>
+</a>
+<a href="https://sukebei.pantsu.cat/download/F0CCACAB27AEBBC74996CA06D825D09CCE0BE15C" title="Torrent file">
+<div class="icon-floppy"></div>
+</a>
+</td>
+<td class="tr-size home-td hide-xs">
+1.7 GiB
+</td>
+<td class="tr-se home-td hide-smol">0</td>
+<td class="tr-le home-td hide-smol">0</td>
+<td class="tr-dl home-td hide-xs">0</td>
+<td class="tr-date home-td date-short hide-xs">2017-09-19T04:04:01Z</td>
+</tr>
+<tr id="torrent_2351053" class="torrent-info ">
+<td class="tr-cat home-td">
+<div class="nyaa-cat sukebei-cat-22">
+<a href="/search?c=2_2" title="Real Life - Videos" class="category">
+</a>
+<a href="/search?c=2_2&amp;lang=ja">
+<img src="/img/blank.gif" alt="Japanese" class="flag flag-ja" title="Japanese" />
+ </a>
+</div>
+</td>
+<td class="tr-name home-td" colspan="2">
+<a href="/view/2351053">
+パコパコママ 072217_122 巨乳美魔女とまる見せ開放デート
+</a>
+</td>
+<td class="tr-links home-td">
+<a href="magnet:?xt=urn:btih:5F271F07D50BBE4FA17368C5C84C8C846458A78F&amp;dn=%E3%83%91%E3%82%B3%E3%83%91%E3%82%B3%E3%83%9E%E3%83%9E+072217_122+%E5%B7%A8%E4%B9%B3%E7%BE%8E%E9%AD%94%E5%A5%B3%E3%81%A8%E3%81%BE%E3%82%8B%E8%A6%8B%E3%81%9B%E9%96%8B%E6%94%BE%E3%83%87%E3%83%BC%E3%83%88&amp;tr=http://sukebei.tracker.wf:8888/announce&amp;tr=http://sukebei.tracker.wf:8888/announce&amp;tr=udp://zer0day.to:1337/announce&amp;tr=udp://tracker.leechers-paradise.org:6969&amp;tr=udp://explodie.org:6969&amp;tr=udp://tracker.opentrackr.org:1337&amp;tr=udp://tracker.internetwarriors.net:1337/announce&amp;tr=http://anidex.moe:6969/announce&amp;tr=udp://tracker.doko.moe:6969&amp;tr=udp://tracker.uw0.xyz:6969/announce" title="Magnet Link">
+<div class="icon-magnet"></div>
+</a>
+<a href="https://sukebei.pantsu.cat/download/5F271F07D50BBE4FA17368C5C84C8C846458A78F" title="Torrent file">
+<div class="icon-floppy"></div>
+</a>
+</td>
+<td class="tr-size home-td hide-xs">
+2.3 GiB
+</td>
+<td class="tr-se home-td hide-smol">0</td>
+<td class="tr-le home-td hide-smol">0</td>
+<td class="tr-dl home-td hide-xs">0</td>
+<td class="tr-date home-td date-short hide-xs">2017-09-19T04:02:46Z</td>
+</tr>
+<tr id="torrent_2351052" class="torrent-info ">
+<td class="tr-cat home-td">
+<div class="nyaa-cat sukebei-cat-22">
+<a href="/search?c=2_2" title="Real Life - Videos" class="category">
+</a>
+<a href="/search?c=2_2&amp;lang=ja">
+<img src="/img/blank.gif" alt="Japanese" class="flag flag-ja" title="Japanese" />
+</a>
+</div>
+</td>
+<td class="tr-name home-td" colspan="2">
+<a href="/view/2351052">
+一本道 072217_556 モデルコレクション 大咲萌
+</a>
+</td>
+<td class="tr-links home-td">
+<a href="magnet:?xt=urn:btih:66D501A299C9A7D7D8DC630318F1613996AF696B&amp;dn=%E4%B8%80%E6%9C%AC%E9%81%93+072217_556+%E3%83%A2%E3%83%87%E3%83%AB%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3+%E5%A4%A7%E5%92%B2%E8%90%8C&amp;tr=http://sukebei.tracker.wf:8888/announce&amp;tr=http://sukebei.tracker.wf:8888/announce&amp;tr=udp://zer0day.to:1337/announce&amp;tr=udp://tracker.leechers-paradise.org:6969&amp;tr=udp://explodie.org:6969&amp;tr=udp://tracker.opentrackr.org:1337&amp;tr=udp://tracker.internetwarriors.net:1337/announce&amp;tr=http://anidex.moe:6969/announce&amp;tr=udp://tracker.doko.moe:6969&amp;tr=udp://tracker.uw0.xyz:6969/announce" title="Magnet Link">
+<div class="icon-magnet"></div>
+</a>
+<a href="https://sukebei.pantsu.cat/download/66D501A299C9A7D7D8DC630318F1613996AF696B" title="Torrent file">
+<div class="icon-floppy"></div>
+</a>
+</td>
+<td class="tr-size home-td hide-xs">
+1.7 GiB
+</td>
+<td class="tr-se home-td hide-smol">0</td>
+<td class="tr-le home-td hide-smol">0</td>
+<td class="tr-dl home-td hide-xs">0</td>
+<td class="tr-date home-td date-short hide-xs">2017-09-19T04:01:20Z</td>
+</tr>
+<tr id="torrent_2351051" class="torrent-info ">
+<td class="tr-cat home-td">
+<div class="nyaa-cat sukebei-cat-13">
+<a href="/search?c=1_3" title="Art - Games" class="category">
+</a>
+<a href="/search?c=1_3&amp;lang=ja">
+<img src="/img/blank.gif" alt="Japanese" class="flag flag-ja" title="Japanese" />
+</a>
+</div>
+</td>
+<td class="tr-name home-td" colspan="2">
+<a href="/view/2351051">
+[RPG] [えのきっぷ] くノ一牡丹
+</a>
+</td>
+<td class="tr-links home-td">
+<a href="magnet:?xt=urn:btih:D9C098FE10909D65D5418236DB9B09C57B0BDD0B&amp;dn=%5BRPG%5D+%5B%E3%81%88%E3%81%AE%E3%81%8D%E3%81%A3%E3%81%B7%5D+%E3%81%8F%E3%83%8E%E4%B8%80%E7%89%A1%E4%B8%B9&amp;tr=http://anidex.moe:6969/announce&amp;tr=http://anidex.moe:6969/announce&amp;tr=http://anidex.moe:6969/announce&amp;tr=http://sukebei.tracker.wf:8888/announce&amp;tr=udp://eddie4.nl:6969/announce&amp;tr=udp://shadowshq.yi.org:6969/announce&amp;tr=udp://tracker.coppersurfer.tk:6969/announce&amp;tr=udp://tracker.leechers-paradise.org:6969/announce&amp;tr=udp://tracker.opentrackr.org:1337/announce&amp;tr=udp://tracker.uw0.xyz:6969/announce" title="Magnet Link">
+<div class="icon-magnet"></div>
+</a>
+<a href="https://sukebei.pantsu.cat/download/D9C098FE10909D65D5418236DB9B09C57B0BDD0B" title="Torrent file">
+<div class="icon-floppy"></div>
+</a>
+</td>
+<td class="tr-size home-td hide-xs">
+199.3 MiB
+</td>
+<td class="tr-se home-td hide-smol">3</td>
+<td class="tr-le home-td hide-smol">21</td>
+<td class="tr-dl home-td hide-xs">1</td>
+<td class="tr-date home-td date-short hide-xs">2017-09-19T03:22:41Z</td>
+</tr>
+<tr id="torrent_2351050" class="torrent-info ">
+<td class="tr-cat home-td">
+<div class="nyaa-cat sukebei-cat-22">
+<a href="/search?c=2_2" title="Real Life - Videos" class="category">
+</a>
+</div>
+</td>
+<td class="tr-name home-td" colspan="2">
+<a href="/view/2351050">
++++ SNTH-020 ナンパ連れ込みSEX隠し撮り・そのまま勝手にAV発売。する23才まで童貞 Vol.20
+</a>
+</td>
+<td class="tr-links home-td">
+<a href="magnet:?xt=urn:btih:CD2F016DD31B57368948FFFB37D30DB1A2E5385E&amp;dn=%2B%2B%2B+SNTH-020+%E3%83%8A%E3%83%B3%E3%83%91%E9%80%A3%E3%82%8C%E8%BE%BC%E3%81%BFSEX%E9%9A%A0%E3%81%97%E6%92%AE%E3%82%8A%E3%83%BB%E3%81%9D%E3%81%AE%E3%81%BE%E3%81%BE%E5%8B%9D%E6%89%8B%E3%81%ABAV%E7%99%BA%E5%A3%B2%E3%80%82%E3%81%99%E3%82%8B23%E6%89%8D%E3%81%BE%E3%81%A7%E7%AB%A5%E8%B2%9E+Vol.20&amp;tr=http://sukebei.tracker.wf:8888/announce&amp;tr=http://sukebei.tracker.wf:8888/announce&amp;tr=udp://tracker.doko.moe:6969&amp;tr=http://anidex.moe:6969/announce&amp;tr=udp://tracker.opentrackr.org:1337/announce&amp;tr=udp://tracker.coppersurfer.tk:6969/announce&amp;tr=udp://tracker.internetwarriors.net:1337&amp;tr=udp://tracker.internetwarriors.net:1337/announce&amp;tr=udp://9.rarbg.me:2710/announce&amp;tr=udp://9.rarbg.me:2710&amp;tr=http://sukebei.tracker.wf:8888/announce&amp;tr=udp://tracker.uw0.xyz:6969/announce" title="Magnet Link">
+<div class="icon-magnet"></div>
+</a>
+<a href="https://sukebei.pantsu.cat/download/CD2F016DD31B57368948FFFB37D30DB1A2E5385E" title="Torrent file">
+<div class="icon-floppy"></div>
+</a>
+</td>
+<td class="tr-size home-td hide-xs">
+447.2 MiB
+</td>
+<td class="tr-se home-td hide-smol">27</td>
+<td class="tr-le home-td hide-smol">58</td>
+<td class="tr-dl home-td hide-xs">25</td>
+<td class="tr-date home-td date-short hide-xs">2017-09-19T02:55:53Z</td>
+</tr>
+<tr id="torrent_2351049" class="torrent-info ">
+<td class="tr-cat home-td">
+<div class="nyaa-cat sukebei-cat-22">
+<a href="/search?c=2_2" title="Real Life - Videos" class="category">
+</a>
+</div>
+</td>
+<td class="tr-name home-td" colspan="2">
+<a href="/view/2351049">
++++ RIX-047 学園祭JKマッサージ盗撮
+</a>
+</td>
+<td class="tr-links home-td">
+<a href="magnet:?xt=urn:btih:AF228F7C526F36997AC666521FB3AFCEE0CF2183&amp;dn=%2B%2B%2B+RIX-047+%E5%AD%A6%E5%9C%92%E7%A5%ADJK%E3%83%9E%E3%83%83%E3%82%B5%E3%83%BC%E3%82%B8%E7%9B%97%E6%92%AE&amp;tr=udp://tracker.uw0.xyz:6969/announce&amp;tr=udp://tracker.coppersurfer.tk:6969&amp;tr=udp://tracker.zer0day.to:1337/announce&amp;tr=udp://tracker.leechers-paradise.org:6969&amp;tr=udp://explodie.org:6969&amp;tr=udp://tracker.opentrackr.org:1337&amp;tr=udp://tracker.internetwarriors.net:1337/announce&amp;tr=http://mgtracker.org:6969/announce&amp;tr=udp://ipv6.leechers-paradise.org:6969/announce&amp;tr=http://nyaa.tracker.wf:7777/announce&amp;tr=http://sukebei.tracker.wf:7777/announce&amp;tr=http://tracker.anirena.com:80/announce&amp;tr=http://anidex.moe:6969/announce&amp;tr=udp://tracker.uw0.xyz:6969/announce&amp;tr=udp://tracker.coppersurfer.tk:6969&amp;tr=udp://tracker.zer0day.to:1337/announce&amp;tr=udp://tracker.leechers-paradise.org:6969&amp;tr=udp://explodie.org:6969&amp;tr=udp://tracker.opentrackr.org:1337&amp;tr=udp://tracker.internetwarriors.net:1337/announce&amp;tr=http://mgtracker.org:6969/announce&amp;tr=udp://ipv6.leechers-paradise.org:6969/announce&amp;tr=http://nyaa.tracker.wf:7777/announce&amp;tr=http://sukebei.tracker.wf:7777/announce&amp;tr=http://tracker.anirena.com:80/announce&amp;tr=http://anidex.moe:6969/announce" title="Magnet Link">
+<div class="icon-magnet"></div>
+</a>
+<a href="https://sukebei.pantsu.cat/download/AF228F7C526F36997AC666521FB3AFCEE0CF2183" title="Torrent file">
+<div class="icon-floppy"></div>
+</a>
+</td>
+<td class="tr-size home-td hide-xs">
+Unknown
+</td>
+<td class="tr-se home-td hide-smol">5</td>
+<td class="tr-le home-td hide-smol">129</td>
+<td class="tr-dl home-td hide-xs">2</td>
+<td class="tr-date home-td date-short hide-xs">2017-09-19T02:55:42Z</td>
+</tr>
+<tr id="torrent_2351048" class="torrent-info ">
+<td class="tr-cat home-td">
+<div class="nyaa-cat sukebei-cat-22">
+<a href="/search?c=2_2" title="Real Life - Videos" class="category">
+</a>
+</div>
+</td>
+<td class="tr-name home-td" colspan="2">
+<a href="/view/2351048">
++++ OVG-063 夜這いされ喘ぎ声を我慢しながら旦那の横で中出しまでされる人妻9
+</a>
+</td>
+<td class="tr-links home-td">
+<a href="magnet:?xt=urn:btih:CA9C91CF7C364C84819F7DA044B62EC027A7E552&amp;dn=%2B%2B%2B+OVG-063+%E5%A4%9C%E9%80%99%E3%81%84%E3%81%95%E3%82%8C%E5%96%98%E3%81%8E%E5%A3%B0%E3%82%92%E6%88%91%E6%85%A2%E3%81%97%E3%81%AA%E3%81%8C%E3%82%89%E6%97%A6%E9%82%A3%E3%81%AE%E6%A8%AA%E3%81%A7%E4%B8%AD%E5%87%BA%E3%81%97%E3%81%BE%E3%81%A7%E3%81%95%E3%82%8C%E3%82%8B%E4%BA%BA%E5%A6%BB9&amp;tr=http://sukebei.tracker.wf:8888/announce&amp;tr=http://sukebei.tracker.wf:8888/announce&amp;tr=udp://tracker.doko.moe:6969&amp;tr=http://anidex.moe:6969/announce&amp;tr=udp://tracker.opentrackr.org:1337/announce&amp;tr=udp://tracker.coppersurfer.tk:6969/announce&amp;tr=udp://tracker.internetwarriors.net:1337&amp;tr=udp://tracker.internetwarriors.net:1337/announce&amp;tr=udp://9.rarbg.me:2710/announce&amp;tr=udp://9.rarbg.me:2710&amp;tr=http://sukebei.tracker.wf:8888/announce&amp;tr=udp://tracker.uw0.xyz:6969/announce" title="Magnet Link">
+<div class="icon-magnet"></div>
+</a>
+<a href="https://sukebei.pantsu.cat/download/CA9C91CF7C364C84819F7DA044B62EC027A7E552" title="Torrent file">
+<div class="icon-floppy"></div>
+</a>
+</td>
+<td class="tr-size home-td hide-xs">
+483.8 MiB
+</td>
+<td class="tr-se home-td hide-smol">34</td>
+<td class="tr-le home-td hide-smol">88</td>
+<td class="tr-dl home-td hide-xs">44</td>
+<td class="tr-date home-td date-short hide-xs">2017-09-19T02:55:14Z</td>
+</tr>
+<tr id="torrent_2351047" class="torrent-info ">
+<td class="tr-cat home-td">
+<div class="nyaa-cat sukebei-cat-22">
+ <a href="/search?c=2_2" title="Real Life - Videos" class="category">
+</a>
+</div>
+</td>
+<td class="tr-name home-td" colspan="2">
+<a href="/view/2351047">
++++ HAME-031 売れないギタリスト「テツ」の居酒屋連れ出しナンパ3
+</a>
+</td>
+<td class="tr-links home-td">
+<a href="magnet:?xt=urn:btih:55C45D1E988A57F8128EE3E6F912E97DD8228493&amp;dn=%2B%2B%2B+HAME-031+%E5%A3%B2%E3%82%8C%E3%81%AA%E3%81%84%E3%82%AE%E3%82%BF%E3%83%AA%E3%82%B9%E3%83%88%E3%80%8C%E3%83%86%E3%83%84%E3%80%8D%E3%81%AE%E5%B1%85%E9%85%92%E5%B1%8B%E9%80%A3%E3%82%8C%E5%87%BA%E3%81%97%E3%83%8A%E3%83%B3%E3%83%913&amp;tr=http://sukebei.tracker.wf:8888/announce&amp;tr=http://sukebei.tracker.wf:8888/announce&amp;tr=udp://tracker.doko.moe:6969&amp;tr=http://anidex.moe:6969/announce&amp;tr=udp://tracker.opentrackr.org:1337/announce&amp;tr=udp://tracker.coppersurfer.tk:6969/announce&amp;tr=udp://tracker.internetwarriors.net:1337&amp;tr=udp://tracker.internetwarriors.net:1337/announce&amp;tr=udp://9.rarbg.me:2710/announce&amp;tr=udp://9.rarbg.me:2710&amp;tr=http://sukebei.tracker.wf:8888/announce&amp;tr=udp://tracker.uw0.xyz:6969/announce" title="Magnet Link">
+<div class="icon-magnet"></div>
+</a>
+<a href="https://sukebei.pantsu.cat/download/55C45D1E988A57F8128EE3E6F912E97DD8228493" title="Torrent file">
+<div class="icon-floppy"></div>
+</a>
+</td>
+<td class="tr-size home-td hide-xs">
+565.2 MiB
+</td>
+<td class="tr-se home-td hide-smol">13</td>
+<td class="tr-le home-td hide-smol">53</td>
+<td class="tr-dl home-td hide-xs">13</td>
+<td class="tr-date home-td date-short hide-xs">2017-09-19T02:55:05Z</td>
+</tr>
+<tr id="torrent_2351046" class="torrent-info remake">
+<td class="tr-cat home-td">
+<div class="nyaa-cat sukebei-cat-13">
+<a href="/search?c=1_3" title="Art - Games" class="category">
+</a>
+</div>
+</td>
+<td class="tr-name home-td" colspan="2">
+<a href="/view/2351046">
+[ACT] TWINTAIL MAGIC / ツインテールの魔法
+</a>
+</td>
+<td class="tr-links home-td">
+<a href="magnet:?xt=urn:btih:B32774E4E2F75C67E15D10EB7A137EF4833F1D42&amp;dn=%5BACT%5D+TWINTAIL+MAGIC+%2F+%E3%83%84%E3%82%A4%E3%83%B3%E3%83%86%E3%83%BC%E3%83%AB%E3%81%AE%E9%AD%94%E6%B3%95&amp;tr=http://anidex.moe:6969/announce&amp;tr=http://anidex.moe:6969/announce&amp;tr=http://sukebei.tracker.wf:8888/announce&amp;tr=udp://tracker.coppersurfer.tk:6969/announce&amp;tr=udp://tracker.leechers-paradise.org:6969/announce&amp;tr=udp://tracker.opentrackr.org:1337/announce&amp;tr=udp://shadowshq.yi.org:6969/announce&amp;tr=udp://tracker.pirateparty.gr:6969/announce&amp;tr=udp://eddie4.nl:6969/announce&amp;tr=udp://9.rarbg.me:2750/announce&amp;tr=udp://9.rarbg.to:2800/announce&amp;tr=udp://tracker.doko.moe:6969&amp;tr=udp://tracker.uw0.xyz:6969/announce" title="Magnet Link">
+<div class="icon-magnet"></div>
+</a>
+<a href="https://sukebei.pantsu.cat/download/B32774E4E2F75C67E15D10EB7A137EF4833F1D42" title="Torrent file">
+<div class="icon-floppy"></div>
+</a>
+</td>
+<td class="tr-size home-td hide-xs">
+941.0 MiB
+</td>
+<td class="tr-se home-td hide-smol">4</td>
+<td class="tr-le home-td hide-smol">42</td>
+<td class="tr-dl home-td hide-xs">0</td>
+<td class="tr-date home-td date-short hide-xs">2017-09-19T02:39:00Z</td>
+</tr>
+<tr id="torrent_2351045" class="torrent-info trusted">
+<td class="tr-cat home-td">
+<div class="nyaa-cat sukebei-cat-14">
+<a href="/search?c=1_4" title="Art - Manga" class="category">
+</a>
+</div>
+</td>
+<td class="tr-name home-td" colspan="2">
+<a href="/view/2351045">
+(成年コミック) [雑誌] COMIC 真激 2017年10月号 [DL版]
+</a>
+</td>
+<td class="tr-links home-td">
+<a href="magnet:?xt=urn:btih:B06B2583B43A21AA785925205F5C0FEB55C45396&amp;dn=%28%E6%88%90%E5%B9%B4%E3%82%B3%E3%83%9F%E3%83%83%E3%82%AF%29+%5B%E9%9B%91%E8%AA%8C%5D+COMIC+%E7%9C%9F%E6%BF%80+2017%E5%B9%B410%E6%9C%88%E5%8F%B7+%5BDL%E7%89%88%5D&amp;tr=http://ehtracker.org/1117488/announce&amp;tr=udp://tracker.uw0.xyz:6969/announce" title="Magnet Link">
+<div class="icon-magnet"></div>
+</a>
+<a href="https://sukebei.pantsu.cat/download/B06B2583B43A21AA785925205F5C0FEB55C45396" title="Torrent file">
+<div class="icon-floppy"></div>
+</a>
+</td>
+<td class="tr-size home-td hide-xs">
+504.8 MiB
+</td>
+<td class="tr-se home-td hide-smol">94</td>
+<td class="tr-le home-td hide-smol">66</td>
+<td class="tr-dl home-td hide-xs">184</td>
+<td class="tr-date home-td date-short hide-xs">2017-09-19T02:29:19Z</td>
+</tr>
+<tr id="torrent_2351044" class="torrent-info trusted">
+<td class="tr-cat home-td">
+<div class="nyaa-cat sukebei-cat-12">
+<a href="/search?c=1_2" title="Art - Doujinshi" class="category">
+</a>
+</div>
+</td>
+<td class="tr-name home-td" colspan="2">
+<a href="/view/2351044">
+(C92) [Dual i fap (月猫)] 由良ゆらな日々 スパッツの消失編 (艦隊これくしょん -艦これ-)
+</a>
+</td>
+<td class="tr-links home-td">
+<a href="magnet:?xt=urn:btih:05C17E5EF1AA65BA942CA740BBE6A4068EFB0AD6&amp;dn=%28C92%29+%5BDual+i+fap+%28%E6%9C%88%E7%8C%AB%29%5D+%E7%94%B1%E8%89%AF%E3%82%86%E3%82%89%E3%81%AA%E6%97%A5%E3%80%85+%E3%82%B9%E3%83%91%E3%83%83%E3%83%84%E3%81%AE%E6%B6%88%E5%A4%B1%E7%B7%A8+%28%E8%89%A6%E9%9A%8A%E3%81%93%E3%82%8C%E3%81%8F%E3%81%97%E3%82%87%E3%82%93+-%E8%89%A6%E3%81%93%E3%82%8C-%29&amp;tr=http://ehtracker.org/1117125/announce&amp;tr=udp://tracker.uw0.xyz:6969/announce" title="Magnet Link">
+<div class="icon-magnet"></div>
+</a>
+<a href="https://sukebei.pantsu.cat/download/05C17E5EF1AA65BA942CA740BBE6A4068EFB0AD6" title="Torrent file">
+<div class="icon-floppy"></div>
+</a>
+</td>
+<td class="tr-size home-td hide-xs">
+75.2 MiB
+</td>
+<td class="tr-se home-td hide-smol">51</td>
+<td class="tr-le home-td hide-smol">21</td>
+<td class="tr-dl home-td hide-xs">76</td>
+<td class="tr-date home-td date-short hide-xs">2017-09-19T02:29:18Z</td>
+</tr>
+<tr id="torrent_2351043" class="torrent-info remake">
+<td class="tr-cat home-td">
+<div class="nyaa-cat sukebei-cat-11">
+<a href="/search?c=1_1" title="Art - Anime" class="category">
+</a>
+</div>
+</td>
+<td class="tr-name home-td" colspan="2">
+<a href="/view/2351043">
+[Hentai 2D] Mother &amp; Son Incest Apartment ~Life After Divorce~ Vol.2 (Motion Comic Version) / 母子相姦アパート～離婚した母と息子の共同性活～ 第2話(モーションコミック版)
+</a>
+</td>
+<td class="tr-links home-td">
+<a href="magnet:?xt=urn:btih:1606A7AB26DAC19730B60E577E7E2E46D87A6328&amp;dn=%5BHentai+2D%5D+Mother+%26+Son+Incest+Apartment+~Life+After+Divorce~+Vol.2+%28Motion+Comic+Version%29+%2F+%E6%AF%8D%E5%AD%90%E7%9B%B8%E5%A7%A6%E3%82%A2%E3%83%91%E3%83%BC%E3%83%88%EF%BD%9E%E9%9B%A2%E5%A9%9A%E3%81%97%E3%81%9F%E6%AF%8D%E3%81%A8%E6%81%AF%E5%AD%90%E3%81%AE%E5%85%B1%E5%90%8C%E6%80%A7%E6%B4%BB%EF%BD%9E+%E7%AC%AC2%E8%A9%B1%28%E3%83%A2%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%B3%E3%83%9F%E3%83%83%E3%82%AF%E7%89%88%29&amp;tr=http://anidex.moe:6969/announce&amp;tr=http://anidex.moe:6969/announce&amp;tr=http://sukebei.tracker.wf:8888/announce&amp;tr=udp://tracker.coppersurfer.tk:6969/announce&amp;tr=udp://tracker.leechers-paradise.org:6969/announce&amp;tr=udp://tracker.opentrackr.org:1337/announce&amp;tr=udp://shadowshq.yi.org:6969/announce&amp;tr=udp://tracker.pirateparty.gr:6969/announce&amp;tr=udp://eddie4.nl:6969/announce&amp;tr=udp://9.rarbg.me:2750/announce&amp;tr=udp://9.rarbg.to:2800/announce&amp;tr=udp://tracker.doko.moe:6969&amp;tr=udp://tracker.uw0.xyz:6969/announce" title="Magnet Link">
+<div class="icon-magnet"></div>
+</a>
+<a href="https://sukebei.pantsu.cat/download/1606A7AB26DAC19730B60E577E7E2E46D87A6328" title="Torrent file">
+<div class="icon-floppy"></div>
+</a>
+</td>
+<td class="tr-size home-td hide-xs">
+1.6 GiB
+</td>
+<td class="tr-se home-td hide-smol">5</td>
+<td class="tr-le home-td hide-smol">64</td>
+<td class="tr-dl home-td hide-xs">1</td>
+<td class="tr-date home-td date-short hide-xs">2017-09-19T02:18:39Z</td>
+</tr>
 <tr id="torrent_2351042" class="torrent-info remake">
 <td class="tr-cat home-td">
 <div class="nyaa-cat sukebei-cat-11">
@@ -318,9 +666,9 @@ Date
 <td class="tr-size home-td hide-xs">
 1.3 GiB
 </td>
-<td class="tr-se home-td hide-smol">1</td>
-<td class="tr-le home-td hide-smol">8</td>
-<td class="tr-dl home-td hide-xs">1</td>
+<td class="tr-se home-td hide-smol">2</td>
+<td class="tr-le home-td hide-smol">84</td>
+<td class="tr-dl home-td hide-xs">4</td>
 <td class="tr-date home-td date-short hide-xs">2017-09-19T01:56:32Z</td>
 </tr>
 <tr id="torrent_2351041" class="torrent-info ">
@@ -342,13 +690,13 @@ Date
 <a href="https://sukebei.pantsu.cat/download/F5718A8226FC72B028DC40AB829906179EA68ECC" title="Torrent file">
 <div class="icon-floppy"></div>
 </a>
- </td>
+</td>
 <td class="tr-size home-td hide-xs">
 11.4 MiB
 </td>
-<td class="tr-se home-td hide-smol">10</td>
-<td class="tr-le home-td hide-smol">13</td>
-<td class="tr-dl home-td hide-xs">11</td>
+<td class="tr-se home-td hide-smol">25</td>
+<td class="tr-le home-td hide-smol">9</td>
+<td class="tr-dl home-td hide-xs">65</td>
 <td class="tr-date home-td date-short hide-xs">2017-09-19T01:49:53Z</td>
 </tr>
 <tr id="torrent_2351040" class="torrent-info ">
@@ -374,9 +722,9 @@ HBAD-367 白領人妻屁股肉棒摩擦肏破絲襪《中文字幕》
 <td class="tr-size home-td hide-xs">
 1.5 GiB
 </td>
-<td class="tr-se home-td hide-smol">9</td>
-<td class="tr-le home-td hide-smol">14</td>
-<td class="tr-dl home-td hide-xs">0</td>
+<td class="tr-se home-td hide-smol">97</td>
+<td class="tr-le home-td hide-smol">266</td>
+<td class="tr-dl home-td hide-xs">4</td>
 <td class="tr-date home-td date-short hide-xs">2017-09-19T01:49:41Z</td>
 </tr>
 <tr id="torrent_2351039" class="torrent-info ">
@@ -402,9 +750,9 @@ GS-108 同學來訪趁妹離開誘惑偷幹好友《中文字幕》
 <td class="tr-size home-td hide-xs">
 986.3 MiB
 </td>
-<td class="tr-se home-td hide-smol">6</td>
-<td class="tr-le home-td hide-smol">21</td>
-<td class="tr-dl home-td hide-xs">0</td>
+<td class="tr-se home-td hide-smol">59</td>
+<td class="tr-le home-td hide-smol">118</td>
+<td class="tr-dl home-td hide-xs">24</td>
 <td class="tr-date home-td date-short hide-xs">2017-09-19T01:49:04Z</td>
 </tr>
 <tr id="torrent_2351038" class="torrent-info remake">
@@ -430,9 +778,9 @@ GS-108 同學來訪趁妹離開誘惑偷幹好友《中文字幕》
 <td class="tr-size home-td hide-xs">
 1.8 GiB
 </td>
-<td class="tr-se home-td hide-smol">3</td>
-<td class="tr-le home-td hide-smol">32</td>
-<td class="tr-dl home-td hide-xs">1</td>
+<td class="tr-se home-td hide-smol">24</td>
+<td class="tr-le home-td hide-smol">47</td>
+<td class="tr-dl home-td hide-xs">30</td>
 <td class="tr-date home-td date-short hide-xs">2017-09-19T01:29:17Z</td>
 </tr>
 <tr id="torrent_2351037" class="torrent-info trusted">
@@ -458,9 +806,9 @@ GS-108 同學來訪趁妹離開誘惑偷幹好友《中文字幕》
 <td class="tr-size home-td hide-xs">
 23.1 MiB
 </td>
-<td class="tr-se home-td hide-smol">1</td>
+<td class="tr-se home-td hide-smol">2</td>
 <td class="tr-le home-td hide-smol">0</td>
-<td class="tr-dl home-td hide-xs">0</td>
+<td class="tr-dl home-td hide-xs">1</td>
 <td class="tr-date home-td date-short hide-xs">2017-09-19T01:24:25Z</td>
 </tr>
 <tr id="torrent_2351033" class="torrent-info trusted">
@@ -490,8 +838,8 @@ SMDST-022 本番禁止なのにヤリった人妻ヘルス嬢たち… 2 7時間
 9.1 GiB
 </td>
 <td class="tr-se home-td hide-smol">0</td>
-<td class="tr-le home-td hide-smol">4</td>
-<td class="tr-dl home-td hide-xs">0</td>
+<td class="tr-le home-td hide-smol">9</td>
+<td class="tr-dl home-td hide-xs">1</td>
 <td class="tr-date home-td date-short hide-xs">2017-09-19T00:19:45Z</td>
 </tr>
 <tr id="torrent_2351032" class="torrent-info trusted">
@@ -506,7 +854,7 @@ SMDST-022 本番禁止なのにヤリった人妻ヘルス嬢たち… 2 7時間
 </td>
 <td class="tr-name home-td" colspan="2">
 <a href="/view/2351032">
-SIRO-3084 ネットでAV応募→AV体験撮影 348
+ SIRO-3084 ネットでAV応募→AV体験撮影 348
 </a>
 </td>
 <td class="tr-links home-td">
@@ -521,7 +869,7 @@ SIRO-3084 ネットでAV応募→AV体験撮影 348
 2.0 GiB
 </td>
 <td class="tr-se home-td hide-smol">0</td>
-<td class="tr-le home-td hide-smol">5</td>
+<td class="tr-le home-td hide-smol">8</td>
 <td class="tr-dl home-td hide-xs">0</td>
 <td class="tr-date home-td date-short hide-xs">2017-09-19T00:19:09Z</td>
 </tr>
@@ -551,8 +899,8 @@ SIRO-2982 ネットでAV応募→AV体験撮影 298
 <td class="tr-size home-td hide-xs">
 2.3 GiB
 </td>
-<td class="tr-se home-td hide-smol">1</td>
-<td class="tr-le home-td hide-smol">4</td>
+<td class="tr-se home-td hide-smol">0</td>
+<td class="tr-le home-td hide-smol">8</td>
 <td class="tr-dl home-td hide-xs">1</td>
 <td class="tr-date home-td date-short hide-xs">2017-09-19T00:18:33Z</td>
 </tr>
@@ -583,7 +931,7 @@ NACS-001 昼顔妻の濡れた乳房 あなたの知らない平凡妻の本性
 3.6 GiB
 </td>
 <td class="tr-se home-td hide-smol">0</td>
-<td class="tr-le home-td hide-smol">2</td>
+<td class="tr-le home-td hide-smol">4</td>
 <td class="tr-dl home-td hide-xs">0</td>
 <td class="tr-date home-td date-short hide-xs">2017-09-19T00:17:58Z</td>
 </tr>
@@ -614,15 +962,15 @@ MEYD-286 今日は孕むまでナカに出して… 松下紗栄子
 3.3 GiB
 </td>
 <td class="tr-se home-td hide-smol">1</td>
-<td class="tr-le home-td hide-smol">7</td>
-<td class="tr-dl home-td hide-xs">0</td>
+<td class="tr-le home-td hide-smol">8</td>
+<td class="tr-dl home-td hide-xs">3</td>
 <td class="tr-date home-td date-short hide-xs">2017-09-19T00:17:21Z</td>
 </tr>
 <tr id="torrent_2351028" class="torrent-info trusted">
 <td class="tr-cat home-td">
 <div class="nyaa-cat sukebei-cat-22">
 <a href="/search?c=2_2" title="Real Life - Videos" class="category">
- </a>
+</a>
 <a href="/search?c=2_2&amp;lang=ja">
 <img src="/img/blank.gif" alt="Japanese" class="flag flag-ja" title="Japanese" />
 </a>
@@ -645,7 +993,7 @@ IPX-005 リピーター続出！噂の本番でき店 Fップ巨乳嬢を味わ�
 2.7 GiB
 </td>
 <td class="tr-se home-td hide-smol">0</td>
-<td class="tr-le home-td hide-smol">4</td>
+<td class="tr-le home-td hide-smol">7</td>
 <td class="tr-dl home-td hide-xs">1</td>
 <td class="tr-date home-td date-short hide-xs">2017-09-19T00:16:44Z</td>
 </tr>
@@ -670,13 +1018,13 @@ IPX-004 奇跡の美少女と交わすヨく濃厚な接吻とセックス 明�
 </a>
 <a href="https://sukebei.pantsu.cat/download/1819D875398E59DA14612718A853A87AA41D5960" title="Torrent file">
 <div class="icon-floppy"></div>
- </a>
+</a>
 </td>
 <td class="tr-size home-td hide-xs">
 3.5 GiB
 </td>
-<td class="tr-se home-td hide-smol">0</td>
-<td class="tr-le home-td hide-smol">3</td>
+<td class="tr-se home-td hide-smol">1</td>
+<td class="tr-le home-td hide-smol">8</td>
 <td class="tr-dl home-td hide-xs">2</td>
 <td class="tr-date home-td date-short hide-xs">2017-09-19T00:16:06Z</td>
 </tr>
@@ -707,8 +1055,8 @@ EYAN-096 潜入！危険日孕ませ乱交サ母乳若妻と一般男性10人が
 2.7 GiB
 </td>
 <td class="tr-se home-td hide-smol">0</td>
-<td class="tr-le home-td hide-smol">0</td>
-<td class="tr-dl home-td hide-xs">1</td>
+<td class="tr-le home-td hide-smol">1</td>
+<td class="tr-dl home-td hide-xs">2</td>
 <td class="tr-date home-td date-short hide-xs">2017-09-19T00:15:30Z</td>
 </tr>
 <tr id="torrent_2351034" class="torrent-info ">
@@ -734,9 +1082,9 @@ MKBD-S137 KIRARI 137 Kirari Model Collection Remix 3HRS : 波多野結衣, 篠�
 <td class="tr-size home-td hide-xs">
 7.2 GiB
 </td>
-<td class="tr-se home-td hide-smol">32</td>
-<td class="tr-le home-td hide-smol">181</td>
-<td class="tr-dl home-td hide-xs">9</td>
+<td class="tr-se home-td hide-smol">72</td>
+<td class="tr-le home-td hide-smol">198</td>
+<td class="tr-dl home-td hide-xs">36</td>
 <td class="tr-date home-td date-short hide-xs">2017-09-19T00:15:10Z</td>
 </tr>
 <tr id="torrent_2351025" class="torrent-info trusted">
@@ -765,8 +1113,8 @@ EBOD-417 全裸爆乳ガイド付きバスツアー 霧島さくら
 <td class="tr-size home-td hide-xs">
 3.3 GiB
 </td>
-<td class="tr-se home-td hide-smol">1</td>
-<td class="tr-le home-td hide-smol">2</td>
+<td class="tr-se home-td hide-smol">0</td>
+<td class="tr-le home-td hide-smol">3</td>
 <td class="tr-dl home-td hide-xs">0</td>
 <td class="tr-date home-td date-short hide-xs">2017-09-19T00:14:58Z</td>
 </tr>
@@ -796,8 +1144,8 @@ EBOD-416 初めての中出し性交 佐伯ゆきな
 <td class="tr-size home-td hide-xs">
 2.7 GiB
 </td>
-<td class="tr-se home-td hide-smol">2</td>
-<td class="tr-le home-td hide-smol">5</td>
+<td class="tr-se home-td hide-smol">1</td>
+<td class="tr-le home-td hide-smol">4</td>
 <td class="tr-dl home-td hide-xs">0</td>
 <td class="tr-date home-td date-short hide-xs">2017-09-19T00:14:25Z</td>
 </tr>
@@ -827,16 +1175,16 @@ EBOD-415 全裸爆乳ガイド付きバスツアー 井上瞳
 <td class="tr-size home-td hide-xs">
 2.6 GiB
 </td>
-<td class="tr-se home-td hide-smol">1</td>
-<td class="tr-le home-td hide-smol">4</td>
-<td class="tr-dl home-td hide-xs">1</td>
+<td class="tr-se home-td hide-smol">0</td>
+<td class="tr-le home-td hide-smol">5</td>
+<td class="tr-dl home-td hide-xs">2</td>
 <td class="tr-date home-td date-short hide-xs">2017-09-19T00:13:51Z</td>
 </tr>
 <tr id="torrent_2351022" class="torrent-info trusted">
 <td class="tr-cat home-td">
 <div class="nyaa-cat sukebei-cat-22">
 <a href="/search?c=2_2" title="Real Life - Videos" class="category">
- </a>
+</a>
 <a href="/search?c=2_2&amp;lang=ja">
 <img src="/img/blank.gif" alt="Japanese" class="flag flag-ja" title="Japanese" />
 </a>
@@ -859,8 +1207,8 @@ AVOP-314 夢の一夫多妻時間停止中出 最強の能力をた男が8人の
 4.9 GiB
 </td>
 <td class="tr-se home-td hide-smol">0</td>
-<td class="tr-le home-td hide-smol">5</td>
-<td class="tr-dl home-td hide-xs">1</td>
+<td class="tr-le home-td hide-smol">6</td>
+<td class="tr-dl home-td hide-xs">2</td>
 <td class="tr-date home-td date-short hide-xs">2017-09-19T00:13:19Z</td>
 </tr>
 <tr id="torrent_2351021" class="torrent-info trusted">
@@ -889,9 +1237,9 @@ AVOP-314 夢の一夫多妻時間停止中出 最強の能力をた男が8人の
 <td class="tr-size home-td hide-xs">
 282.8 MiB
 </td>
-<td class="tr-se home-td hide-smol">55</td>
-<td class="tr-le home-td hide-smol">34</td>
-<td class="tr-dl home-td hide-xs">89</td>
+<td class="tr-se home-td hide-smol">80</td>
+<td class="tr-le home-td hide-smol">25</td>
+<td class="tr-dl home-td hide-xs">177</td>
 <td class="tr-date home-td date-short hide-xs">2017-09-19T00:13:13Z</td>
 </tr>
 <tr id="torrent_2351020" class="torrent-info trusted">
@@ -920,9 +1268,9 @@ AVOP-314 夢の一夫多妻時間停止中出 最強の能力をた男が8人の
 <td class="tr-size home-td hide-xs">
 380.0 MiB
 </td>
-<td class="tr-se home-td hide-smol">48</td>
-<td class="tr-le home-td hide-smol">33</td>
-<td class="tr-dl home-td hide-xs">75</td>
+<td class="tr-se home-td hide-smol">66</td>
+<td class="tr-le home-td hide-smol">29</td>
+<td class="tr-dl home-td hide-xs">144</td>
 <td class="tr-date home-td date-short hide-xs">2017-09-19T00:12:55Z</td>
 </tr>
 <tr id="torrent_2351035" class="torrent-info ">
@@ -948,9 +1296,9 @@ MKBD-S136 KIRARI 136 ゴージャス系女優企畫 : 黒木澪(ブルーレイ�
 <td class="tr-size home-td hide-xs">
 5.4 GiB
 </td>
-<td class="tr-se home-td hide-smol">31</td>
-<td class="tr-le home-td hide-smol">130</td>
-<td class="tr-dl home-td hide-xs">24</td>
+<td class="tr-se home-td hide-smol">41</td>
+<td class="tr-le home-td hide-smol">149</td>
+<td class="tr-dl home-td hide-xs">42</td>
 <td class="tr-date home-td date-short hide-xs">2017-09-19T00:12:50Z</td>
 </tr>
 <tr id="torrent_2351019" class="torrent-info trusted">
@@ -980,7 +1328,7 @@ ABP-639 働く痴女系お姉さん vol.07 吉川蓮
 4.3 GiB
 </td>
 <td class="tr-se home-td hide-smol">0</td>
-<td class="tr-le home-td hide-smol">2</td>
+<td class="tr-le home-td hide-smol">4</td>
 <td class="tr-dl home-td hide-xs">2</td>
 <td class="tr-date home-td date-short hide-xs">2017-09-19T00:12:44Z</td>
 </tr>
@@ -1011,7 +1359,7 @@ ABP-637 鈴村あいりがあなたを飼いならす。 ACT.01
 3.7 GiB
 </td>
 <td class="tr-se home-td hide-smol">0</td>
-<td class="tr-le home-td hide-smol">2</td>
+<td class="tr-le home-td hide-smol">4</td>
 <td class="tr-dl home-td hide-xs">0</td>
 <td class="tr-date home-td date-short hide-xs">2017-09-19T00:12:10Z</td>
 </tr>
@@ -1041,8 +1389,8 @@ ABP-637 鈴村あいりがあなたを飼いならす。 ACT.01
 <td class="tr-size home-td hide-xs">
 3.2 GiB
 </td>
-<td class="tr-se home-td hide-smol">2</td>
-<td class="tr-le home-td hide-smol">4</td>
+<td class="tr-se home-td hide-smol">0</td>
+<td class="tr-le home-td hide-smol">6</td>
 <td class="tr-dl home-td hide-xs">0</td>
 <td class="tr-date home-td date-short hide-xs">2017-09-19T00:11:38Z</td>
 </tr>
@@ -1072,8 +1420,8 @@ ABP-637 鈴村あいりがあなたを飼いならす。 ACT.01
 <td class="tr-size home-td hide-xs">
 2.5 GiB
 </td>
-<td class="tr-se home-td hide-smol">2</td>
-<td class="tr-le home-td hide-smol">0</td>
+<td class="tr-se home-td hide-smol">0</td>
+<td class="tr-le home-td hide-smol">7</td>
 <td class="tr-dl home-td hide-xs">0</td>
 <td class="tr-date home-td date-short hide-xs">2017-09-19T00:11:01Z</td>
 </tr>
@@ -1103,7 +1451,7 @@ ABP-637 鈴村あいりがあなたを飼いならす。 ACT.01
 <td class="tr-size home-td hide-xs">
 2.8 GiB
 </td>
-<td class="tr-se home-td hide-smol">1</td>
+<td class="tr-se home-td hide-smol">0</td>
 <td class="tr-le home-td hide-smol">2</td>
 <td class="tr-dl home-td hide-xs">0</td>
 <td class="tr-date home-td date-short hide-xs">2017-09-19T00:10:25Z</td>
@@ -1131,9 +1479,9 @@ MKBD-S135 KIRARI 135 奇跡の50歳スーパー熟女がいたっ！ : 南條れ
 <td class="tr-size home-td hide-xs">
 5.3 GiB
 </td>
-<td class="tr-se home-td hide-smol">65</td>
-<td class="tr-le home-td hide-smol">155</td>
-<td class="tr-dl home-td hide-xs">27</td>
+<td class="tr-se home-td hide-smol">110</td>
+<td class="tr-le home-td hide-smol">209</td>
+<td class="tr-dl home-td hide-xs">48</td>
 <td class="tr-date home-td date-short hide-xs">2017-09-19T00:10:25Z</td>
 </tr>
 <tr id="torrent_2351014" class="torrent-info trusted">
@@ -1163,13 +1511,13 @@ MKBD-S135 KIRARI 135 奇跡の50歳スーパー熟女がいたっ！ : 南條れ
 2.5 GiB
 </td>
 <td class="tr-se home-td hide-smol">0</td>
-<td class="tr-le home-td hide-smol">2</td>
+<td class="tr-le home-td hide-smol">5</td>
 <td class="tr-dl home-td hide-xs">0</td>
 <td class="tr-date home-td date-short hide-xs">2017-09-19T00:09:52Z</td>
 </tr>
 <tr id="torrent_2351013" class="torrent-info trusted">
 <td class="tr-cat home-td">
-<div class="nyaa-cat sukebei-cat-22">
+ <div class="nyaa-cat sukebei-cat-22">
 <a href="/search?c=2_2" title="Real Life - Videos" class="category">
 </a>
 <a href="/search?c=2_2&amp;lang=ja">
@@ -1194,7 +1542,7 @@ MKBD-S135 KIRARI 135 奇跡の50歳スーパー熟女がいたっ！ : 南條れ
 2.6 GiB
 </td>
 <td class="tr-se home-td hide-smol">0</td>
-<td class="tr-le home-td hide-smol">1</td>
+<td class="tr-le home-td hide-smol">3</td>
 <td class="tr-dl home-td hide-xs">0</td>
 <td class="tr-date home-td date-short hide-xs">2017-09-19T00:09:14Z</td>
 </tr>
@@ -1224,8 +1572,8 @@ MKBD-S135 KIRARI 135 奇跡の50歳スーパー熟女がいたっ！ : 南條れ
 <td class="tr-size home-td hide-xs">
 3.0 GiB
 </td>
-<td class="tr-se home-td hide-smol">0</td>
-<td class="tr-le home-td hide-smol">2</td>
+<td class="tr-se home-td hide-smol">1</td>
+<td class="tr-le home-td hide-smol">3</td>
 <td class="tr-dl home-td hide-xs">0</td>
 <td class="tr-date home-td date-short hide-xs">2017-09-19T00:08:39Z</td>
 </tr>
@@ -1238,7 +1586,7 @@ MKBD-S135 KIRARI 135 奇跡の50歳スーパー熟女がいたっ！ : 南條れ
 </td>
 <td class="tr-name home-td" colspan="2">
 <a href="/view/2351011">
- MKBD-S134 KIRARI 134 美少女のエッチな日常 : 水島にな(ブルーレイ版)
+MKBD-S134 KIRARI 134 美少女のエッチな日常 : 水島にな(ブルーレイ版)
 </a>
 </td>
 <td class="tr-links home-td">
@@ -1252,9 +1600,9 @@ MKBD-S135 KIRARI 135 奇跡の50歳スーパー熟女がいたっ！ : 南條れ
 <td class="tr-size home-td hide-xs">
 5.5 GiB
 </td>
-<td class="tr-se home-td hide-smol">17</td>
-<td class="tr-le home-td hide-smol">127</td>
-<td class="tr-dl home-td hide-xs">6</td>
+<td class="tr-se home-td hide-smol">27</td>
+<td class="tr-le home-td hide-smol">136</td>
+<td class="tr-dl home-td hide-xs">19</td>
 <td class="tr-date home-td date-short hide-xs">2017-09-19T00:01:27Z</td>
 </tr>
 <tr id="torrent_2351010" class="torrent-info ">
@@ -1280,9 +1628,9 @@ Heydouga 4080-531 さやか - 巨乳女子大生さやか　再降臨!!　さや
 <td class="tr-size home-td hide-xs">
 1.3 GiB
 </td>
-<td class="tr-se home-td hide-smol">110</td>
-<td class="tr-le home-td hide-smol">120</td>
-<td class="tr-dl home-td hide-xs">99</td>
+<td class="tr-se home-td hide-smol">134</td>
+<td class="tr-le home-td hide-smol">98</td>
+<td class="tr-dl home-td hide-xs">189</td>
 <td class="tr-date home-td date-short hide-xs">2017-09-18T23:53:08Z</td>
 </tr>
 <tr id="torrent_2351009" class="torrent-info ">
@@ -1308,9 +1656,9 @@ Heydouga 4183-002 マリ - 【個人撮影】マリ25歳　色気が半端ない
 <td class="tr-size home-td hide-xs">
 2.4 GiB
 </td>
-<td class="tr-se home-td hide-smol">114</td>
-<td class="tr-le home-td hide-smol">164</td>
-<td class="tr-dl home-td hide-xs">91</td>
+<td class="tr-se home-td hide-smol">143</td>
+<td class="tr-le home-td hide-smol">155</td>
+<td class="tr-dl home-td hide-xs">179</td>
 <td class="tr-date home-td date-short hide-xs">2017-09-18T23:50:29Z</td>
 </tr>
 <tr id="torrent_2351008" class="torrent-info trusted">
@@ -1320,12 +1668,11 @@ Heydouga 4183-002 マリ - 【個人撮影】マリ25歳　色気が半端ない
 </a>
 </div>
 </td>
-<td class="tr-name home-td" colspan="2">
+ <td class="tr-name home-td" colspan="2">
 <a href="/view/2351008">
 [エクストリームポンコツ (おたれまゆ)] うちの小梅メイドさん (アイドルマスター シンデレラガールズ) [DL版]
 </a>
 </td>
-
 <td class="tr-links home-td">
 <a href="magnet:?xt=urn:btih:8E2C18497179E200F83B4B727B674771F0FCC5DE&amp;dn=%5B%E3%82%A8%E3%82%AF%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%A0%E3%83%9D%E3%83%B3%E3%82%B3%E3%83%84+%28%E3%81%8A%E3%81%9F%E3%82%8C%E3%81%BE%E3%82%86%29%5D+%E3%81%86%E3%81%A1%E3%81%AE%E5%B0%8F%E6%A2%85%E3%83%A1%E3%82%A4%E3%83%89%E3%81%95%E3%82%93+%28%E3%82%A2%E3%82%A4%E3%83%89%E3%83%AB%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%BC+%E3%82%B7%E3%83%B3%E3%83%87%E3%83%AC%E3%83%A9%E3%82%AC%E3%83%BC%E3%83%AB%E3%82%BA%29+%5BDL%E7%89%88%5D&amp;tr=http://ehtracker.org/1117459/announce&amp;tr=http://ehtracker.org/1117459/announce&amp;tr=udp://tracker.doko.moe:6969&amp;tr=http://sukebei.tracker.wf:8888/announce&amp;tr=http://nyaa.tracker.wf:7777/announce&amp;tr=udp://tracker.uw0.xyz:6969/announce" title="Magnet Link">
 <div class="icon-magnet"></div>
@@ -1337,9 +1684,9 @@ Heydouga 4183-002 マリ - 【個人撮影】マリ25歳　色気が半端ない
 <td class="tr-size home-td hide-xs">
 29.3 MiB
 </td>
-<td class="tr-se home-td hide-smol">9</td>
-<td class="tr-le home-td hide-smol">5</td>
-<td class="tr-dl home-td hide-xs">26</td>
+<td class="tr-se home-td hide-smol">13</td>
+<td class="tr-le home-td hide-smol">2</td>
+<td class="tr-dl home-td hide-xs">40</td>
 <td class="tr-date home-td date-short hide-xs">2017-09-18T23:16:45Z</td>
 </tr>
 <tr id="torrent_2351007" class="torrent-info ">
@@ -1369,7 +1716,7 @@ Heydouga 4183-002 マリ - 【個人撮影】マリ25歳　色気が半端ない
 1.7 GiB
 </td>
 <td class="tr-se home-td hide-smol">2</td>
-<td class="tr-le home-td hide-smol">2</td>
+<td class="tr-le home-td hide-smol">0</td>
 <td class="tr-dl home-td hide-xs">0</td>
 <td class="tr-date home-td date-short hide-xs">2017-09-18T22:47:50Z</td>
 </tr>
@@ -1379,7 +1726,7 @@ Heydouga 4183-002 マリ - 【個人撮影】マリ25歳　色気が半端ない
 <a href="/search?c=2_2" title="Real Life - Videos" class="category">
 </a>
 <a href="/search?c=2_2&amp;lang=ja">
-<img src="/img/blank.gif" alt="Japanese" class="flag flag-ja" title="Japanese" />
+ <img src="/img/blank.gif" alt="Japanese" class="flag flag-ja" title="Japanese" />
 </a>
 </div>
 </td>
@@ -1399,9 +1746,9 @@ HEYZO 1537 真面目そうな後輩、一皮剥いたらエロビッチだった
 <td class="tr-size home-td hide-xs">
 2.4 GiB
 </td>
-<td class="tr-se home-td hide-smol">2</td>
-<td class="tr-le home-td hide-smol">3</td>
-<td class="tr-dl home-td hide-xs">1</td>
+<td class="tr-se home-td hide-smol">3</td>
+<td class="tr-le home-td hide-smol">1</td>
+<td class="tr-dl home-td hide-xs">3</td>
 <td class="tr-date home-td date-short hide-xs">2017-09-18T22:46:31Z</td>
 </tr>
 <tr id="torrent_2351005" class="torrent-info ">
@@ -1431,373 +1778,9 @@ FC2-PPV 607149 めっちゃエロい人気キャバ嬢25歳がハメ撮り初体
 1.9 GiB
 </td>
 <td class="tr-se home-td hide-smol">6</td>
- <td class="tr-le home-td hide-smol">7</td>
-<td class="tr-dl home-td hide-xs">8</td>
-<td class="tr-date home-td date-short hide-xs">2017-09-18T22:45:09Z</td>
-</tr>
-<tr id="torrent_2351004" class="torrent-info ">
-<td class="tr-cat home-td">
-<div class="nyaa-cat sukebei-cat-22">
-<a href="/search?c=2_2" title="Real Life - Videos" class="category">
-</a>
-<a href="/search?c=2_2&amp;lang=ja">
-<img src="/img/blank.gif" alt="Japanese" class="flag flag-ja" title="Japanese" />
-</a>
-</div>
-</td>
-<td class="tr-name home-td" colspan="2">
-<a href="/view/2351004">
-FC2-PPV 559226 １８歳Jカップグラドル超人気美爆乳美女再度降臨。ハプニングありの期間枚数限定。後編
-</a>
-</td>
-<td class="tr-links home-td">
-<a href="magnet:?xt=urn:btih:F4D73DC074847A9A56FF1D88FDE93636760308C2&amp;dn=FC2-PPV+559226+%EF%BC%91%EF%BC%98%E6%AD%B3J%E3%82%AB%E3%83%83%E3%83%97%E3%82%B0%E3%83%A9%E3%83%89%E3%83%AB%E8%B6%85%E4%BA%BA%E6%B0%97%E7%BE%8E%E7%88%86%E4%B9%B3%E7%BE%8E%E5%A5%B3%E5%86%8D%E5%BA%A6%E9%99%8D%E8%87%A8%E3%80%82%E3%83%8F%E3%83%97%E3%83%8B%E3%83%B3%E3%82%B0%E3%81%82%E3%82%8A%E3%81%AE%E6%9C%9F%E9%96%93%E6%9E%9A%E6%95%B0%E9%99%90%E5%AE%9A%E3%80%82%E5%BE%8C%E7%B7%A8&amp;tr=http://sukebei.tracker.wf:8888/announce&amp;tr=http://sukebei.tracker.wf:8888/announce&amp;tr=udp://zer0day.to:1337/announce&amp;tr=udp://tracker.leechers-paradise.org:6969&amp;tr=udp://explodie.org:6969&amp;tr=udp://tracker.opentrackr.org:1337&amp;tr=udp://tracker.internetwarriors.net:1337/announce&amp;tr=http://anidex.moe:6969/announce&amp;tr=udp://tracker.doko.moe:6969&amp;tr=udp://tracker.uw0.xyz:6969/announce" title="Magnet Link">
-<div class="icon-magnet"></div>
-</a>
-<a href="https://sukebei.pantsu.cat/download/F4D73DC074847A9A56FF1D88FDE93636760308C2" title="Torrent file">
-<div class="icon-floppy"></div>
-</a>
-</td>
-<td class="tr-size home-td hide-xs">
-1.9 GiB
-</td>
-<td class="tr-se home-td hide-smol">6</td>
-<td class="tr-le home-td hide-smol">6</td>
-<td class="tr-dl home-td hide-xs">13</td>
-<td class="tr-date home-td date-short hide-xs">2017-09-18T22:43:41Z</td>
-</tr>
-<tr id="torrent_2351003" class="torrent-info ">
-<td class="tr-cat home-td">
-<div class="nyaa-cat sukebei-cat-22">
-<a href="/search?c=2_2" title="Real Life - Videos" class="category">
-</a>
-<a href="/search?c=2_2&amp;lang=ja">
-<img src="/img/blank.gif" alt="Japanese" class="flag flag-ja" title="Japanese" />
-</a>
-</div>
-</td>
-<td class="tr-name home-td" colspan="2">
-<a href="/view/2351003">
-カリビアンコム 072117-465 恍惚 ～極上ボディの濃密セックス～ 七瀬リナ
-</a>
-</td>
-<td class="tr-links home-td">
-<a href="magnet:?xt=urn:btih:655705B92F331531F8D5F9D61149BFD13B70ED96&amp;dn=%E3%82%AB%E3%83%AA%E3%83%93%E3%82%A2%E3%83%B3%E3%82%B3%E3%83%A0+072117-465+%E6%81%8D%E6%83%9A+%EF%BD%9E%E6%A5%B5%E4%B8%8A%E3%83%9C%E3%83%87%E3%82%A3%E3%81%AE%E6%BF%83%E5%AF%86%E3%82%BB%E3%83%83%E3%82%AF%E3%82%B9%EF%BD%9E+%E4%B8%83%E7%80%AC%E3%83%AA%E3%83%8A&amp;tr=http://sukebei.tracker.wf:8888/announce&amp;tr=http://sukebei.tracker.wf:8888/announce&amp;tr=udp://zer0day.to:1337/announce&amp;tr=udp://tracker.leechers-paradise.org:6969&amp;tr=udp://explodie.org:6969&amp;tr=udp://tracker.opentrackr.org:1337&amp;tr=udp://tracker.internetwarriors.net:1337/announce&amp;tr=http://anidex.moe:6969/announce&amp;tr=udp://tracker.doko.moe:6969&amp;tr=udp://tracker.uw0.xyz:6969/announce" title="Magnet Link">
-<div class="icon-magnet"></div>
-</a>
-<a href="https://sukebei.pantsu.cat/download/655705B92F331531F8D5F9D61149BFD13B70ED96" title="Torrent file">
-<div class="icon-floppy"></div>
-</a>
-</td>
-<td class="tr-size home-td hide-xs">
-1.8 GiB
-</td>
-<td class="tr-se home-td hide-smol">0</td>
-<td class="tr-le home-td hide-smol">3</td>
-<td class="tr-dl home-td hide-xs">0</td>
-<td class="tr-date home-td date-short hide-xs">2017-09-18T22:42:16Z</td>
-</tr>
-<tr id="torrent_2351002" class="torrent-info ">
-<td class="tr-cat home-td">
-<div class="nyaa-cat sukebei-cat-22">
-<a href="/search?c=2_2" title="Real Life - Videos" class="category">
-</a>
-<a href="/search?c=2_2&amp;lang=ja">
-<img src="/img/blank.gif" alt="Japanese" class="flag flag-ja" title="Japanese" />
-</a>
-</div>
-</td>
-<td class="tr-name home-td" colspan="2">
-<a href="/view/2351002">
-パコパコママ 072117_121 人妻自宅ハメ ～アポなし訪問でハメ撮り～
-</a>
-</td>
-<td class="tr-links home-td">
-<a href="magnet:?xt=urn:btih:082B3FF724677C406709E24B84B3A946EE38EE9A&amp;dn=%E3%83%91%E3%82%B3%E3%83%91%E3%82%B3%E3%83%9E%E3%83%9E+072117_121+%E4%BA%BA%E5%A6%BB%E8%87%AA%E5%AE%85%E3%83%8F%E3%83%A1+%EF%BD%9E%E3%82%A2%E3%83%9D%E3%81%AA%E3%81%97%E8%A8%AA%E5%95%8F%E3%81%A7%E3%83%8F%E3%83%A1%E6%92%AE%E3%82%8A%EF%BD%9E&amp;tr=http://sukebei.tracker.wf:8888/announce&amp;tr=http://sukebei.tracker.wf:8888/announce&amp;tr=udp://zer0day.to:1337/announce&amp;tr=udp://tracker.leechers-paradise.org:6969&amp;tr=udp://explodie.org:6969&amp;tr=udp://tracker.opentrackr.org:1337&amp;tr=udp://tracker.internetwarriors.net:1337/announce&amp;tr=http://anidex.moe:6969/announce&amp;tr=udp://tracker.doko.moe:6969&amp;tr=udp://tracker.uw0.xyz:6969/announce" title="Magnet Link">
-<div class="icon-magnet"></div>
-</a>
-<a href="https://sukebei.pantsu.cat/download/082B3FF724677C406709E24B84B3A946EE38EE9A" title="Torrent file">
-<div class="icon-floppy"></div>
-</a>
-</td>
-<td class="tr-size home-td hide-xs">
-1.9 GiB
-</td>
-<td class="tr-se home-td hide-smol">0</td>
-<td class="tr-le home-td hide-smol">1</td>
-<td class="tr-dl home-td hide-xs">1</td>
-<td class="tr-date home-td date-short hide-xs">2017-09-18T22:40:54Z</td>
-</tr>
-<tr id="torrent_2351001" class="torrent-info ">
-<td class="tr-cat home-td">
-<div class="nyaa-cat sukebei-cat-22">
-<a href="/search?c=2_2" title="Real Life - Videos" class="category">
-</a>
-<a href="/search?c=2_2&amp;lang=ja">
-<img src="/img/blank.gif" alt="Japanese" class="flag flag-ja" title="Japanese" />
-</a>
-</div>
-</td>
-<td class="tr-name home-td" colspan="2">
-<a href="/view/2351001">
-ガチん娘！ gachig256 菜々緒　－別刊マンコレ137－
-</a>
-</td>
-<td class="tr-links home-td">
-<a href="magnet:?xt=urn:btih:E05372EA6D37E0AF56759577AACA5E3B7D63F919&amp;dn=%E3%82%AC%E3%83%81%E3%82%93%E5%A8%98%EF%BC%81+gachig256+%E8%8F%9C%E3%80%85%E7%B7%92%E3%80%80%EF%BC%8D%E5%88%A5%E5%88%8A%E3%83%9E%E3%83%B3%E3%82%B3%E3%83%AC137%EF%BC%8D&amp;tr=http://sukebei.tracker.wf:8888/announce&amp;tr=http://sukebei.tracker.wf:8888/announce&amp;tr=udp://zer0day.to:1337/announce&amp;tr=udp://tracker.leechers-paradise.org:6969&amp;tr=udp://explodie.org:6969&amp;tr=udp://tracker.opentrackr.org:1337&amp;tr=udp://tracker.internetwarriors.net:1337/announce&amp;tr=http://anidex.moe:6969/announce&amp;tr=udp://tracker.doko.moe:6969&amp;tr=udp://tracker.uw0.xyz:6969/announce" title="Magnet Link">
-<div class="icon-magnet"></div>
-</a>
-<a href="https://sukebei.pantsu.cat/download/E05372EA6D37E0AF56759577AACA5E3B7D63F919" title="Torrent file">
-<div class="icon-floppy"></div>
-</a>
-</td>
-<td class="tr-size home-td hide-xs">
-620.5 MiB
-</td>
-<td class="tr-se home-td hide-smol">1</td>
-<td class="tr-le home-td hide-smol">3</td>
-<td class="tr-dl home-td hide-xs">2</td>
-<td class="tr-date home-td date-short hide-xs">2017-09-18T22:39:29Z</td>
-</tr>
-<tr id="torrent_2351000" class="torrent-info ">
-<td class="tr-cat home-td">
-<div class="nyaa-cat sukebei-cat-22">
-<a href="/search?c=2_2" title="Real Life - Videos" class="category">
-</a>
-<a href="/search?c=2_2&amp;lang=ja">
-<img src="/img/blank.gif" alt="Japanese" class="flag flag-ja" title="Japanese" />
-</a>
-</div>
-</td>
-<td class="tr-name home-td" colspan="2">
-<a href="/view/2351000">
-Tokyo-Hot kb1471 チーム木村番外編 – 嶋崎凜子
-</a>
-</td>
-<td class="tr-links home-td">
-<a href="magnet:?xt=urn:btih:55024A4CC7285BDD989B8FFE0CF4E8B32D770D24&amp;dn=Tokyo-Hot+kb1471+%E3%83%81%E3%83%BC%E3%83%A0%E6%9C%A8%E6%9D%91%E7%95%AA%E5%A4%96%E7%B7%A8+%E2%80%93+%E5%B6%8B%E5%B4%8E%E5%87%9C%E5%AD%90&amp;tr=http://sukebei.tracker.wf:8888/announce&amp;tr=http://sukebei.tracker.wf:8888/announce&amp;tr=udp://zer0day.to:1337/announce&amp;tr=udp://tracker.leechers-paradise.org:6969&amp;tr=udp://explodie.org:6969&amp;tr=udp://tracker.opentrackr.org:1337&amp;tr=udp://tracker.internetwarriors.net:1337/announce&amp;tr=http://anidex.moe:6969/announce&amp;tr=udp://tracker.doko.moe:6969&amp;tr=udp://tracker.uw0.xyz:6969/announce" title="Magnet Link">
-<div class="icon-magnet"></div>
-</a>
-<a href="https://sukebei.pantsu.cat/download/55024A4CC7285BDD989B8FFE0CF4E8B32D770D24" title="Torrent file">
-<div class="icon-floppy"></div>
-</a>
-</td>
-<td class="tr-size home-td hide-xs">
-1.7 GiB
-</td>
-<td class="tr-se home-td hide-smol">1</td>
-<td class="tr-le home-td hide-smol">3</td>
-<td class="tr-dl home-td hide-xs">0</td>
-<td class="tr-date home-td date-short hide-xs">2017-09-18T22:37:47Z</td>
-</tr>
-<tr id="torrent_2350999" class="torrent-info ">
-<td class="tr-cat home-td">
-<div class="nyaa-cat sukebei-cat-22">
-<a href="/search?c=2_2" title="Real Life - Videos" class="category">
-</a>
-<a href="/search?c=2_2&amp;lang=ja">
-<img src="/img/blank.gif" alt="Japanese" class="flag flag-ja" title="Japanese" />
-</a>
-</div>
-</td>
-<td class="tr-name home-td" colspan="2">
-<a href="/view/2350999">
-HEYZO 1511 メイどーる Vol.7～ご主人様のいいなり性人形～ - 希咲良
-</a>
-</td>
-<td class="tr-links home-td">
-<a href="magnet:?xt=urn:btih:D9C14F61C0E7B3F47284BA522C0ABC926B448FED&amp;dn=HEYZO+1511+%E3%83%A1%E3%82%A4%E3%81%A9%E3%83%BC%E3%82%8B+Vol.7%EF%BD%9E%E3%81%94%E4%B8%BB%E4%BA%BA%E6%A7%98%E3%81%AE%E3%81%84%E3%81%84%E3%81%AA%E3%82%8A%E6%80%A7%E4%BA%BA%E5%BD%A2%EF%BD%9E+-+%E5%B8%8C%E5%92%B2%E8%89%AF&amp;tr=http://sukebei.tracker.wf:8888/announce&amp;tr=http://sukebei.tracker.wf:8888/announce&amp;tr=udp://zer0day.to:1337/announce&amp;tr=udp://tracker.leechers-paradise.org:6969&amp;tr=udp://explodie.org:6969&amp;tr=udp://tracker.opentrackr.org:1337&amp;tr=udp://tracker.internetwarriors.net:1337/announce&amp;tr=http://anidex.moe:6969/announce&amp;tr=udp://tracker.doko.moe:6969&amp;tr=udp://tracker.uw0.xyz:6969/announce" title="Magnet Link">
-<div class="icon-magnet"></div>
-</a>
-<a href="https://sukebei.pantsu.cat/download/D9C14F61C0E7B3F47284BA522C0ABC926B448FED" title="Torrent file">
-<div class="icon-floppy"></div>
-</a>
-</td>
- <td class="tr-size home-td hide-xs">
-2.3 GiB
-</td>
-<td class="tr-se home-td hide-smol">0</td>
-<td class="tr-le home-td hide-smol">2</td>
-<td class="tr-dl home-td hide-xs">0</td>
-<td class="tr-date home-td date-short hide-xs">2017-09-18T22:36:15Z</td>
-</tr>
-<tr id="torrent_2350998" class="torrent-info ">
-<td class="tr-cat home-td">
-<div class="nyaa-cat sukebei-cat-22">
-<a href="/search?c=2_2" title="Real Life - Videos" class="category">
-</a>
-<a href="/search?c=2_2&amp;lang=ja">
-<img src="/img/blank.gif" alt="Japanese" class="flag flag-ja" title="Japanese" />
-</a>
-</div>
-</td>
-<td class="tr-name home-td" colspan="2">
-<a href="/view/2350998">
-天然むすめ 072017_01 デリヘル嬢呼んだら知り合いの娘さんでした 井上まなみ
-</a>
-</td>
-<td class="tr-links home-td">
-<a href="magnet:?xt=urn:btih:6B4385D60D8EE2F7D28F860CB57A5496E9B89C92&amp;dn=%E5%A4%A9%E7%84%B6%E3%82%80%E3%81%99%E3%82%81+072017_01+%E3%83%87%E3%83%AA%E3%83%98%E3%83%AB%E5%AC%A2%E5%91%BC%E3%82%93%E3%81%A0%E3%82%89%E7%9F%A5%E3%82%8A%E5%90%88%E3%81%84%E3%81%AE%E5%A8%98%E3%81%95%E3%82%93%E3%81%A7%E3%81%97%E3%81%9F+%E4%BA%95%E4%B8%8A%E3%81%BE%E3%81%AA%E3%81%BF&amp;tr=http://sukebei.tracker.wf:8888/announce&amp;tr=http://sukebei.tracker.wf:8888/announce&amp;tr=udp://zer0day.to:1337/announce&amp;tr=udp://tracker.leechers-paradise.org:6969&amp;tr=udp://explodie.org:6969&amp;tr=udp://tracker.opentrackr.org:1337&amp;tr=udp://tracker.internetwarriors.net:1337/announce&amp;tr=http://anidex.moe:6969/announce&amp;tr=udp://tracker.doko.moe:6969&amp;tr=udp://tracker.uw0.xyz:6969/announce" title="Magnet Link">
-<div class="icon-magnet"></div>
-</a>
-<a href="https://sukebei.pantsu.cat/download/6B4385D60D8EE2F7D28F860CB57A5496E9B89C92" title="Torrent file">
-<div class="icon-floppy"></div>
-</a>
-</td>
-<td class="tr-size home-td hide-xs">
-1.9 GiB
-</td>
-<td class="tr-se home-td hide-smol">1</td>
-<td class="tr-le home-td hide-smol">5</td>
-<td class="tr-dl home-td hide-xs">1</td>
-<td class="tr-date home-td date-short hide-xs">2017-09-18T22:33:59Z</td>
-</tr>
-<tr id="torrent_2350997" class="torrent-info trusted">
-<td class="tr-cat home-td">
-<div class="nyaa-cat sukebei-cat-15">
-<a href="/search?c=1_5" title="Art - Pictures" class="category">
-</a>
-</div>
-</td>
-<td class="tr-name home-td" colspan="2">
-<a href="/view/2350997">
-[ACBC] 膣内描画 - 汗汁まみれの淫汁まみれ II
-</a>
-</td>
-<td class="tr-links home-td">
-<a href="magnet:?xt=urn:btih:890531CE11139AFEB5F7C135BD63656B403A9FF7&amp;dn=%5BACBC%5D+%E8%86%A3%E5%86%85%E6%8F%8F%E7%94%BB+-+%E6%B1%97%E6%B1%81%E3%81%BE%E3%81%BF%E3%82%8C%E3%81%AE%E6%B7%AB%E6%B1%81%E3%81%BE%E3%81%BF%E3%82%8C+II&amp;tr=http://ehtracker.org/1117432/announce&amp;tr=http://ehtracker.org/1117432/announce&amp;tr=udp://tracker.doko.moe:6969&amp;tr=http://sukebei.tracker.wf:8888/announce&amp;tr=http://nyaa.tracker.wf:7777/announce&amp;tr=udp://tracker.uw0.xyz:6969/announce" title="Magnet Link">
-<div class="icon-magnet"></div>
-</a>
-<a href="https://sukebei.pantsu.cat/download/890531CE11139AFEB5F7C135BD63656B403A9FF7" title="Torrent file">
-<div class="icon-floppy"></div>
-</a>
-</td>
-<td class="tr-size home-td hide-xs">
-43.5 MiB
-</td>
-<td class="tr-se home-td hide-smol">13</td>
-<td class="tr-le home-td hide-smol">3</td>
-<td class="tr-dl home-td hide-xs">54</td>
-<td class="tr-date home-td date-short hide-xs">2017-09-18T21:24:47Z</td>
-</tr>
-
-<tr id="torrent_2350996" class="torrent-info trusted">
-<td class="tr-cat home-td">
-<div class="nyaa-cat sukebei-cat-14">
-<a href="/search?c=1_4" title="Art - Manga" class="category">
-</a>
-</div>
-</td>
-<td class="tr-name home-td" colspan="2">
-<a href="/view/2350996">
-[新堂エル] ラッキー❤ゆい (純愛イレギュラーズ) [中国翻訳][無修正]
-</a>
-</td>
-<td class="tr-links home-td">
-<a href="magnet:?xt=urn:btih:C3BDEEC579336C63E5C910FFD12CE058A28DE06A&amp;dn=%5B%E6%96%B0%E5%A0%82%E3%82%A8%E3%83%AB%5D+%E3%83%A9%E3%83%83%E3%82%AD%E3%83%BC%E2%9D%A4%E3%82%86%E3%81%84+%28%E7%B4%94%E6%84%9B%E3%82%A4%E3%83%AC%E3%82%AE%E3%83%A5%E3%83%A9%E3%83%BC%E3%82%BA%29+%5B%E4%B8%AD%E5%9B%BD%E7%BF%BB%E8%A8%B3%5D%5B%E7%84%A1%E4%BF%AE%E6%AD%A3%5D&amp;tr=http://ehtracker.org/1117365/announce&amp;tr=http://ehtracker.org/1117365/announce&amp;tr=udp://tracker.doko.moe:6969&amp;tr=http://sukebei.tracker.wf:8888/announce&amp;tr=http://nyaa.tracker.wf:7777/announce&amp;tr=udp://tracker.uw0.xyz:6969/announce" title="Magnet Link">
-<div class="icon-magnet"></div>
-</a>
-<a href="https://sukebei.pantsu.cat/download/C3BDEEC579336C63E5C910FFD12CE058A28DE06A" title="Torrent file">
-<div class="icon-floppy"></div>
-</a>
-</td>
-<td class="tr-size home-td hide-xs">
-86.4 MiB
-</td>
-<td class="tr-se home-td hide-smol">11</td>
 <td class="tr-le home-td hide-smol">4</td>
-<td class="tr-dl home-td hide-xs">32</td>
-<td class="tr-date home-td date-short hide-xs">2017-09-18T21:24:00Z</td>
-</tr>
-<tr id="torrent_2350995" class="torrent-info trusted">
-<td class="tr-cat home-td">
-<div class="nyaa-cat sukebei-cat-22">
-<a href="/search?c=2_2" title="Real Life - Videos" class="category">
-</a>
-<a href="/search?c=2_2&amp;lang=ja">
-<img src="/img/blank.gif" alt="Japanese" class="flag flag-ja" title="Japanese" />
-</a>
-</div>
-</td>
-<td class="tr-name home-td" colspan="2">
-<a href="/view/2350995">
-[JAV] [Uncesored] Jukujo-club 6970 熟女倶楽部 6970 楠真由美 無修正動画 「男狂いの四十路熟女が3Pで乱れる」
-</a>
-</td>
-<td class="tr-links home-td">
-<a href="magnet:?xt=urn:btih:927E17D7EFC07539ED85A03F7FC353E83BA6404C&amp;dn=%5BJAV%5D+%5BUncesored%5D+Jukujo-club+6970+%E7%86%9F%E5%A5%B3%E5%80%B6%E6%A5%BD%E9%83%A8+6970+%E6%A5%A0%E7%9C%9F%E7%94%B1%E7%BE%8E+%E7%84%A1%E4%BF%AE%E6%AD%A3%E5%8B%95%E7%94%BB+%E3%80%8C%E7%94%B7%E7%8B%82%E3%81%84%E3%81%AE%E5%9B%9B%E5%8D%81%E8%B7%AF%E7%86%9F%E5%A5%B3%E3%81%8C3P%E3%81%A7%E4%B9%B1%E3%82%8C%E3%82%8B%E3%80%8D&amp;tr=http://anidex.moe:6969/announce&amp;tr=http://anidex.moe:6969/announce&amp;tr=http://sukebei.tracker.wf:8888/announce&amp;tr=udp://eddie4.nl:6969/announce&amp;tr=udp://shadowshq.yi.org:6969/announce&amp;tr=udp://tracker.coppersurfer.tk:6969/announce&amp;tr=udp://tracker.leechers-paradise.org:6969/announce&amp;tr=udp://tracker.opentrackr.org:1337/announce&amp;tr=udp://tracker.doko.moe:6969&amp;tr=udp://tracker.uw0.xyz:6969/announce" title="Magnet Link">
-<div class="icon-magnet"></div>
-</a>
-<a href="https://sukebei.pantsu.cat/download/927E17D7EFC07539ED85A03F7FC353E83BA6404C" title="Torrent file">
-<div class="icon-floppy"></div>
-</a>
-</td>
-<td class="tr-size home-td hide-xs">
-722.2 MiB
-</td>
-<td class="tr-se home-td hide-smol">51</td>
-<td class="tr-le home-td hide-smol">42</td>
-<td class="tr-dl home-td hide-xs">119</td>
-<td class="tr-date home-td date-short hide-xs">2017-09-18T21:13:13Z</td>
-</tr>
-<tr id="torrent_2350994" class="torrent-info trusted">
-<td class="tr-cat home-td">
-<div class="nyaa-cat sukebei-cat-15">
-<a href="/search?c=1_5" title="Art - Pictures" class="category">
-</a>
-</div>
-</td>
-<td class="tr-name home-td" colspan="2">
-<a href="/view/2350994">
-[ACBC] 狂気の館で
-</a>
-</td>
-<td class="tr-links home-td">
-<a href="magnet:?xt=urn:btih:521BB96BD6BC02CCDCA2D191C257829442FF1B16&amp;dn=%5BACBC%5D+%E7%8B%82%E6%B0%97%E3%81%AE%E9%A4%A8%E3%81%A7&amp;tr=http://ehtracker.org/1117422/announce&amp;tr=http://ehtracker.org/1117422/announce&amp;tr=udp://tracker.doko.moe:6969&amp;tr=http://sukebei.tracker.wf:8888/announce&amp;tr=http://nyaa.tracker.wf:7777/announce&amp;tr=udp://tracker.uw0.xyz:6969/announce" title="Magnet Link">
-<div class="icon-magnet"></div>
-</a>
-<a href="https://sukebei.pantsu.cat/download/521BB96BD6BC02CCDCA2D191C257829442FF1B16" title="Torrent file">
-<div class="icon-floppy"></div>
-</a>
-</td>
-<td class="tr-size home-td hide-xs">
-24.5 MiB
-</td>
-<td class="tr-se home-td hide-smol">7</td>
-<td class="tr-le home-td hide-smol">3</td>
-<td class="tr-dl home-td hide-xs">37</td>
-<td class="tr-date home-td date-short hide-xs">2017-09-18T21:03:19Z</td>
-</tr>
-<tr id="torrent_2350993" class="torrent-info trusted">
-<td class="tr-cat home-td">
-<div class="nyaa-cat sukebei-cat-22">
-<a href="/search?c=2_2" title="Real Life - Videos" class="category">
-</a>
-<a href="/search?c=2_2&amp;lang=ja">
-<img src="/img/blank.gif" alt="Japanese" class="flag flag-ja" title="Japanese" />
-</a>
-</div>
-</td>
-<td class="tr-name home-td" colspan="2">
-<a href="/view/2350993">
-[JAV] [Uncesored] Jukujo-club 6969 熟女倶楽部 6969 宮澤ケイト　生チンポ大好きなS級美女　第2話
-</a>
-</td>
-<td class="tr-links home-td">
-<a href="magnet:?xt=urn:btih:D9855C9CD5794C2C60431DE828674D81E8124102&amp;dn=%5BJAV%5D+%5BUncesored%5D+Jukujo-club+6969+%E7%86%9F%E5%A5%B3%E5%80%B6%E6%A5%BD%E9%83%A8+6969+%E5%AE%AE%E6%BE%A4%E3%82%B1%E3%82%A4%E3%83%88%E3%80%80%E7%94%9F%E3%83%81%E3%83%B3%E3%83%9D%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AAS%E7%B4%9A%E7%BE%8E%E5%A5%B3%E3%80%80%E7%AC%AC2%E8%A9%B1&amp;tr=http://anidex.moe:6969/announce&amp;tr=http://anidex.moe:6969/announce&amp;tr=http://sukebei.tracker.wf:8888/announce&amp;tr=udp://eddie4.nl:6969/announce&amp;tr=udp://shadowshq.yi.org:6969/announce&amp;tr=udp://tracker.coppersurfer.tk:6969/announce&amp;tr=udp://tracker.leechers-paradise.org:6969/announce&amp;tr=udp://tracker.opentrackr.org:1337/announce&amp;tr=udp://tracker.doko.moe:6969&amp;tr=udp://tracker.uw0.xyz:6969/announce" title="Magnet Link">
-<div class="icon-magnet"></div>
-</a>
-<a href="https://sukebei.pantsu.cat/download/D9855C9CD5794C2C60431DE828674D81E8124102" title="Torrent file">
-<div class="icon-floppy"></div>
-</a>
-</td>
-<td class="tr-size home-td hide-xs">
-711.5 MiB
-</td>
-<td class="tr-se home-td hide-smol">43</td>
-<td class="tr-le home-td hide-smol">32</td>
-<td class="tr-dl home-td hide-xs">134</td>
-<td class="tr-date home-td date-short hide-xs">2017-09-18T20:59:36Z</td>
+<td class="tr-dl home-td hide-xs">11</td>
+<td class="tr-date home-td date-short hide-xs">2017-09-18T22:45:09Z</td>
 </tr>
 </tbody>
 </table>
@@ -1809,7 +1792,7 @@ HEYZO 1511 メイどーる Vol.7～ご主人様のいいなり性人形～ - 希
 </audio>
 <div class="container bottom">
 <div class="pagination">
-<a id="page-prev" style="display:none;" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a><a aria-label="Page 1" href="/search/1?"><span class="active">1</span></a><a aria-label="Page 2" href="/search/2?"><span>2</span></a><a aria-label="Page 3" href="/search/3?"><span>3</span></a><a aria-label="Page 4" href="/search/4?"><span>4</span></a><a aria-label="Page 5" href="/search/5?"><span>5</span></a><a aria-label="Page 6" href="/search/6?"><span>6</span></a><a aria-label="Page 7" href="/search/7?"><span>7</span></a><a aria-label="Page 8" href="/search/8?"><span>8</span></a><a aria-label="Page 9" href="/search/9?"><span>9</span></a><a aria-label="Page 10" href="/search/10?"><span>10</span></a><a aria-label="Page 11" href="/search/11?"><span>11</span></a><a aria-label="Page 12" href="/search/12?"><span>12</span></a><a aria-label="Page 13" href="/search/13?"><span>13</span></a><a aria-label="Page 14" href="/search/14?"><span>14</span></a><a aria-label="Page 15" href="/search/15?"><span>15</span></a><a id="page-next" href="/search/2?" aria-label="Next"><span aria-hidden="true">&raquo;</span></a><p>1-50/341192</p>
+<a id="page-prev" style="display:none;" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a><a aria-label="Page 1" href="/search/1?sort=&fromDate=&toDate=&maxage=&order=&minSize=&maxSize=&c="><span class="active">1</span></a><a aria-label="Page 2" href="/search/2?sort=&fromDate=&toDate=&maxage=&order=&minSize=&maxSize=&c="><span>2</span></a><a aria-label="Page 3" href="/search/3?sort=&fromDate=&toDate=&maxage=&order=&minSize=&maxSize=&c="><span>3</span></a><a aria-label="Page 4" href="/search/4?sort=&fromDate=&toDate=&maxage=&order=&minSize=&maxSize=&c="><span>4</span></a><a aria-label="Page 5" href="/search/5?sort=&fromDate=&toDate=&maxage=&order=&minSize=&maxSize=&c="><span>5</span></a><a aria-label="Page 6" href="/search/6?sort=&fromDate=&toDate=&maxage=&order=&minSize=&maxSize=&c="><span>6</span></a><a aria-label="Page 7" href="/search/7?sort=&fromDate=&toDate=&maxage=&order=&minSize=&maxSize=&c="><span>7</span></a><a aria-label="Page 8" href="/search/8?sort=&fromDate=&toDate=&maxage=&order=&minSize=&maxSize=&c="><span>8</span></a><a aria-label="Page 9" href="/search/9?sort=&fromDate=&toDate=&maxage=&order=&minSize=&maxSize=&c="><span>9</span></a><a aria-label="Page 10" href="/search/10?sort=&fromDate=&toDate=&maxage=&order=&minSize=&maxSize=&c="><span>10</span></a><a aria-label="Page 11" href="/search/11?sort=&fromDate=&toDate=&maxage=&order=&minSize=&maxSize=&c="><span>11</span></a><a aria-label="Page 12" href="/search/12?sort=&fromDate=&toDate=&maxage=&order=&minSize=&maxSize=&c="><span>12</span></a><a aria-label="Page 13" href="/search/13?sort=&fromDate=&toDate=&maxage=&order=&minSize=&maxSize=&c="><span>13</span></a><a aria-label="Page 14" href="/search/14?sort=&fromDate=&toDate=&maxage=&order=&minSize=&maxSize=&c="><span>14</span></a><a aria-label="Page 15" href="/search/15?sort=&fromDate=&toDate=&maxage=&order=&minSize=&maxSize=&c="><span>15</span></a><a id="page-next" href="/search/2?sort=&fromDate=&toDate=&maxage=&order=&minSize=&maxSize=&c=" aria-label="Next"><span aria-hidden="true">&raquo;</span></a><p>1-50/341204</p>
 </div>
 </div>
 <div class="centered">
@@ -1818,7 +1801,7 @@ HEYZO 1511 メイどーる Vol.7～ご主人様のいいなり性人形～ - 希
 <footer id="footer">
 <div class="container footer center">
 <div class="footer-opt">
-<p><a href="/settings">Change Appearance/Settings</a><a id="dark-toggle" href="/dark/search/1"> - Toggle Dark Mode</a></p>
+<p><a href="/settings">Change Appearance/Settings</a><a id="dark-toggle" href="/dark/search/1?sort=&amp;fromDate=&amp;toDate=&amp;maxage=&amp;order=&amp;minSize=&amp;maxSize=&amp;c="> - Toggle Dark Mode</a></p>
 </div>
 <span><i>Powered by <a href="#">Nyaa Pantsu</a> v1.1.3 - commit <a id="commit" href="https://github.com/NyaaPantsu/nyaa/commit/"></a></i></span>
 </div>
@@ -1959,7 +1942,7 @@ Templates.Add("torrents.item", function(torrent) {
 });
 </script>
 <script type="text/javascript">
-Torrents.LastID = 2351042;
+Torrents.LastID = 2351054;
 if (Torrents.LastID > 0) Torrents.CanRefresh = true;
 </script>
 </body>

@@ -9,36 +9,60 @@ import re
 import json
 import random
 import sys
+from Utility import Utility
 
 
 class NyaaSpider(scrapy.Spider):
     name = 'NyaaSpider'
     host = 'https://sukebei.nyaa.si/'
-    logging.getLogger("requests").setLevel(logging.WARNING
-                                          )  # 将requests的日志级别设成WARNING
-    logging.basicConfig(
-        level=logging.DEBUG,
-        format=
-        '%(asctime)s %(filename)s[line:%(lineno)d] %(levelname)s %(message)s',
-        datefmt='%a, %d %b %Y %H:%M:%S',
-        filename='cataline.log',
-        filemode='w')
+    # logging.getLogger("requests").setLevel(logging.WARNING
+    #                                       )  # 将requests的日志级别设成WARNING
+    # logging.basicConfig(
+    #     level=logging.DEBUG,
+    #     format=
+    #     '%(asctime)s %(filename)s[line:%(lineno)d] %(levelname)s %(message)s',
+    #     datefmt='%a, %d %b %Y %H:%M:%S',
+    #     filename='cataline.log',
+    #     filemode='w')
 
     # 參數page:選擇要取得幾頁資料
     # 用法:scrapy crawl NyaaSpider -a page=5
     def __init__(self, page=2, *args, **kwargs):
         super(NyaaSpider, self).__init__(*args, **kwargs)
-        self.page = page
+        try:
+            page = max(1, int(page))
+        except (ValueError, TypeError):
+            page = 1
+
+        self.util = Utility()
+        # 因為python的range不包含指定數字 所以+1
+        self.page = page + 1
+        self.sort = '',
+        self.searchkeyword = ''
+        self.category  = ''
+        self.sortOrder = ''
+        self.sortKey = ''
+        self.fromDate = ''
+        self.toDate = ''
+        self.maxage = ''
+        self.minSize = ''
+        self.maxSize = ''
+
 
     def start_requests(self):
         NyaadevUrl = 'https://sukebei.nyaa.si/?q=&f=0&c=2_0&p=%s'
-        NyaacatUrl = 'https://sukebei.pantsu.cat/search/%s'
-        # 取得前兩頁的頁面
+        NyaacatUrl = 'https://sukebei.pantsu.cat/search/'
+        # 取得指定頁數的頁面
         for page in range(1, self.page):
-            yield scrapy.Request(url=NyaadevUrl % page, callback=self.parseNyaadev)
-            # yield scrapy.Request(url=NyaacatUrl % page, callback=self.parseNyaacat)
+            # yield scrapy.Request(url=NyaadevUrl % page, callback=self.parseNyaadev)
+            # 組合出NyaaCat的Query Url
+            yield scrapy.Request(url=self.util.NyaaCatBuildUrl(
+                                        NyaacatUrl, page, sort=self.sort, fromDate=self.fromDate, toDate=self.toDate, maxage = self.maxage,
+                                        order=self.sortOrder, minSize=self.minSize, maxSize=self.maxSize, c=self.category),
+                                 callback=self.parseNyaacat)
 
     # search NyaaDev
+    # p.s. 此站不給RSS filter 直接爬page
     def parseNyaadev(self, response):
         # 匹配目前頁數
         m = re.search("p=(\d+)", response.url)
@@ -49,7 +73,7 @@ class NyaaSpider(scrapy.Spider):
         with open(filename, 'wb') as f:
             f.write(response.body)
 
-    # search NyaaCat
+    # search NyaaCat by RSS feed
     def parseNyaacat(self,response):
         # 匹配目前頁數
         m = re.search("search/(\d+)", response.url)
@@ -64,5 +88,5 @@ class NyaaSpider(scrapy.Spider):
 def gen_argv(s):
     sys.argv = s.split()
 if __name__ == '__main__':
-    gen_argv('scrapy crawl NyaaSpider')
+    gen_argv('scrapy crawl NyaaSpider -a page=2')
     execute()
