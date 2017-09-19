@@ -83,24 +83,29 @@ class NyaaSpider(scrapy.Spider):
     # search NyaaCat by RSS feed
     def parseNyaacat(self,response):
         # 匹配目前頁數
-        m = re.search("p/(\d+)", response.url)
-        if m:
-            page = m.group(1)
-        else:
-            page = 0
-        filename = 'NyaaCat-ArticleList-page(%s).html' % page
-        # 將html存至html檔
-        with open(filename, 'wb') as f:
-            f.write(response.body)
+        # m = re.search("p/(\d+)", response.url)
+        # if m:
+        #     page = m.group(1)
+        # else:
+        #     page = 0
+        # filename = 'NyaaCat-ArticleList-page(%s).html' % page
+        # # 將html存至html檔
+        # with open(filename, 'wb') as f:
+        #     f.write(response.body)
 
         # 取得RSS每個影片的物件
         items = response.xpath('//channel/item')
+        # match所有url
+        pattern = '(?P<url>(?:\w+):\/\/(?P<domain>[\w@][\w.:@-]+)\/?[\w\.?=%&=\-@/$,]*)'
         # 取出影片資訊
         for i in items:
             videoInfo = ArticleList()
             videoInfo["title"] = i.xpath('title/text()').extract()[0] # 文章標題
             videoInfo["torrent"] = i.xpath('link/text()').extract()[0] # 種子連結
-            videoInfo["ImagePath"] = i.xpath('description/text()').extract()[0] # 取出預覽圖位址
+            regex = re.compile(pattern)
+            # match description裡所有的url 將url跟domain存在dict裡 格式 {'url':'xxx','url':'http://xxx/'}
+            urls = [m.groupdict() for m in regex.finditer(i.xpath('description/text()').extract()[0])]
+            videoInfo["ImagePath"] = urls # 取出預覽圖位址
             videoInfo["articlelink"] = i.xpath('guid/text()').extract()[0] # 文章連結
             videoInfo["pubDate"] = i.xpath('pubDate/text()').extract()[0] # 發佈日期
             videoInfo["size"] = i.xpath('enclosure/@length').extract()[0] # 檔案大小
