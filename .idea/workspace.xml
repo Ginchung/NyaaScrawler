@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="798c92d8-e337-41f8-bb0c-6d233813d068" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/NyaaCrawler/spiders/NyaaDev-ArticleList-page(0).html" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/NyaaCrawler/spiders/NyaaDev-ArticleList-page(1).html" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/NyaaCrawler/spiders/NyaaDev-ArticleList-page(2).html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -19,11 +18,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="NyaaSpider.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="NyaaSpider.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NyaaCrawler/spiders/NyaaSpider.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="57" column="19" lean-forward="true" selection-start-line="57" selection-start-column="19" selection-end-line="57" selection-end-column="19" />
+            <state relative-caret-position="2025">
+              <caret line="141" column="26" lean-forward="true" selection-start-line="141" selection-start-column="26" selection-end-line="141" selection-end-column="26" />
               <folding>
                 <element signature="e#14#61#0" expanded="true" />
               </folding>
@@ -35,50 +34,6 @@
         <entry file="mongo://null/Nyaa/Article">
           <provider selected="true" editor-type-id="MongoData">
             <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="null/Nyaa/Article" pinned="false" current-in-tab="false">
-        <entry file="mongo://null/Nyaa/Article">
-          <provider selected="true" editor-type-id="MongoData">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NyaaDev-ArticleList-page(1).html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/NyaaCrawler/spiders/NyaaDev-ArticleList-page(1).html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-6000">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <marker date="1505889292569" expanded="true" signature="112587:112597" ph="..." />
-                <marker date="1505889292569" expanded="true" signature="112643:113165" ph="..." />
-                <marker date="1505889292569" expanded="true" signature="112649:113158" ph="..." />
-                <marker date="1505889292569" expanded="true" signature="112673:113151" ph="..." />
-                <marker date="1505889292569" expanded="false" signature="112708:112715" ph="«" />
-                <marker date="1505889292569" expanded="false" signature="113131:113138" ph="»" />
-                <marker date="1505889292569" expanded="false" signature="113190:113209" ph="..." />
-                <marker date="1505889292569" expanded="true" signature="113210:113394" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NyaaDev-ArticleList-page(2).html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/NyaaCrawler/spiders/NyaaDev-ArticleList-page(2).html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-32302">
-              <caret line="252" column="22" lean-forward="false" selection-start-line="252" selection-start-column="15" selection-end-line="252" selection-end-column="20" />
-              <folding>
-                <marker date="1505889292060" expanded="true" signature="109786:109796" ph="..." />
-                <marker date="1505889292060" expanded="true" signature="109842:110432" ph="..." />
-                <marker date="1505889292060" expanded="true" signature="109848:110425" ph="..." />
-                <marker date="1505889292060" expanded="false" signature="109919:109926" ph="«" />
-                <marker date="1505889292060" expanded="false" signature="110398:110405" ph="»" />
-                <marker date="1505889292060" expanded="false" signature="110457:110476" ph="..." />
-                <marker date="1505889292060" expanded="true" signature="110477:110661" ph="..." />
-              </folding>
-            </state>
           </provider>
         </entry>
       </file>
@@ -125,12 +80,19 @@
       <file leaf-file-name="Utility.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NyaaCrawler/spiders/Utility.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="332">
-              <caret line="19" column="39" lean-forward="false" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
+            <state relative-caret-position="125">
+              <caret line="25" column="24" lean-forward="true" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
               <folding>
                 <element signature="e#0#34#0" expanded="true" />
               </folding>
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="null/Nyaa/Article" pinned="false" current-in-tab="true">
+        <entry file="mongo://null/Nyaa/Article">
+          <provider selected="true" editor-type-id="MongoData">
+            <state />
           </provider>
         </entry>
       </file>
@@ -162,8 +124,8 @@
         <option value="$PROJECT_DIR$/NyaaCrawler/items.py" />
         <option value="$PROJECT_DIR$/NyaaCrawler/pipelines.py" />
         <option value="$PROJECT_DIR$/NyaaCrawler/settings.py" />
-        <option value="$PROJECT_DIR$/NyaaCrawler/spiders/Utility.py" />
         <option value="$PROJECT_DIR$/NyaaCrawler/spiders/NyaaSpider.py" />
+        <option value="$PROJECT_DIR$/NyaaCrawler/spiders/Utility.py" />
       </list>
     </option>
   </component>
@@ -717,16 +679,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-6000">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1505889292569" expanded="true" signature="112587:112597" ph="..." />
-            <marker date="1505889292569" expanded="true" signature="112643:113165" ph="..." />
-            <marker date="1505889292569" expanded="true" signature="112649:113158" ph="..." />
-            <marker date="1505889292569" expanded="true" signature="112673:113151" ph="..." />
-            <marker date="1505889292569" expanded="false" signature="112708:112715" ph="«" />
-            <marker date="1505889292569" expanded="false" signature="113131:113138" ph="»" />
-            <marker date="1505889292569" expanded="false" signature="113190:113209" ph="..." />
-            <marker date="1505889292569" expanded="true" signature="113210:113394" ph="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -734,22 +687,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-32302">
           <caret line="252" column="22" lean-forward="false" selection-start-line="252" selection-start-column="15" selection-end-line="252" selection-end-column="20" />
-          <folding>
-            <marker date="1505889292060" expanded="true" signature="109786:109796" ph="..." />
-            <marker date="1505889292060" expanded="true" signature="109842:110432" ph="..." />
-            <marker date="1505889292060" expanded="true" signature="109848:110425" ph="..." />
-            <marker date="1505889292060" expanded="false" signature="109919:109926" ph="«" />
-            <marker date="1505889292060" expanded="false" signature="110398:110405" ph="»" />
-            <marker date="1505889292060" expanded="false" signature="110457:110476" ph="..." />
-            <marker date="1505889292060" expanded="true" signature="110477:110661" ph="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/NyaaCrawler/spiders/Utility.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="19" column="39" lean-forward="false" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
+        <state relative-caret-position="125">
+          <caret line="25" column="24" lean-forward="true" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
           <folding>
             <element signature="e#0#34#0" expanded="true" />
           </folding>
@@ -758,8 +703,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/NyaaCrawler/spiders/NyaaSpider.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="57" column="19" lean-forward="true" selection-start-line="57" selection-start-column="19" selection-end-line="57" selection-end-column="19" />
+        <state relative-caret-position="2025">
+          <caret line="141" column="26" lean-forward="true" selection-start-line="141" selection-start-column="26" selection-end-line="141" selection-end-column="26" />
           <folding>
             <element signature="e#14#61#0" expanded="true" />
           </folding>

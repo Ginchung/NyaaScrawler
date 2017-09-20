@@ -81,7 +81,7 @@ class NyaaSpider(scrapy.Spider):
                 videoInfo["title"] = i.xpath('td[2]/a/text()').extract()[0]  # 影片標題
                 videoInfo["articlelink"] = self.NyaadevUrl + i.xpath('td[2]/a/@href').extract()[0]  # 文章連結
                 videoInfo["torrent"] = self.NyaadevUrl + i.xpath('td[3]/a[1]/@href').extract()[0]  # 種子連結 有torrent跟磁力 只取torrent
-                videoInfo["size"] = i.xpath('td[4]/text()').extract()[0]  # size
+                videoInfo["size"] = self.util.convertSize(i.xpath('td[4]/text()').extract()[0])  # size
                 videoInfo["pubDate"] = self.util.strToDateTime(i.xpath('td[5]/text()').extract()[0])  # date
                 videoInfo["seeder"] = i.xpath('td[6]/text()').extract()[0]  # seeder
                 videoInfo["leecher"] = i.xpath('td[7]/text()').extract()[0]  # leecher
@@ -133,7 +133,7 @@ class NyaaSpider(scrapy.Spider):
             videoInfo["ImagePath"] = urls  # 取出預覽圖位址
             videoInfo["articlelink"] = i.xpath('guid/text()').extract()[0] # 文章連結
             videoInfo["pubDate"] = self.util.strToDateTime(i.xpath('pubDate/text()').extract()[0]) # 發佈日期
-            videoInfo["size"] = i.xpath('enclosure/@length').extract()[0] # 檔案大小
+            videoInfo["size"] = self.util.convertSize(i.xpath('enclosure/@length').extract()[0]) # 檔案大小
             yield videoInfo
 
 

@@ -21,3 +21,22 @@ class Utility:
     def strToDateTime(self,text):
         dt = parser.parse(text)
         return dt.strftime("%Y-%m-%d %H:%M:%S")
+
+    # 輸入檔案大小 轉成MB 接受以下格式 12316546、123 Mib、123Gib
+    def convertSize(self,text):
+        item = re.match("(?P<size>[\d\.]+)\s?(?P<st>\w+)?", text)
+        if (item):
+            size = item.group('size')
+            st = item.group('st')
+            # 找不到st就是byte 除以1024的平方轉成MB
+            if st is None:
+                return str(round(float(size) / (1024 * 1024), 1)) + ' MB'
+            elif st.upper() == 'GIB':
+                return str(round(float(size) * 1000, 1)) + ' MB'
+            elif st.upper() == 'MIB':
+                return size + ' MB'
+            else:
+                return '0 MB'
+        else:
+            return '0 MB'
+
