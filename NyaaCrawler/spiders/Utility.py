@@ -1,6 +1,7 @@
 from urllib.parse import urlencode
 import re
 from dateutil import parser
+from scrapy.conf import settings
 
 class Utility:
     # 依據搜尋關鍵字 組合出搜尋url
@@ -20,7 +21,7 @@ class Utility:
     # 將字串轉為YYYY-MM-DD HH:MM:SS的DateTime格式
     def strToDateTime(self,text):
         dt = parser.parse(text)
-        return dt.strftime("%Y-%m-%d %H:%M:%S")
+        return dt.strftime(settings['DATETIME_FORMAT'])
 
     # 輸入檔案大小 轉成MB 接受以下格式 12316546、123 Mib、123Gib
     def convertSize(self,text):
@@ -30,13 +31,15 @@ class Utility:
             st = item.group('st')
             # 找不到st就是byte 除以1024的平方轉成MB
             if st is None:
-                return str(round(float(size) / (1024 * 1024), 1)) + ' MB'
+                return round(float(size) / (1024 * 1024), 1)
             elif st.upper() == 'GIB':
-                return str(round(float(size) * 1000, 1)) + ' MB'
+                return round(float(size) * 1000, 1)
             elif st.upper() == 'MIB':
-                return size + ' MB'
+                return float(size)
             else:
-                return '0 MB'
+                return 0
         else:
-            return '0 MB'
+            return 0
 
+if __name__=='__main__':
+    print(settings['DATETIME_FORMAT'])
