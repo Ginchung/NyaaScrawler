@@ -18,7 +18,7 @@ class ArticleList:
         with app.app_context():
             # 不回傳_id欄位
             articles = mongo.db.Article.find({}, {'_id': 0}).sort("pubDate", -1)
-            return dict(result='success', articlelist=articles)
+            return dict(result='success', article=articles)
     '''
     依據關鍵字搜尋文章
     fromDate:發佈日期_起

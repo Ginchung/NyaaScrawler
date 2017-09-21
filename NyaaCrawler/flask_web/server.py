@@ -1,55 +1,38 @@
 # hello.py
 from flask import Flask
 from flask import render_template
-app=Flask(__name__)
+from bson.json_util import dumps, loads
+from NyaaCrawler.flask_web.model import ArticleList
+app = Flask(__name__)
 
-data = [{
-  "name": "bootstrap-table",
-  "commits": "10",
-  "attention": "122",
-  "uneven": "An extended Bootstrap table"
-},
- {
-  "name": "multiple-select",
-  "commits": "288",
-  "attention": "20",
-  "uneven": "A jQuery plugin"
-}, {
-  "name": "Testing",
-  "commits": "340",
-  "attention": "20",
-  "uneven": "For test"
-}]
-# other column settings -> http://bootstrap-table.wenzhixin.net.cn/documentation/#column-options
+
 columns = [
   {
-    "field": "name", # which is the field's name of data key
-    "title": "name", # display as the table header's name
+    "field": "title", # which is the field's name of data key
+    "title": "標題", # display as the table header's name
     "sortable": True,
   },
   {
-    "field": "commits",
-    "title": "commits",
+    "field": "torrent",
+    "title": "種子",
     "sortable": True,
   },
   {
-    "field": "attention",
-    "title": "attention",
-    "sortable": True,
-  },
-  {
-    "field": "uneven",
-    "title": "uneven",
+    "field": "pubDate",
+    "title": "發佈日期",
     "sortable": True,
   }
 ]
 
-#jdata=json.dumps(data)
 
 @app.route('/')
 def index():
+    # 取得所有資料
+    items = ArticleList().GetArticleAll().get("article")
+    items = [doc for doc in items]
+
     return render_template("index.html",
-      data=data,
+      data=items,
       columns=columns,
       title='Flask Bootstrap Table')
 
