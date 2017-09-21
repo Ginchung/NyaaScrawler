@@ -41,7 +41,7 @@ class ArticleList:
             if fromDate is not None or toDate is not None:
                 key = "pubDate"
                 query.setdefault(key, {})
-            # fromDate/toDate pubDate 最終格式:{'pubDate': {'$gte': '2017-09-21 00:00:00', '$lt': '2017-12-12 00:00:00'}}
+            # 如果fromDate/toDate有值 最終格式:{'pubDate': {'$gte': '2017-09-21 00:00:00', '$lt': '2017-12-12 00:00:00'}}
             if fromDate is not None:
                 query['pubDate'].update({'$gte': parser.parse(fromDate).strftime("%Y-%m-%d %H:%M:%S")})
             if toDate is not None:
