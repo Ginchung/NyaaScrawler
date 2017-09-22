@@ -11,16 +11,37 @@ columns = [
     "field": "title", # which is the field's name of data key
     "title": "標題", # display as the table header's name
     "sortable": True,
+    "width":300
   },
   {
     "field": "torrent",
     "title": "種子",
     "sortable": True,
+    "width": 300
   },
+  {
+    "field": "size",
+    "title": "檔案大小",
+    "sortable": True,
+    "width": 300
+  },
+    {
+        "field": "articlelink",
+        "title": "文章連結",
+        "sortable": True,
+        "width": 300
+    },
+    {
+        "field": "ImagePath",
+        "title": "預覽圖連結",
+        "sortable": True,
+        "width": 100
+    },
   {
     "field": "pubDate",
     "title": "發佈日期",
     "sortable": True,
+    "width": 300
   }
 ]
 
