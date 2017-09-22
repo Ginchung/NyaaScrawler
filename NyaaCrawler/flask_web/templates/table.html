@@ -55,15 +55,17 @@
 
 		<div class="row">
 			<div class="col-sm-12" style="background-color: rgba(169, 160, 121, 0.5);">
-				    <table
-					  id="table"
-					  data-toggle="true"
-					  data-toolbar="#toolbar"
-					  data-search="true"
-					  data-show-columns="true"
-					  data-pagination="true"
-					  data-height="800"
-					  class = "table table-hover">
+				    <table id="table">
+					  <!--id="table"-->
+					  <!--data-toggle="table"-->
+					  <!--data-toolbar="#toolbar"-->
+					  <!--data-search="true"-->
+					  <!--data-show-columns="true"-->
+					  <!--data-pagination="true"-->
+					  <!--data-height="800"-->
+					  <!--data-url="{{ url_for('get') }}"-->
+					  <!--class = "table table-hover"-->
+
 					</table>
 			</div>
 
@@ -98,17 +100,56 @@
 
 <script type="text/javascript" src="{{ url_for('static', filename='js/magister.js') }}"></script>
 
-	  <script type='text/javascript'>
-		$(window).load(function(){
-		  var data = {{data|tojson}};
-		  var columns = {{columns|tojson}};
-		  $(function() {
-			$('#table').bootstrapTable({
-			  data: data,
-			  columns: columns,
-			});
-		  });
-		});
-	  </script>
 </body>
+	<script type='text/javascript'>
+		$('#table').bootstrapTable({
+			url:"{{ url_for('get') }}",
+			sidePagination:'server',
+			height:800,
+			method:'get',
+			pageSize:20,
+			pagination:true,
+			search:true,
+			showColumns:true,
+			pageList:[10,50,100],
+			columns: [
+						  {
+							field: "title",
+							title: "標題",
+							sortable: true,
+							width:300
+						  },
+						  {
+							field: "torrent",
+							title: "種子",
+							sortable: true,
+							width: 300
+						  },
+						  {
+							field: "size",
+							title: "檔案大小",
+							sortable: true,
+							width: 300
+						  },
+							{
+								field: "articlelink",
+								title: "文章連結",
+								sortable: true,
+								width: 300
+							},
+							{
+								field: "ImagePath",
+								title: "預覽圖連結",
+								sortable: true,
+								width: 100
+							},
+						  {
+							field: "pubDate",
+							title: "發佈日期",
+							sortable: true,
+							width: 300
+						  }
+						]
+		});
+	</script>
 </html>

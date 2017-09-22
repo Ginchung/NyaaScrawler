@@ -13,6 +13,11 @@ app.config.update(
 mongo = PyMongo(app)
 
 class ArticleList:
+    # 回傳所有文章數量
+    def GetAllDataCount(self):
+        with app.app_context():
+            return mongo.db.Article.count()
+
     # 取得所有文章
     def GetArticleAll(self):
         with app.app_context():
@@ -84,5 +89,6 @@ class ArticleList:
 
 
 if __name__=='__main__':
-    ArticleList().GetArticleByKey(fromDate='20170921')
+    print(ArticleList().GetAllDataCount())
+    # ArticleList().GetArticleByKey(fromDate='20170921')
 
