@@ -30,15 +30,10 @@ def index():
     # 取得所有資料
     items = ArticleList().GetArticleAll().get("article")
     # items = [doc for doc in items]
-    return render_template("index.html",
+    return render_template("table.html",
       data=list(items),
       columns=columns,
       title='Flask Bootstrap Table')
-
-@app.route('/table/')
-@app.route('/table/<name>')
-def table(name=None):
-    return render_template('table.html', name=name)
 
 if __name__=='__main__':
     app.run(debug=True)
