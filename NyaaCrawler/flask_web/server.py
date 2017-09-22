@@ -29,17 +29,16 @@ columns = [
 def index():
     # 取得所有資料
     items = ArticleList().GetArticleAll().get("article")
-    items = [doc for doc in items]
-
+    # items = [doc for doc in items]
     return render_template("index.html",
-      data=items,
+      data=list(items),
       columns=columns,
       title='Flask Bootstrap Table')
 
-@app.route('/hello/')
-@app.route('/hello/<name>')
-def hello(name=None):
-    return render_template('hello.html', name=name)
+@app.route('/table/')
+@app.route('/table/<name>')
+def table(name=None):
+    return render_template('table.html', name=name)
 
 if __name__=='__main__':
     app.run(debug=True)
