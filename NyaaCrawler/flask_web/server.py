@@ -21,6 +21,7 @@ def get():
     query = {}
     query["offset"] = request.args.get('offset')
     query["order"] = request.args.get('order')
+    query["sort"] = request.args.get('sort')
     query["limit"] = request.args.get('limit')
     query["keyword"] = request.args.get('keyword')
     query["fromDate"] = request.args.get('fromDate')
@@ -31,9 +32,9 @@ def get():
 
 
     al = ArticleList()
-    items = al.GetArticleByKey(**query).get("article")
-    pagination = {'total': al.GetAllDataCount()}
-    pagination['rows'] = list(items)
+    items = al.GetArticleByKey(**query)
+    pagination = {'total': items.get("total")}
+    pagination['rows'] = list(items.get("article"))
     return jsonify(pagination)
 
 
