@@ -27,6 +27,9 @@
 				width: 1800px;
 			}
 		}
+        .bkcolor{
+            background-color: rgba(169, 160, 121, 0.5);
+        }
 
 	</style>
 </head>
@@ -52,20 +55,40 @@
 <!-- Main (Home) section -->
 <section class="section" id="head">
 	<div class="container">
-
+        <div class="row">
+            <div class="col-sm-2" class="bkcolor">
+                <label for="keyword">文章標題</label>
+                  <input type="text" class="form-control" id="keyword">
+            </div>
+            <div class="col-sm-2" class="bkcolor">
+                <label for="fromDate">發佈日期(起):</label>
+                <input type="text" class="form-control" id="fromDate">
+            </div>
+            <div class="col-sm-2" class="bkcolor">
+                <label for="toDate">發佈日期(起)::</label>
+                <input type="text" class="form-control" id="toDate">
+            </div>
+            <div class="col-sm-2" class="bkcolor">
+                <label for="minSize">檔案大小(起):</label>
+                <input type="text" class="form-control" id="minSize">
+            </div>
+            <div class="col-sm-2" class="bkcolor">
+                <label for="maxSize">檔案大小(迄):</label>
+                <input type="text" class="form-control" id="maxSize">
+            </div>
+            <div class="col-sm-2" class="bkcolor">
+                <label for="maxage">最近日期:</label>
+                <input type="text" class="form-control" id="maxage">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-2 col-sm-offset-11" class="bkcolor" style="margin-top:10px;margin-bottom:10px">
+                <button type="button" id="search" class="btn btn-primary" style="width:120px">搜尋</button>
+            </div>
+        </div>
 		<div class="row">
-			<div class="col-sm-12" style="background-color: rgba(169, 160, 121, 0.5);">
+			<div class="col-sm-12" class="bkcolor">
 				    <table id="table">
-					  <!--id="table"-->
-					  <!--data-toggle="table"-->
-					  <!--data-toolbar="#toolbar"-->
-					  <!--data-search="true"-->
-					  <!--data-show-columns="true"-->
-					  <!--data-pagination="true"-->
-					  <!--data-height="800"-->
-					  <!--data-url="{{ url_for('get') }}"-->
-					  <!--class = "table table-hover"-->
-
 					</table>
 			</div>
 
@@ -107,10 +130,25 @@
 			sidePagination:'server',
 			height:800,
 			method:'get',
+			queryParams:function(params){
+                 var q = {
+                            limit: params.limit,
+                            offset: params.offset,
+                            keyword : $("#keyword").val(),
+                            fromDate : $("#fromDate").val(),
+                            toDate : $("#toDate").val(),
+                            minSize : $("#minSize").val(),
+                            maxSize : $("#maxSize").val(),
+                            maxage : $("#maxage").val(),
+                            sort : params.sort,
+                            search: params.search,
+                            order: params.order
+                         };
+
+                        return q;
+            },
 			pageSize:20,
 			pagination:true,
-			search:true,
-			showColumns:true,
 			pageList:[10,50,100],
 			columns: [
 						  {
@@ -151,5 +189,9 @@
 						  }
 						]
 		});
+
+		$('#search').click(function () {
+                $("#table").bootstrapTable('refresh');
+        });
 	</script>
 </html>

@@ -16,13 +16,22 @@ def index():
       title='Flask Bootstrap Table')
 
 # 回傳文章資料json格式
-@app.route('/get')
+@app.route('/get', methods=['GET', 'POST'])
 def get():
-    offset = request.args.get('offset')
-    order = request.args.get('order')
-    limit = request.args.get('limit')
+    query = {}
+    query["offset"] = request.args.get('offset')
+    query["order"] = request.args.get('order')
+    query["limit"] = request.args.get('limit')
+    query["keyword"] = request.args.get('keyword')
+    query["fromDate"] = request.args.get('fromDate')
+    query["toDate"] = request.args.get('toDate')
+    query["minSize"] = request.args.get('minSize')
+    query["maxSize"] = request.args.get('maxSize')
+    query["maxage"] = request.args.get('maxage')
+
+
     al = ArticleList()
-    items = al.GetArticleAll().get("article")
+    items = al.GetArticleByKey(**query).get("article")
     pagination = {'total': al.GetAllDataCount()}
     pagination['rows'] = list(items)
     return jsonify(pagination)

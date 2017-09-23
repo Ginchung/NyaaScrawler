@@ -43,47 +43,55 @@ class ArticleList:
             fromDate = kwargs.get('fromDate', None)
             toDate = kwargs.get('toDate', None)
             # 當這兩個關鍵字有值 就新增一個key到dict
-            if fromDate is not None or toDate is not None:
+            if fromDate  or toDate:
                 key = "pubDate"
                 query.setdefault(key, {})
             # 如果fromDate/toDate有值 最終格式:{'pubDate': {'$gte': '2017-09-21 00:00:00', '$lt': '2017-12-12 00:00:00'}}
-            if fromDate is not None:
+            if fromDate:
                 query['pubDate'].update({'$gte': parser.parse(fromDate).strftime("%Y-%m-%d %H:%M:%S")})
-            if toDate is not None:
+            if toDate:
                 query['pubDate'].update({'$lt': parser.parse(toDate).strftime("%Y-%m-%d %H:%M:%S")})
 
             # 用關鍵字搜尋title 用regex達成like效果
             keyWord = kwargs.get('keyWord', None)
-            if keyWord is not None:
+            if keyWord:
                 query['title'] = {'$regex':keyWord}
 
             # 搜尋檔案大小 起迄
             minSize = kwargs.get('minSize', None)
             maxSize = kwargs.get('maxSize', None)
             # 當這兩個關鍵字有值 就新增一個key到dict
-            if minSize is not None or maxSize is not None:
+            if minSize or maxSize:
                 key = "size"
                 query.setdefault(key, {})
             # 如果minSize/maxSize有值 就新增dict到size裡 最終格式:{'size': {'$gte': '123', '$lt': '999'}}
-            if minSize is not None:
+            if minSize:
                 query['size'].update({'$gte': float(minSize)})
-            if maxSize is not None:
+            if maxSize:
                 query['size'].update({'$lt': float(maxSize)})
 
             # 排序
             sortQuery = []
             sortKey = kwargs.get('sortKey', None)
             sortOrder = kwargs.get('sortOrder', None)
-            if sortKey is not None:
+            if sortKey:
                 if sortOrder in ['1','-1']:
                     sortQuery.append((sortKey, int(sortOrder)))
                 else:
                     sortQuery.append((sortKey, 1))  # 如果沒設定sortOrder 預設ASC
             else:
                 sortQuery.append(('pubDate', -1))  # 如果沒設定sortKey 預設用發佈日期 desc
+            # 分頁
+            limit = kwargs.get('limit', None)
+            offset = kwargs.get('offset', None)
+            if not limit:
+                limit = 20
+            if not offset:
+                offset = 0
+
             # 撈出資料
-            article = mongo.db.Article.find(query, {'_id': 0}).sort(sortQuery)
-            if article is not None:
+            article = mongo.db.Article.find(query, {'_id': 0}).sort(sortQuery).skip(int(offset)).limit(int(limit))
+            if article:
                 return dict(result='success', article=article)
             return dict(result='error', message='No record found')
 
