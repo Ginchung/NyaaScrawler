@@ -19,7 +19,9 @@
 	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 	<link href='http://fonts.googleapis.com/css?family=Wire+One' rel='stylesheet' type='text/css'>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker3.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker3.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.9.1/sweetalert2.min.css" />
 	<style>
 		body {
 			overflow:hidden;
@@ -84,7 +86,10 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-2 col-sm-offset-11" class="bkcolor" style="margin-top:10px;margin-bottom:10px">
+			<div class="col-sm-1 col-sm-offset-9" class="bkcolor" style="margin-top:10px;margin-bottom:10px">
+                <button type="button" id="loadImage" class="btn btn-primary" style="width:120px">載入預覽圖</button>
+            </div>
+            <div class="col-sm-2 col-sm-offset-0" class="bkcolor" style="margin-top:10px;margin-bottom:10px">
                 <button type="button" id="search" class="btn btn-primary" style="width:120px">搜尋</button>
             </div>
         </div>
@@ -95,6 +100,17 @@
 			</div>
 
 		</div> <!-- /row -->
+
+	</div>
+
+	<div id="previewImage" style="display:none;">
+		  <a href="https://c2.staticflickr.com/6/5499/30972532232_051e1dc57e_h.jpg" data-fancybox="0" />
+
+		  <a href="https://farm6.staticflickr.com/5551/31096145856_793c69283a_k_d.jpg" data-fancybox="0"/>
+
+		  <a href="https://c1.staticflickr.com/1/357/31876784275_12286240d4_h.jpg" data-fancybox="1"/>
+
+		  <a href="https://farm3.staticflickr.com/2947/33594572585_b48eba935b_k_d.jpg" data-fancybox="1"/>
 
 	</div>
 </section>
@@ -125,9 +141,32 @@
 
 <script type="text/javascript" src="{{ url_for('static', filename='js/magister.js') }}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/js/bootstrap-datepicker.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.9.1/sweetalert2.min.js"></script>
 
 </body>
 	<script type='text/javascript'>
+		//所有row的資料
+		var rowData = {}
+
+		$(document).ready(function() {
+			//row的預覽圖按鈕點擊 依照點擊的row的index 開啟不同group的gallery
+			 $('#table').on('click', '.fancybox-trigger' , function (event) {
+			     var gallery = $("[data-fancybox='" + $(this).attr('trigger-rel') + "']");
+			     if(gallery.length>0){
+                     gallery.eq(0).trigger('click');
+                 }else{
+			         swal("沒有預覽圖","", "error")
+				 }
+
+             });
+             //預載入圖片按鈕點擊
+			$('#loadImage').click(function(){
+
+				BuildGallery();
+			});
+         });
+
 		$('#table').bootstrapTable({
 			url:"{{ url_for('get') }}",
 			sidePagination:'server',
@@ -153,6 +192,15 @@
 			pageSize:20,
 			pagination:true,
 			pageList:[10,50,100],
+			//當換分頁時 將放預覽圖圖片的div清空
+			onPageChange:function(page,size){
+
+			},
+			//加載成功時 取得所有row的資料 存到全域變數
+			onLoadSuccess:function(data){
+			    //從data取得預覽圖位址
+				rowData = data.rows
+			},
             columns: [
                         {
                             field: "title",
@@ -193,12 +241,8 @@
                             sortable: true,
                             width: '10%',
                             visible:true,
-                            formatter:function(value){
-                                var urls = ''
-                                for(var k in value) {
-								   urls+=value[k].url+' domain:'+value[k].domain+'\n';
-								}
-                                return urls;
+                            formatter:function(value,row,index){
+                                return '<button class="btn btn-primary fancybox-trigger" trigger-rel="'+index+'"> <i class="fa fa-picture-o" aria-hidden="true"></i> 預覽 </button>';
                             }
                         },
                         {
@@ -218,5 +262,25 @@
             format: "yyyy-mm-dd",
             language: "zh-TW"
         });
+		//初始化gallery
+		function initFancyBox() {
+            $().fancybox({
+                selector: '[data-fancybox]',
+                thumbs: false,
+                hash: false,
+            });
+        }
+
+
+		function BuildGallery(){
+		    console.log(rowData);
+		    if(rowData.length==0)
+		        return;
+
+		    rowData.forEach(function(element) {
+                console.log(element.ImagePath.url);
+            });
+		    initFancyBox();
+		}
 	</script>
 </html>

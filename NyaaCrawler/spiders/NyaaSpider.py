@@ -142,5 +142,5 @@ def gen_argv(s):
 if __name__ == '__main__':
     # LOG_ENABLED 是否在console顯示log
     #gen_argv('scrapy crawl NyaaSpider -s LOG_ENABLED=False -a page=2')
-    gen_argv('scrapy crawl NyaaSpider -a page=2')
+    gen_argv('scrapy crawl NyaaSpider -a page=30')
     execute()
