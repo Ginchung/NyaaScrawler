@@ -1,11 +1,11 @@
 # hello.py
 from flask import Flask
-from flask import render_template
-from bson.json_util import dumps, loads
-from NyaaCrawler.flask_web.model import ArticleList
 from flask import jsonify
+from flask import render_template
 from flask import request
-from .ImageHandler import Image
+
+from NyaaCrawler.flask_web.model import ArticleList
+
 app = Flask(__name__)
 
 @app.route('/')
@@ -41,7 +41,7 @@ def getImage():
     imgs = []
     data = request.get_json()
     ImagePath = data['ImagePath']
-    imgHandler = Image()
+    # imgHandler = Image()
     for item in ImagePath:
         # url = item['url']
         # domain = item['domain']
