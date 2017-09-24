@@ -168,7 +168,7 @@
          });
 
 		$('#table').bootstrapTable({
-			url:"{{ url_for('get') }}",
+			url:"{{ url_for('post') }}",
 			sidePagination:'server',
 			height:800,
 			method:'get',
@@ -190,6 +190,7 @@
                         return q;
             },
 			pageSize:20,
+			undefinedText:'<i class="fa fa-spinner" aria-hidden="true"></i>',
 			pagination:true,
 			pageList:[10,50,100],
 			//當換分頁時 將放預覽圖圖片的div清空
@@ -239,11 +240,18 @@
                             field: "ImagePath",
                             title: "預覽圖連結",
                             sortable: true,
-                            width: '10%',
+                            width: '5%',
                             visible:true,
                             formatter:function(value,row,index){
-                                return '<button class="btn btn-primary fancybox-trigger" trigger-rel="'+index+'"> <i class="fa fa-picture-o" aria-hidden="true"></i> 預覽 </button>';
+                                return previewButtonTemplate(index);
                             }
+                        },
+				        {
+                            field: "ImageStatus",
+                            title: "預覽圖狀態",
+                            sortable: true,
+                            width: '3%',
+                            visible:true
                         },
                         {
                             field: "pubDate",
@@ -253,6 +261,10 @@
                         }
                     ]
 		});
+
+		function previewButtonTemplate(index){
+		    return '<button class="btn btn-primary fancybox-trigger" trigger-rel="'+index+'"> <i class="fa fa-picture-o" aria-hidden="true"></i> 預覽 </button>';
+		}
 
 		$('#search').click(function () {
                 $("#table").bootstrapTable('refresh');
@@ -271,14 +283,29 @@
             });
         }
 
-
+		//取得預覽圖 插入到html裡
 		function BuildGallery(){
-		    console.log(rowData);
+		    //console.log(rowData);
 		    if(rowData.length==0)
 		        return;
 
-		    rowData.forEach(function(element) {
-                console.log(element.ImagePath.url);
+		    rowData.forEach(function(element,index) {
+                $.ajax({
+					url: "/getImage",
+					type: "POST",
+					data: JSON.stringify({ImagePath: element.ImagePath}),
+					contentType: "application/json; charset=utf-8",
+					success: function(data) {
+					    //console.log(data);
+					    //組成圖片gallery的html
+
+						//更新預覽圖狀態 成功為勾勾 失敗為叉叉
+						var icon = '<i class="fa fa-check-circle" aria-hidden="true"></i>'
+						if(data.length==0)
+							icon = '<i class="fa fa-times" aria-hidden="true"></i>'
+						$('#table').bootstrapTable('updateCell',{index:index,field:'ImageStatus',value:icon});
+					}
+				});
             });
 		    initFancyBox();
 		}

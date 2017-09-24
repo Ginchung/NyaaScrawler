@@ -5,19 +5,17 @@ from bson.json_util import dumps, loads
 from NyaaCrawler.flask_web.model import ArticleList
 from flask import jsonify
 from flask import request
+from .ImageHandler import Image
 app = Flask(__name__)
 
 @app.route('/')
 def index():
-    # 取得所有資料
-    items = ArticleList().GetArticleAll().get("article")
-    # items = [doc for doc in items]
     return render_template("table.html",
       title='Flask Bootstrap Table')
 
 # 回傳文章資料json格式
-@app.route('/get', methods=['GET', 'POST'])
-def get():
+@app.route('/post', methods=['GET', 'POST'])
+def post():
     query = {}
     query["offset"] = request.args.get('offset')
     query["order"] = request.args.get('order')
@@ -37,6 +35,20 @@ def get():
     pagination['rows'] = list(items.get("article"))
     return jsonify(pagination)
 
+# 取得預覽圖連結的陣列 回傳預覽圖片連結的陣列
+@app.route('/getImage', methods=['GET', 'POST'])
+def getImage():
+    imgs = []
+    data = request.get_json()
+    ImagePath = data['ImagePath']
+    imgHandler = Image()
+    for item in ImagePath:
+        # url = item['url']
+        # domain = item['domain']
+        # imgHandler.getImage(domain, url)
+        imgs.append('http://test.jpg')
+
+    return jsonify(imgs)
 
 if __name__=='__main__':
     app.run(debug=True)
