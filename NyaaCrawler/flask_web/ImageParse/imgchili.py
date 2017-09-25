@@ -4,3 +4,7 @@ class imgchili(object):
 
     def get(self):
         return '進到imgchili url='+self.url
+
+if __name__ == '__main__':
+    imh = imgchili("gag")
+    print(imh.get())
