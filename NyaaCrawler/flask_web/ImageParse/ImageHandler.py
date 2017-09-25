@@ -1,21 +1,12 @@
-import logging
 
 class Image:
-    logging.basicConfig(
-        level=logging.WARNING,
-        format=
-        '%(asctime)s %(filename)s[line:%(lineno)d] %(levelname)s %(message)s',
-        datefmt='%a,%Y %b %d  %H:%M:%S',
-        handlers=[logging.FileHandler('../Logs/NoSupportImageUrl.log', 'a', 'utf-8'), ])
-    logging.getLogger("ImageHandler").setLevel(logging.WARNING
-                                               )  # 将requests的日志级别设成WARNING
 
+    def __init__(self,domain,url):
+        self.__initImageClient(domain,url)
 
-    # 依據domain 呼叫不同的function
-    def getImage(self, domain,url):
-        def func_not_found():  # 未支援的圖床會回傳找不到url
-            logging.warning("url: "+url)
-            return "This image url:(" + domain + ") is not yet supported!"
+    # 依據domain 呼叫不同的class
+    def __initImageClient(self, domain,url):
+
         # 支援的圖床
         host = {
             "imgchili": "imgchili.net",
@@ -48,21 +39,21 @@ class Image:
             "imgoutlet": "io1.imgoutlet.co",
 
         }
-        # 如果domain有在host的value裡 取出host的key
-        domainName = ''
-        if domain in host.values():
-            domainName = list(host.keys())[list(host.values()).index(domain)]
+        # 依據domain 找出對應的class
+        domainName = list(host.keys())[list(host.values()).index(domain)]
+        # 如果import不到此class 就使用NotSupport class
+        try:
+            imgClass = __import__(domainName)
+        except:
+            imgClass = __import__('NotSupport')
+            domainName = 'NotSupport'
 
-        func_name = 'func_' + domainName
-        func = getattr(self, func_name, func_not_found)
-        return func()
+        self.ImgClient = getattr(imgClass, domainName)(url=url)
 
-    def func_imgchili(self):
-        return 'imgchili'
-
-    def func_pixsense(self):
-        return 'pixsense'
+    def get(self):
+        return self.ImgClient.get()
 
 if __name__=='__main__':
-    result = Image().getImage('adhadh.','http://dahah.com.tw/5747.jpg')
-    print(result)
+    result = Image('damimage.com','http://imgchili.net/5747.jpg')
+
+    print(result.get())
