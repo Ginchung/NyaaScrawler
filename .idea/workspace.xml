@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="798c92d8-e337-41f8-bb0c-6d233813d068" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NyaaCrawler/flask_web/ImageParse/ImageHandler.py" afterPath="$PROJECT_DIR$/NyaaCrawler/flask_web/ImageParse/ImageHandler.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NyaaCrawler/flask_web/ImageParse/imgchili.py" afterPath="$PROJECT_DIR$/NyaaCrawler/flask_web/ImageParse/imgchili.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NyaaCrawler/flask_web/Logs/NoSupportImageUrl.log" afterPath="$PROJECT_DIR$/NyaaCrawler/flask_web/Logs/NoSupportImageUrl.log" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -41,18 +40,8 @@
       <file leaf-file-name="socketserver.py" pinned="false" current-in-tab="false">
         <entry file="file://C:/ProgramData/Anaconda3/Lib/socketserver.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6058">
-              <caret line="237" column="0" lean-forward="false" selection-start-line="237" selection-start-column="0" selection-end-line="237" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="server.py" pinned="false" current-in-tab="false">
-        <entry file="file://C:/ProgramData/Anaconda3/Lib/http/server.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="10400">
-              <caret line="417" column="0" lean-forward="false" selection-start-line="417" selection-start-column="0" selection-end-line="417" selection-end-column="0" />
+            <state relative-caret-position="-205">
+              <caret line="223" column="23" lean-forward="true" selection-start-line="223" selection-start-column="23" selection-end-line="223" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -61,20 +50,27 @@
       <file leaf-file-name="table.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NyaaCrawler/flask_web/templates/table.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="546">
+            <state relative-caret-position="4186">
               <caret line="161" column="16" lean-forward="true" selection-start-line="161" selection-start-column="16" selection-end-line="161" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ImageHandler.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ImageHandler.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NyaaCrawler/flask_web/ImageParse/ImageHandler.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="44" column="41" lean-forward="false" selection-start-line="44" selection-start-column="41" selection-end-line="44" selection-end-column="41" />
+            <state relative-caret-position="442">
+              <caret line="42" column="36" lean-forward="true" selection-start-line="42" selection-start-column="36" selection-end-line="42" selection-end-column="36" />
               <folding />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="null/Nyaa/Article" pinned="false" current-in-tab="false">
+        <entry file="mongo://null/Nyaa/Article">
+          <provider selected="true" editor-type-id="MongoData">
+            <state />
           </provider>
         </entry>
       </file>
@@ -97,12 +93,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="imgchili.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="imgchili.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/NyaaCrawler/flask_web/ImageParse/imgchili.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="9" column="20" lean-forward="true" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
-              <folding />
+            <state relative-caret-position="208">
+              <caret line="18" column="41" lean-forward="true" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -110,7 +108,7 @@
       <file leaf-file-name="model.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NyaaCrawler/flask_web/model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="754">
+            <state relative-caret-position="650">
               <caret line="29" column="11" lean-forward="false" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="11" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
@@ -161,8 +159,8 @@
         <option value="$PROJECT_DIR$/NyaaCrawler/flask_web/server.py" />
         <option value="$PROJECT_DIR$/NyaaCrawler/flask_web/model.py" />
         <option value="$PROJECT_DIR$/NyaaCrawler/flask_web/ImageParse/NotSupport.py" />
-        <option value="$PROJECT_DIR$/NyaaCrawler/flask_web/ImageParse/imgchili.py" />
         <option value="$PROJECT_DIR$/NyaaCrawler/flask_web/ImageParse/ImageHandler.py" />
+        <option value="$PROJECT_DIR$/NyaaCrawler/flask_web/ImageParse/imgchili.py" />
       </list>
     </option>
   </component>
@@ -320,8 +318,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -341,7 +339,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.ImageHandler">
+  <component name="RunManager" selected="Python.imgchili">
     <configuration default="false" name="server" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -378,24 +376,6 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="Utility" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/NyaaCrawler/spiders" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="NyaaCrawler" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/NyaaCrawler/spiders/Utility.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <method />
-    </configuration>
     <configuration default="false" name="ImageHandler" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -427,6 +407,24 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="NyaaCrawler" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/NyaaCrawler/flask_web/ImageParse/imgchili.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="NyaaSpider" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/NyaaCrawler/spiders" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="NyaaCrawler" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/NyaaCrawler/spiders/NyaaSpider.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -499,17 +497,17 @@
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.server" />
       <item index="1" class="java.lang.String" itemvalue="Python.model" />
-      <item index="2" class="java.lang.String" itemvalue="Python.Utility" />
-      <item index="3" class="java.lang.String" itemvalue="Python.ImageHandler" />
-      <item index="4" class="java.lang.String" itemvalue="Python.imgchili" />
+      <item index="2" class="java.lang.String" itemvalue="Python.ImageHandler" />
+      <item index="3" class="java.lang.String" itemvalue="Python.imgchili" />
+      <item index="4" class="java.lang.String" itemvalue="Python.NyaaSpider" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.ImageHandler" />
-        <item index="1" class="java.lang.String" itemvalue="Python.imgchili" />
-        <item index="2" class="java.lang.String" itemvalue="Python.server" />
-        <item index="3" class="java.lang.String" itemvalue="Python.model" />
-        <item index="4" class="java.lang.String" itemvalue="Python.Utility" />
+        <item index="0" class="java.lang.String" itemvalue="Python.imgchili" />
+        <item index="1" class="java.lang.String" itemvalue="Python.NyaaSpider" />
+        <item index="2" class="java.lang.String" itemvalue="Python.ImageHandler" />
+        <item index="3" class="java.lang.String" itemvalue="Python.server" />
+        <item index="4" class="java.lang.String" itemvalue="Python.model" />
       </list>
     </recent_temporary>
   </component>
@@ -542,24 +540,24 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16311301" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286334" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329718" sideWeight="0.5021322" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3362256" sideWeight="0.49573562" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329718" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286334" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3362256" sideWeight="0.49573562" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286334" sideWeight="0.4978678" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16311301" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329718" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3991323" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329718" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -782,7 +780,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -791,9 +788,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="546">
           <caret line="21" column="32" lean-forward="false" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="32" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -801,7 +795,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51246">
           <caret line="1996" column="0" lean-forward="false" selection-start-line="1996" selection-start-column="0" selection-end-line="1996" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -809,7 +802,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6760">
           <caret line="283" column="0" lean-forward="false" selection-start-line="283" selection-start-column="0" selection-end-line="283" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -829,14 +821,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/ProgramData/Anaconda3/Lib/socketserver.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6058">
-          <caret line="237" column="0" lean-forward="false" selection-start-line="237" selection-start-column="0" selection-end-line="237" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/NyaaCrawler/flask_web/server.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="676">
@@ -849,7 +833,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/NyaaCrawler/flask_web/model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="754">
+        <state relative-caret-position="650">
           <caret line="29" column="11" lean-forward="false" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="11" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
@@ -859,7 +843,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/NyaaCrawler/flask_web/templates/table.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
+        <state relative-caret-position="4186">
           <caret line="161" column="16" lean-forward="true" selection-start-line="161" selection-start-column="16" selection-end-line="161" selection-end-column="16" />
           <folding />
         </state>
@@ -880,19 +864,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NyaaCrawler/flask_web/ImageParse/imgchili.py">
+    <entry file="file://C:/ProgramData/Anaconda3/Lib/socketserver.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="9" column="20" lean-forward="true" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
+        <state relative-caret-position="-205">
+          <caret line="223" column="23" lean-forward="true" selection-start-line="223" selection-start-column="23" selection-end-line="223" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/NyaaCrawler/flask_web/ImageParse/ImageHandler.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="44" column="41" lean-forward="false" selection-start-line="44" selection-start-column="41" selection-end-line="44" selection-end-column="41" />
+        <state relative-caret-position="442">
+          <caret line="42" column="36" lean-forward="true" selection-start-line="42" selection-start-column="36" selection-end-line="42" selection-end-column="36" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NyaaCrawler/flask_web/ImageParse/imgchili.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="18" column="41" lean-forward="true" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
