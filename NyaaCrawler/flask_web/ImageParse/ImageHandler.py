@@ -11,9 +11,12 @@ class Image:
         host = {
             "imgchili.net":"imgchili",
             "www.pixsense.net":"pixsense",
+            # ================
+            # 同規則的群組
             "55888.eu":"eu5588",
-            "imgazel.info":"eu5588", # 規則跟eu55888一樣
-            "img.yt":"NotSupport",
+            "imgazel.info":"eu5588",
+            # =================
+            "img.yt": "imgyt", # 跳過
              "anidex.info":"NotSupport",
              "www.imgbabes.com":"NotSupport",
              "imageteam.org":"NotSupport",
