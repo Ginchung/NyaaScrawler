@@ -11,7 +11,7 @@ class Image:
         host = {
             "imgchili.net":"imgchili",
             "www.pixsense.net":"pixsense",
-            "55888.eu":"NotSupport",
+            "55888.eu":"eu5588",
             "imgazel.info":"NotSupport",
             "img.yt":"NotSupport",
              "anidex.info":"NotSupport",

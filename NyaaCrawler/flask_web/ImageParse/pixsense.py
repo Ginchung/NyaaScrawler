@@ -10,7 +10,8 @@ class pixsense(object):
         BigImgUrl = ''
         """
         只request pixsense.net/site/v/xxxxxx的網址
-        因為如果是縮圖 通常都會搭配圖床連結，就不用重覆抓取了
+        因為如果是縮圖 通常都會搭配圖床連結，就不用重覆抓取了 
+        而且縮圖的規則沒辨法replace small to big就能看到大圖
         """
         if re.match(r"^https?://\w+.pixsense.net/site/[\w/#&]+$",self.url):
             r = requests.get(self.url)
