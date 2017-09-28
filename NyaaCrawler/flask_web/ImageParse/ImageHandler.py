@@ -12,7 +12,7 @@ class Image:
             "imgchili.net":"imgchili",
             "www.pixsense.net":"pixsense",
             "55888.eu":"eu5588",
-            "imgazel.info":"NotSupport",
+            "imgazel.info":"eu5588", # 規則跟eu55888一樣
             "img.yt":"NotSupport",
              "anidex.info":"NotSupport",
              "www.imgbabes.com":"NotSupport",

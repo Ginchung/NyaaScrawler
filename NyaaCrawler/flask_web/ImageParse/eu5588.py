@@ -1,7 +1,11 @@
 import requests
 import re
 from lxml import etree
-
+"""
+適用的domain:
+eu55888.eu
+imgazel.info
+"""
 class eu5588(object):
     def __init__(self, url):
         self.url = url
@@ -15,7 +19,7 @@ class eu5588(object):
         """
         if re.match(r"http.*(?=html)",self.url):
             r = requests.get(self.url)
-            img = re.search(r"(?P<url>http://55888\.eu\/upload\/big\/[^\']*)", r.text)
+            img = re.search(r"(?P<url>http://[^\/]*\/upload\/big\/[^\']*)", r.text)
             if img:
                 BigImgUrl = img["url"]
         elif re.match(r"http.*(?=(jpe?g|png))",self.url):
@@ -26,4 +30,5 @@ class eu5588(object):
 if __name__ == '__main__':
     # imh = eu5588("http://55888.eu/upload/small/2017/08/28/59a48ccb9fc49.jpeg")
     imh = eu5588("http://55888.eu/img-5965f463da3d7.html")
+    # imh = eu5588("http://imgazel.info/img-59c6f7bf6c891.html")
     print(imh.get())
