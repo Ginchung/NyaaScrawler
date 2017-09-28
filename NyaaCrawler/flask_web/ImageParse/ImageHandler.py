@@ -10,7 +10,7 @@ class Image:
         # 支援的圖床 key是domain ，value是要使用的class 用來處理此domain的圖片
         host = {
             "imgchili.net":"imgchili",
-            "www.pixsense.net":"NotSupport",
+            "www.pixsense.net":"pixsense",
             "55888.eu":"NotSupport",
             "imgazel.info":"NotSupport",
             "img.yt":"NotSupport",
