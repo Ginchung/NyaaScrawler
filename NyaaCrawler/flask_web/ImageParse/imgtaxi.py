@@ -15,8 +15,8 @@ class imgtaxi(object):
         """
         if re.match(r"http.*(?=html)",self.url):
             r = requests.get(self.url)
-            # https://imgdrive.net/images/small/2017/09/24/59c77a27a3682.jpg
-            img = re.search(r"(?P<url>https?://[\w\.]+/images.*.jpe?g)",r.text)
+            # https://imgadult.com/upload/small/2017/09/26/59ca0e7512c0d.jpg
+            img = re.search(r"(?P<url>https?://[\w\.]+/(images|upload).*.jpe?g)",r.text)
             if img:
                 BigImgUrl = img["url"].replace("small","big")
         elif re.match(r"http.*(?=(jpe?g|png))",self.url):
@@ -25,5 +25,7 @@ class imgtaxi(object):
         return BigImgUrl
 
 if __name__ == '__main__':
-    imh = imgtaxi("https://imgtaxi.com/img-59cb3bb991980.html")
+    # imh = imgtaxi("https://imgtaxi.com/img-59cb3bb991980.html")
+    # imh = imgtaxi("https://imgadult.com/img-59ca38ac53cb8.html")
+    imh = imgtaxi("https://imgwallet.com/img-59ca0e7785759.html")
     print(imh.get())

@@ -38,9 +38,12 @@ class imgyt(object):
             value = "Continue to your image"
         elif re.search(r"xxxwebdlxxx",self.url) is not None:
             value = "Continue to image ..."
+        elif re.search(r"imgtornado", self.url) is not None:
+            value ="Continue to Image"
+
         return value
 
 if __name__ == '__main__':
-    imh = imgyt("http://xxxwebdlxxx.org/img-59c2cda4669bf.html")
+    imh = imgyt("http://imgtornado.com/img-59cacef6a678b.html")
     print(imh.get())
     # print(imh.chooseParam())

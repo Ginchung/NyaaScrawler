@@ -42,24 +42,24 @@ class Image:
             # 有鎖continue to image 但直接在頁面就能抓得到圖
             "imgtaxi.com": "imgtaxi",
             "imgdrive.net": "imgtaxi",
+            "imgadult.com": "imgtaxi",
+            "imgwallet.com": "imgtaxi",
             # =========================
-            # 有鎖continue to image  可參考imgyt 可能原理都一樣
+            # 有鎖continue to image  點擊button挾帶參數post
             "img.yt": "imgyt",
             "xxxwebdlxxx.org": "imgyt",
-
-            "imgtornado.com": "NotSupport",
-            "imgadult.com": "NotSupport",
-            "imgwallet.com": "NotSupport",
-            "io1.imgoutlet.co": "NotSupport",
-            "imgoutlet.co": "NotSupport",
-            "imgrock.co": "NotSupport",
-            "r01.imgrock.co": "NotSupport",
+            "imgtornado.com": "imgyt",
             # ===================================
 
-             "anidex.info":"NotSupport", # 這網址會連到另一個種子站 先跳過
+            "io1.imgoutlet.co": "NotSupport", # 這圖床的continue按鈕好像是用js載入的 待研究
+            "imgoutlet.co": "NotSupport", # 原理同上  continue button是用js載入的
+            "imgrock.co": "NotSupport", # 同上 continue button是用js載入的
+            "r01.imgrock.co": "NotSupport",# 同上 continue button是用js載入的
+
              "www.imgbabes.com":"NotSupport", # 會用到javascript 先跳過
             "www.imgflare.com": "NotSupport",# 同上 會用到js
             "www.fapforfun.com": "NotSupport", # 看起來會直接連到gallery
+            "anidex.info": "NotSupport",  # 這網址會連到另一個種子站 先跳過
             "www.dmm.co.jp": "NotSupport", # 會連到gallery
         }
         # 依據domain 找出對應的class file並import 對應的class
