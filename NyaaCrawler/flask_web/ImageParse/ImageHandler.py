@@ -35,16 +35,11 @@ class Image:
             "www.imgflare.com": "NotSupport",# 同上 會用到js
             "imgtaxi.com":"NotSupport", # 這個需要按continue to image
             "xxxwebdlxxx.org":"NotSupport",# 有鎖continue to image
-
-
-
-            "imgdrive.net":"NotSupport",
-            "imgtornado.com":"NotSupport",
-            "imgadult.com":"NotSupport",
-            "imgwallet.com":"NotSupport",
-            "www.qpic.ws":"NotSupport",
-            "18itv.com":"NotSupport",
-            "io1.imgoutlet.co":"NotSupport",
+            "imgdrive.net": "NotSupport",# 有鎖continue to image
+            "imgtornado.com": "NotSupport",# 有鎖continue to image
+            "imgadult.com": "NotSupport",# 有鎖continue to image
+            "imgwallet.com": "NotSupport",# 有鎖continue to image
+            "io1.imgoutlet.co":"NotSupport",# 有鎖continue to image
         }
         # 依據domain 找出對應的class file並import 對應的class
         # 如果dict沒有此key 就使用NotSupport class
