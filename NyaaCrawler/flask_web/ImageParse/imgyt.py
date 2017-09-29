@@ -1,10 +1,10 @@
 import requests
 import re
 from lxml import etree
+import json
 """
 適用的domain:
-eu55888.eu
-imgazel.info
+img.yt
 """
 class imgyt(object):
     def __init__(self, url):
@@ -20,19 +20,25 @@ class imgyt(object):
         需要request兩次才能取得到圖片 第一次get 第二次用post
         """
         if re.match(r"http.*(?=html)",self.url):
-            s = requests.Session()
-            # s.get(self.url)
-            # headers = {'Content-type': 'application/x-www-form-urlencoded'}
-            payload = {"imgContinue":"Continue+to+your+image..."}
-            r = s.post(self.url)
-            # img = re.search(r"(?P<url>http://[^\/]*\/upload\/big\/[^\']*)", r.text)
-            # if img:
-            #     BigImgUrl = img["url"]
+            headers = {'Content-type': 'application/x-www-form-urlencoded'}
+            data = {"imgContinue":self.chooseParam()}
+            r = requests.post(self.url,data=data,headers = headers)
+            img = re.search(r"(?P<url>https?://[^\/]*\/upload\/big\/[^\']*)", r.text)
+            if img:
+                 BigImgUrl = img["url"]
         elif re.match(r"http.*(?=(jpe?g|png))",self.url):
             BigImgUrl = self.url.replace("small","big")
 
         return BigImgUrl
 
+    # 依據domain 選擇對應的參數
+    def chooseParam(self):
+        value = ''
+        if re.search(r"img.yt",self.url) is not None:
+            value = "Continue to your image"
+        return value
+
 if __name__ == '__main__':
     imh = imgyt("https://img.yt/img-59c65a87227a3.html")
     print(imh.get())
+    # print(imh.chooseParam())
