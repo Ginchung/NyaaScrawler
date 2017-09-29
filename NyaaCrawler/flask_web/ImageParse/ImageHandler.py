@@ -13,9 +13,13 @@ class Image:
             "www.pixsense.net":"pixsense",
             "img.yt": "imgyt",
             "imagetwist.com": "imagetwist",
+            "3xplanet.com": "xplanet",
+            # =========================
+            # 直接回傳
             "i.imgur.com": "directReturn",
+            "imgtuku.com": "directReturn",
             # ================
-            # 同規則的群組
+            # 圖片規則是/upload/big的圖床
             "55888.eu":"eu5588",
             "imgazel.info":"eu5588",
             "imageteam.org": "eu5588",
@@ -23,17 +27,17 @@ class Image:
             "dimtus.com": "eu5588",
             "damimage.com": "eu5588",
             "imgstudio.org": "eu5588",
+            "imagedecode.com": "eu5588",
             # =================
 
              "anidex.info":"NotSupport", # 這網址會連到另一個種子站 先跳過
              "www.imgbabes.com":"NotSupport", # 會用到javascript 先跳過
+            "www.imgflare.com": "NotSupport",# 同上 會用到js
             "imgtaxi.com":"NotSupport", # 這個需要按continue to image
+            "xxxwebdlxxx.org":"NotSupport",# 有鎖continue to image
 
-            "imgtuku.com":"NotSupport",
-            "imagedecode.com":"NotSupport",
-            "xxxwebdlxxx.org":"NotSupport",
-            "www.imgflare.com":"NotSupport",
-            "3xplanet.com":"NotSupport",
+
+
             "imgdrive.net":"NotSupport",
             "imgtornado.com":"NotSupport",
             "imgadult.com":"NotSupport",
