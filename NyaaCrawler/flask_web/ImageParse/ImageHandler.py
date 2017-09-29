@@ -22,13 +22,13 @@ class Image:
             "imgseed.com": "eu5588",
             "dimtus.com": "eu5588",
             "damimage.com": "eu5588",
+            "imgstudio.org": "eu5588",
             # =================
 
              "anidex.info":"NotSupport", # 這網址會連到另一個種子站 先跳過
              "www.imgbabes.com":"NotSupport", # 會用到javascript 先跳過
             "imgtaxi.com":"NotSupport", # 這個需要按continue to image
 
-            "imgstudio.org":"NotSupport",
             "imgtuku.com":"NotSupport",
             "imagedecode.com":"NotSupport",
             "xxxwebdlxxx.org":"NotSupport",
