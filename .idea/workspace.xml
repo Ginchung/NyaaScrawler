@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="798c92d8-e337-41f8-bb0c-6d233813d068" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NyaaCrawler/flask_web/ImageParse/directReturn.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NyaaCrawler/flask_web/ImageParse/ImageHandler.py" afterPath="$PROJECT_DIR$/NyaaCrawler/flask_web/ImageParse/ImageHandler.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NyaaCrawler/flask_web/ImageParse/eu5588.py" afterPath="$PROJECT_DIR$/NyaaCrawler/flask_web/ImageParse/eu5588.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -25,21 +26,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="table.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/NyaaCrawler/flask_web/templates/table.html">
+      <file leaf-file-name="ImageHandler.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/NyaaCrawler/flask_web/ImageParse/ImageHandler.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4186">
-              <caret line="161" column="16" lean-forward="false" selection-start-line="161" selection-start-column="16" selection-end-line="161" selection-end-column="16" />
+            <state relative-caret-position="-260">
+              <caret line="15" column="42" lean-forward="false" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ImageHandler.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/NyaaCrawler/flask_web/ImageParse/ImageHandler.py">
+      <file leaf-file-name="directReturn.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/NyaaCrawler/flask_web/ImageParse/directReturn.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-26">
-              <caret line="14" column="43" lean-forward="false" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
+            <state relative-caret-position="234">
+              <caret line="9" column="20" lean-forward="true" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -172,6 +173,7 @@
         <option value="$PROJECT_DIR$/NyaaCrawler/flask_web/ImageParse/imgyt.py" />
         <option value="$PROJECT_DIR$/NyaaCrawler/flask_web/ImageParse/imagetwist.py" />
         <option value="$PROJECT_DIR$/NyaaCrawler/flask_web/ImageParse/eu5588.py" />
+        <option value="$PROJECT_DIR$/NyaaCrawler/flask_web/ImageParse/directReturn.py" />
         <option value="$PROJECT_DIR$/NyaaCrawler/flask_web/ImageParse/ImageHandler.py" />
       </list>
     </option>
@@ -350,25 +352,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.eu5588">
-    <configuration default="false" name="imgchili" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/NyaaCrawler/flask_web/ImageParse" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="NyaaCrawler" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/NyaaCrawler/flask_web/ImageParse/imgchili.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.directReturn">
     <configuration default="false" name="pixsense" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -441,6 +425,24 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <method />
     </configuration>
+    <configuration default="false" name="directReturn" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/NyaaCrawler/flask_web/ImageParse" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="NyaaCrawler" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/NyaaCrawler/flask_web/ImageParse/directReturn.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -506,19 +508,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.imgchili" />
-      <item index="1" class="java.lang.String" itemvalue="Python.pixsense" />
-      <item index="2" class="java.lang.String" itemvalue="Python.eu5588" />
-      <item index="3" class="java.lang.String" itemvalue="Python.imgyt" />
-      <item index="4" class="java.lang.String" itemvalue="Python.imagetwist" />
+      <item index="0" class="java.lang.String" itemvalue="Python.pixsense" />
+      <item index="1" class="java.lang.String" itemvalue="Python.eu5588" />
+      <item index="2" class="java.lang.String" itemvalue="Python.imgyt" />
+      <item index="3" class="java.lang.String" itemvalue="Python.imagetwist" />
+      <item index="4" class="java.lang.String" itemvalue="Python.directReturn" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.eu5588" />
-        <item index="1" class="java.lang.String" itemvalue="Python.imagetwist" />
-        <item index="2" class="java.lang.String" itemvalue="Python.imgyt" />
-        <item index="3" class="java.lang.String" itemvalue="Python.pixsense" />
-        <item index="4" class="java.lang.String" itemvalue="Python.imgchili" />
+        <item index="0" class="java.lang.String" itemvalue="Python.directReturn" />
+        <item index="1" class="java.lang.String" itemvalue="Python.eu5588" />
+        <item index="2" class="java.lang.String" itemvalue="Python.imagetwist" />
+        <item index="3" class="java.lang.String" itemvalue="Python.imgyt" />
+        <item index="4" class="java.lang.String" itemvalue="Python.pixsense" />
       </list>
     </recent_temporary>
   </component>
@@ -593,13 +595,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/NyaaCrawler/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/NyaaCrawler/spiders/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -903,10 +898,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/NyaaCrawler/flask_web/ImageParse/directReturn.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="9" column="20" lean-forward="true" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/NyaaCrawler/flask_web/ImageParse/ImageHandler.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-26">
-          <caret line="14" column="43" lean-forward="false" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
+        <state relative-caret-position="-260">
+          <caret line="15" column="42" lean-forward="false" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
           <folding />
         </state>
       </provider>

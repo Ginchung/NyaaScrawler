@@ -13,6 +13,7 @@ class Image:
             "www.pixsense.net":"pixsense",
             "img.yt": "imgyt",
             "imagetwist.com": "imagetwist",
+            "i.imgur.com": "directReturn",
             # ================
             # 同規則的群組
             "55888.eu":"eu5588",
@@ -26,9 +27,6 @@ class Image:
              "www.imgbabes.com":"NotSupport", # 會用到javascript 先跳過
             "imgtaxi.com":"NotSupport", # 這個需要按continue to image
 
-
-            "e-hentai.org":"NotSupport",
-            "i.imgur.com":"NotSupport",
             "damimage.com":"NotSupport",
             "imgstudio.org":"NotSupport",
             "imgtuku.com":"NotSupport",
