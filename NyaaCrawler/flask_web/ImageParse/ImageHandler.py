@@ -15,11 +15,12 @@ class Image:
             # 同規則的群組
             "55888.eu":"eu5588",
             "imgazel.info":"eu5588",
+            "imageteam.org": "eu5588",
             # =================
-            "img.yt": "imgyt", # 跳過
-             "anidex.info":"NotSupport",
-             "www.imgbabes.com":"NotSupport",
-             "imageteam.org":"NotSupport",
+            "img.yt": "imgyt",
+             "anidex.info":"NotSupport", # 這網址會連到另一個種子站 先跳過
+             "www.imgbabes.com":"NotSupport", # 會用到javascript 先跳過
+
             "imgtaxi.com":"NotSupport",
              "imagetwist.com":"NotSupport",
              "imgseed.com":"NotSupport",
