@@ -15,7 +15,7 @@ class Image:
             "imagetwist.com": "imagetwist",
             "3xplanet.com": "xplanet",
             "hostimg.co": "hostimg",
-            "imgtaxi.com": "imgtaxi",
+
             # =========================
             # 直接回傳
             "i.imgur.com": "directReturn",
@@ -39,10 +39,14 @@ class Image:
             "imagedecode.com": "eu5588",
             "xxx.pornscreen.xyz": "eu5588",
             # ========================
+            # 有鎖continue to image 但直接在頁面就能抓得到圖
+            "imgtaxi.com": "imgtaxi",
+            "imgdrive.net": "imgtaxi",
+            # =========================
             # 有鎖continue to image  可參考imgyt 可能原理都一樣
             "img.yt": "imgyt",
-            "xxxwebdlxxx.org": "NotSupport",
-            "imgdrive.net": "NotSupport",
+            "xxxwebdlxxx.org": "imgyt",
+
             "imgtornado.com": "NotSupport",
             "imgadult.com": "NotSupport",
             "imgwallet.com": "NotSupport",
