@@ -20,9 +20,8 @@ class Image:
             "img.yt": "imgyt",
              "anidex.info":"NotSupport", # 這網址會連到另一個種子站 先跳過
              "www.imgbabes.com":"NotSupport", # 會用到javascript 先跳過
-
-            "imgtaxi.com":"NotSupport",
-             "imagetwist.com":"NotSupport",
+            "imgtaxi.com":"NotSupport", # 這個需要按continue to image
+             "imagetwist.com":"imagetwist",
              "imgseed.com":"NotSupport",
             "dimtus.com":"NotSupport",
             "e-hentai.org":"NotSupport",

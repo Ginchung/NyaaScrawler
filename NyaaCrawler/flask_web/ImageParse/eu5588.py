@@ -30,5 +30,5 @@ class eu5588(object):
 
 if __name__ == '__main__':
     # imh = eu5588("http://55888.eu/upload/small/2017/08/28/59a48ccb9fc49.jpeg")
-    imh = eu5588("http://imageteam.org/img-59c8b7544d603.html")
+    imh = eu5588("https://imgtaxi.com/img-59c85087a39fb.html")
     print(imh.get())
