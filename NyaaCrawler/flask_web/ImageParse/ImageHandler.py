@@ -15,6 +15,7 @@ class Image:
             "imagetwist.com": "imagetwist",
             "3xplanet.com": "xplanet",
             "hostimg.co": "hostimg",
+            "imgtaxi.com": "imgtaxi",
             # =========================
             # 直接回傳
             "i.imgur.com": "directReturn",
@@ -40,7 +41,6 @@ class Image:
             # ========================
             # 有鎖continue to image  可參考imgyt 可能原理都一樣
             "img.yt": "imgyt",
-            "imgtaxi.com": "NotSupport",
             "xxxwebdlxxx.org": "NotSupport",
             "imgdrive.net": "NotSupport",
             "imgtornado.com": "NotSupport",
