@@ -53,14 +53,14 @@ class Image:
             # 需要取得轉址後連結 點擊continue to image 並夾帶多個hidden參數
             "imgrock.co": "imgrock",
             "r01.imgrock.co": "imgrock",
-            "io1.imgoutlet.co": "imgrock",  # 這圖床的continue按鈕好像是用js載入的 待研究
-            "imgoutlet.co": "imgrock",  # 原理同上  continue button是用js載入的
+            "io1.imgoutlet.co": "imgrock",
+            "imgoutlet.co": "imgrock",
              # =================================
+            # 需要取到js的參數並執行js的slowAES方法
+            "www.imgbabes.com": "imgbabes",
+            "www.imgflare.com": "imgbabes",
+            # =================================
 
-
-
-             "www.imgbabes.com":"NotSupport", # 會用到javascript 先跳過
-            "www.imgflare.com": "NotSupport",# 同上 會用到js
             "www.fapforfun.com": "NotSupport", # 看起來會直接連到gallery
             "anidex.info": "NotSupport",  # 這網址會連到另一個種子站 先跳過
             "www.dmm.co.jp": "NotSupport", # 會連到gallery
