@@ -60,10 +60,6 @@ class Image:
             "www.imgbabes.com": "imgbabes",
             "www.imgflare.com": "imgbabes",
             # =================================
-
-            "www.fapforfun.com": "NotSupport", # 看起來會直接連到gallery
-            "anidex.info": "NotSupport",  # 這網址會連到另一個種子站 先跳過
-            "www.dmm.co.jp": "NotSupport", # 會連到gallery
         }
         # 依據domain 找出對應的class file並import 對應的class
         # 如果dict沒有此key 就使用NotSupport class
