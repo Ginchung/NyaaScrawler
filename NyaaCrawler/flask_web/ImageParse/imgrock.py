@@ -15,7 +15,7 @@ class imgrock(object):
             fileCode = m["fileCode"]
 
         # 如果是連結網址就進行request 縮圖網址就忽略
-        if re.match(r"http.*(?=html)", self.url):
+        if re.match(r"http.*(?!html)", self.url):
             s = requests.session()
             r = s.get(self.url)
             # 抓取php連結 此為真正的連結
@@ -45,8 +45,8 @@ class imgrock(object):
         return BigImgUrl
 
 if __name__ == '__main__':
-    imh = imgrock("http://imgrock.co/15lok1ijuoj0/MVSD-009.jpg.html")
+    # imh = imgrock("http://imgrock.co/15lok1ijuoj0/MVSD-009.jpg.html")
     # imh = imgrock("http://r01.imgrock.co/i/00269/sq3ja45cjoqv_t.jpg")
-    # imh = imgrock("http://imgoutlet.co/3rf9nnv9sv6u /MUM-017.jpg.html")
+    imh = imgrock("http://imgoutlet.co/qf8looqufspr/IBW-495z.jpg.html")
 
     print(imh.get())

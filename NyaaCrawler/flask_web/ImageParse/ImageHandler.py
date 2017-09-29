@@ -50,13 +50,14 @@ class Image:
             "xxxwebdlxxx.org": "imgyt",
             "imgtornado.com": "imgyt",
             # ===================================
-            # 需要取得轉址後連結 並夾帶hidden參數
+            # 需要取得轉址後連結 點擊continue to image 並夾帶多個hidden參數
             "imgrock.co": "imgrock",
             "r01.imgrock.co": "imgrock",
+            "io1.imgoutlet.co": "imgrock",  # 這圖床的continue按鈕好像是用js載入的 待研究
+            "imgoutlet.co": "imgrock",  # 原理同上  continue button是用js載入的
+             # =================================
 
 
-            "io1.imgoutlet.co": "NotSupport", # 這圖床的continue按鈕好像是用js載入的 待研究
-            "imgoutlet.co": "NotSupport", # 原理同上  continue button是用js載入的
 
              "www.imgbabes.com":"NotSupport", # 會用到javascript 先跳過
             "www.imgflare.com": "NotSupport",# 同上 會用到js
