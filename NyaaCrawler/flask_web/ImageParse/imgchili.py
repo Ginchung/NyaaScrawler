@@ -22,6 +22,6 @@ class imgchili(object):
         return BigImgUrl
 
 if __name__ == '__main__':
-    imh = imgchili("http://imgchili.net/show/112285/112285521_sample.png")
+    imh = imgchili("http://t13.imgchili.net/111537/111537302_she_458.jpg")
     # imh = imgchili("http://t13.imgchili.net/112285/112285521_sample.jpg")
     print(imh.get())
