@@ -24,7 +24,9 @@ body {
 /********************************************************/
 /*                    Navigation bar                    */
 /********************************************************/
-.mainmenu { z-index: 999999; width:100%;  padding: 30px 0 0 0;}
+.mainmenu {
+	/*z-index: 999999;  modify by yich 因為選單會蓋掉fancybox的toolbar */
+	width:100%;  padding: 30px 0 0 0;}
 @media (min-width: 768px) {
 	.mainmenu { position: fixed; }
 }

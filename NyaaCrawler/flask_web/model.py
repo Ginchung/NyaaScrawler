@@ -31,7 +31,6 @@ class ArticleList:
     sortOrder:搜尋的排序 若無值 預設1  接受的參數:asc排序:'1' desc排序:'-1'  type:字串
     '''
     def GetArticleByKey(self,**kwargs):
-        print(settings.DATETIME_FORMAT)
         with app.app_context():
             query = {}
 
