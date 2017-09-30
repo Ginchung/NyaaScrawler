@@ -1,5 +1,7 @@
 import os
 import sys
+import requests
+import base64
 
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 class Image:
@@ -72,9 +74,23 @@ class Image:
         self.ImgClient = getattr(imgClass, domainName)(url=url)
 
     def get(self):
-        return self.ImgClient.get()
+        # 取得圖片網址
+        url = self.ImgClient.get()
+        # 將圖片轉成base64
+        uri = None
+        if url:
+            response = requests.get(url)
+            uri = ("data:" +
+                   response.headers['Content-Type'] + ";" +
+                   "base64," + str(base64.b64encode(response.content),'utf8'))
+        return uri
 
 if __name__=='__main__':
-    result = Image('www.imgflare.com','http://imgchili.net/5747.jpg')
-
-    print(result.get())
+    result = Image('55888.eu','http://55888.eu/img-5966021580209.html')
+    url = result.get()
+    print(url)
+    # response = requests.get(url)
+    # uri = ("data:" +
+    #        response.headers['Content-Type'] + ";" +
+    #        "base64," + str(base64.b64encode(response.content)))
+    # print(uri)

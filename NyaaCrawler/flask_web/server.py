@@ -48,9 +48,9 @@ def getImage():
         url = item['url']
         domain = item['domain']
         img = Image(domain, url)
-        imgPath = img.get()
-        imgs.append(imgPath)
-    print('server.py images = ',imgs)
+        # 回傳的是base64格式的圖片
+        imgBase64 = img.get()
+        imgs.append(imgBase64)
 
     return jsonify(imgs)
 

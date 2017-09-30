@@ -348,9 +348,12 @@
 					success: function(data) {
 					    //loop預覽圖陣列 組成圖片gallery的html 用rowData的index當群組的key
 						var imgLink = ''
-					    data.forEach(function(element) {
-					        if(element)
-								imgLink+="<a href=\""+element+"\" data-fancybox=\""+index+"\" data-options='{\"downloadlink\" : \""+rowObj.torrent+"\",\"articlelink\":\""+rowObj.articlelink+"\"}' />"
+					    data.forEach(function(element,imgIndex) {
+					        if(element) {
+                                imgLink += "<a href=\"#ImgBase" + index + imgIndex + "\" data-fancybox=\"" + index + "\" data-options='{\"downloadlink\" : \"" + rowObj.torrent + "\",\"articlelink\":\"" + rowObj.articlelink + "\"}'>"
+                                imgLink += "<img src=\"" + element + "\" ID=\"ImgBase" + index + imgIndex + "\">"
+                                imgLink += "</a>"
+                            }
 						});
 						//將圖片html插入到div 讓gallery套件能讀取
 						$("#previewImage").append(imgLink)
