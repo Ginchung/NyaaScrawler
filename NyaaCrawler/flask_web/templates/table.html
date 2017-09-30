@@ -185,7 +185,7 @@
 			toolbar  : true,
 			smallBtn : true,
 			thumbs : {
-				autoStart : false
+				autoStart : true
 
 			},
 			//自訂fancybox 的toolbar按鈕 加上下載連結和文章連結
@@ -338,8 +338,8 @@
 		    //console.log(rowData);
 		    if(rowData.length==0)
 		        return;
-
 		    rowData.forEach(function(rowObj,index) {
+
                 $.ajax({
 					url: "/getImage",
 					type: "POST",
@@ -360,7 +360,7 @@
 
 						//更新預覽圖狀態 成功為勾勾 失敗為叉叉
 						var icon = '<i class="fa fa-check-circle" aria-hidden="true"></i>'
-						if(data.length==0)
+						if($('*[data-fancybox="'+index+'"]').length==0)
 							icon = '<i class="fa fa-times" aria-hidden="true"></i>'
 						$('#table').bootstrapTable('updateCell',{index:index,field:'ImageStatus',value:icon});
 					}

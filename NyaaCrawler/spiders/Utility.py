@@ -16,7 +16,16 @@ class Utility:
         regex = re.compile(pattern)
         # match description裡所有的url 將url跟domain存在dict裡 格式 {'url':'xxx','url':'http://xxx/'}
         urls = [m.groupdict() for m in regex.finditer(html)]
-        return urls
+        # 用set移除重覆的url
+        seen = set()
+        new_l = []
+        for d in urls:
+            t = tuple(d.items())
+            if t not in seen:
+                seen.add(t)
+                new_l.append(d)
+
+        return new_l
 
     # 將字串轉為YYYY-MM-DD HH:MM:SS的DateTime格式
     def strToDateTime(self,text):

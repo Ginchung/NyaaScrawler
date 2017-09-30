@@ -3,6 +3,8 @@ from flask import Flask
 from flask import jsonify
 from flask import render_template
 from flask import request
+import requests
+import base64
 
 from NyaaCrawler.flask_web.model import ArticleList
 from NyaaCrawler.flask_web.ImageParse.ImageHandler import Image
@@ -44,14 +46,26 @@ def getImage():
     print('server.py getImage() data=',data)
     ImagePath = data['ImagePath']
 
+    # 宣告圖片陣列 用來防止重覆圖片
+    imgList = []
+
     for item in ImagePath:
         url = item['url']
         domain = item['domain']
         img = Image(domain, url)
-        # 回傳的是base64格式的圖片
-        imgBase64 = img.get()
-        imgs.append(imgBase64)
+        # 取得圖片連結
+        imgPath = img.get()
 
+        if imgPath and imgPath not in imgList:
+            imgList.append(imgPath)
+            # 將圖片轉成base64
+            response = requests.get(imgPath)
+            imgBase64 = ("data:" +
+                   response.headers['Content-Type'] + ";" +
+                   "base64," + str(base64.b64encode(response.content),'utf8'))
+
+            imgs.append(imgBase64)
+    # 回傳base64格式的字串
     return jsonify(imgs)
 
 if __name__=='__main__':
