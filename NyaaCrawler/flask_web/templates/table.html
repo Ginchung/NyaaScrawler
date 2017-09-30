@@ -104,13 +104,7 @@
 	</div>
 
 	<div id="previewImage" style="display:none;">
-		  <a href="https://c2.staticflickr.com/6/5499/30972532232_051e1dc57e_h.jpg" data-fancybox="0" />
 
-		  <a href="https://farm6.staticflickr.com/5551/31096145856_793c69283a_k_d.jpg" data-fancybox="0"/>
-
-		  <a href="https://c1.staticflickr.com/1/357/31876784275_12286240d4_h.jpg" data-fancybox="1"/>
-
-		  <a href="https://farm3.staticflickr.com/2947/33594572585_b48eba935b_k_d.jpg" data-fancybox="1"/>
 
 	</div>
 </section>
@@ -195,7 +189,7 @@
 			pageList:[10,50,100],
 			//當換分頁時 將放預覽圖圖片的div清空
 			onPageChange:function(page,size){
-
+				$("#previewImage").html("")
 			},
 			//加載成功時 取得所有row的資料 存到全域變數
 			onLoadSuccess:function(data){
@@ -258,6 +252,34 @@
                             title: "發佈日期",
                             sortable: true,
                             width: '10%'
+                        },
+
+						{
+                            field: "seeder",
+                            title: "seeder",
+                            sortable: true,
+                            width: '5%',
+							formatter:function(value,row,index){
+                                return value?value:0;
+                            }
+                        },
+				                        {
+                            field: "leecher",
+                            title: "leecher",
+                            sortable: true,
+                            width: '5%',
+							formatter:function(value,row,index){
+                                return value?value:0;
+                            }
+                        },
+				                        {
+                            field: "downloads",
+                            title: "下載數量",
+                            sortable: true,
+                            width: '5%',
+							formatter:function(value,row,index){
+                                return value?value:0;
+                            }
                         }
                     ]
 		});
@@ -278,7 +300,7 @@
 		function initFancyBox() {
             $().fancybox({
                 selector: '[data-fancybox]',
-                thumbs: false,
+                thumbs: true,
                 hash: false,
             });
         }
@@ -296,8 +318,14 @@
 					data: JSON.stringify({ImagePath: element.ImagePath}),
 					contentType: "application/json; charset=utf-8",
 					success: function(data) {
-					    //console.log(data);
-					    //組成圖片gallery的html
+					    //loop預覽圖陣列 組成圖片gallery的html 用rowData的index當群組的key
+						var imgLink = ''
+					    data.forEach(function(element) {
+					        if(element)
+								imgLink+="<a href=\""+element+"\" data-fancybox=\""+index+"\" />"
+						});
+						//將圖片html插入到div 讓gallery套件能讀取
+						$("#previewImage").append(imgLink)
 
 						//更新預覽圖狀態 成功為勾勾 失敗為叉叉
 						var icon = '<i class="fa fa-check-circle" aria-hidden="true"></i>'

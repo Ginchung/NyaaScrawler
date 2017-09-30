@@ -78,14 +78,25 @@ class NyaaSpider(scrapy.Spider):
         for i in items:
             try:
                 videoInfo = ArticleList()
+                videoInfo["site"] = "Nyaadev"
                 videoInfo["title"] = i.xpath('td[2]/a/text()').extract()[0]  # 影片標題
                 videoInfo["articlelink"] = self.NyaadevUrl + i.xpath('td[2]/a/@href').extract()[0]  # 文章連結
                 videoInfo["torrent"] = self.NyaadevUrl + i.xpath('td[3]/a[1]/@href').extract()[0]  # 種子連結 有torrent跟磁力 只取torrent
                 videoInfo["size"] = self.util.convertSize(i.xpath('td[4]/text()').extract()[0])  # size
                 videoInfo["pubDate"] = self.util.strToDateTime(i.xpath('td[5]/text()').extract()[0])  # date
-                videoInfo["seeder"] = i.xpath('td[6]/text()').extract()[0]  # seeder
-                videoInfo["leecher"] = i.xpath('td[7]/text()').extract()[0]  # leecher
-                videoInfo["downloads"] = i.xpath('td[8]/text()').extract()[0]  # downloads
+                try:
+                    videoInfo["seeder"] = int(i.xpath('td[6]/text()').extract()[0])  # seeder
+                except ValueError:
+                    videoInfo["seeder"] = None
+
+                try:
+                    videoInfo["leecher"] = int(i.xpath('td[7]/text()').extract()[0])  # leecher
+                except ValueError:
+                    videoInfo["leecher"] = None
+                try:
+                    videoInfo["downloads"] = int(i.xpath('td[8]/text()').extract()[0])  # downloads
+                except ValueError:
+                    videoInfo["downloads"] = None
 
                 # 如果有match到文章網址 就去爬文章的預覽圖
                 if (re.search('/view/\d+', videoInfo["articlelink"])):
@@ -127,6 +138,7 @@ class NyaaSpider(scrapy.Spider):
         # 取出影片資訊
         for i in items:
             videoInfo = ArticleList()
+            videoInfo["site"] = "Nyaacat"
             videoInfo["title"] = i.xpath('title/text()').extract()[0] # 文章標題
             videoInfo["torrent"] = i.xpath('link/text()').extract()[0] # 種子連結
             urls = self.util.GetUrlFromHtml(i.xpath('description/text()').extract()[0])

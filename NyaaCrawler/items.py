@@ -10,6 +10,7 @@ from scrapy import Item, Field
 
 # 文章列表
 class ArticleList(Item):
+    site = Field() # 種子站的名稱
     title = Field()  # 標題
     articlelink = Field()  # 文章連結
     torrent = Field()  # 種子連結

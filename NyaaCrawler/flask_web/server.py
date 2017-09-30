@@ -5,6 +5,7 @@ from flask import render_template
 from flask import request
 
 from NyaaCrawler.flask_web.model import ArticleList
+from NyaaCrawler.flask_web.ImageParse.ImageHandler import Image
 
 app = Flask(__name__)
 
@@ -40,13 +41,16 @@ def post():
 def getImage():
     imgs = []
     data = request.get_json()
+    print('server.py getImage() data=',data)
     ImagePath = data['ImagePath']
-    # imgHandler = Image()
+
     for item in ImagePath:
-        # url = item['url']
-        # domain = item['domain']
-        # imgHandler.getImage(domain, url)
-        imgs.append('http://test.jpg')
+        url = item['url']
+        domain = item['domain']
+        img = Image(domain, url)
+        imgPath = img.get()
+        imgs.append(imgPath)
+    print('server.py images = ',imgs)
 
     return jsonify(imgs)
 
