@@ -30,6 +30,7 @@ def post():
     query["minSize"] = request.args.get('minSize')
     query["maxSize"] = request.args.get('maxSize')
     query["maxage"] = request.args.get('maxage')
+    query["IsUncensored"] = request.args.get('IsUncensored')
 
 
     al = ArticleList()

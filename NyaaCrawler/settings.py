@@ -16,3 +16,6 @@ MONGODB_COLLECTION = "Article"
 
 # 資料庫用的日期格式
 DATETIME_FORMAT = "%Y-%m-%d %H:%M:%S"
+
+# 當勾選無碼的checkbox時 要搜尋的關鍵字 用逗點分隔
+UncensoredKeyWords = "fc2,carib,10musume,加勒比,Heydouga,kin8tengoku,tokyo,1pondo,Heyzo,一本道"

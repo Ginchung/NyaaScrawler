@@ -15,6 +15,7 @@
 
 	<!-- Custom styles -->
 	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/magister.css') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/checkbox.css') }}">
 	<!-- Fonts -->
 	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 	<link href='http://fonts.googleapis.com/css?family=Wire+One' rel='stylesheet' type='text/css'>
@@ -86,10 +87,14 @@
             </div>
         </div>
         <div class="row">
-			<div class="col-sm-1 col-sm-offset-9" class="bkcolor" style="margin-top:10px;margin-bottom:10px">
+			<div class="col-sm-2 col-sm-offset-0" class="bkcolor" style="margin-top:10px;margin-bottom:10px">
+				    <input type="checkbox" id="cbUncensored" />
+    				<label for="cbUncensored">Uncensored</label>
+			</div>
+			<div class="col-sm-1 col-sm-offset-7" class="bkcolor" style="margin-top:10px;margin-bottom:10px">
                 <button type="button" id="loadImage" class="btn btn-primary" style="width:120px">載入預覽圖</button>
             </div>
-            <div class="col-sm-2 col-sm-offset-0" class="bkcolor" style="margin-top:10px;margin-bottom:10px">
+            <div class="col-sm-1 col-sm-offset-0" class="bkcolor" style="margin-top:10px;margin-bottom:10px">
                 <button type="button" id="search" class="btn btn-primary" style="width:120px">搜尋</button>
             </div>
         </div>
@@ -237,6 +242,7 @@
                             minSize : $("#minSize").val(),
                             maxSize : $("#maxSize").val(),
                             maxage : $("#maxage").val(),
+					 		IsUncensored:$("#cbUncensored").is(":checked"),
                             sort : params.sort,
                             search: params.search,
                             order: params.order
@@ -353,6 +359,13 @@
 		    $.xhrPool.abortAll();
             table.bootstrapTable('refresh');
         });
+		//當在input field按下enter時 自動重整表單
+	   $(':input').on('keypress', function (e) {
+			 if(e.which === 13){
+				$.xhrPool.abortAll();
+            	table.bootstrapTable('refresh');
+			 }
+	   });
 
 		$('#fromDate,#toDate').datepicker({
             format: "yyyy-mm-dd",
