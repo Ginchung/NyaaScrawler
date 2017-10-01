@@ -57,8 +57,7 @@ class ArticleList:
             IsUncensored = kwargs.get('IsUncensored', None)
             if IsUncensored=='true':
                 # 從setting取出無碼片的關鍵字 組成regex字串  ex.  'fc2|Heyzo|carib'
-                unconsolearr = settings.UncensoredKeyWords
-                regexUnconsole = '|'.join([str(x) for x in unconsolearr.split(',')])
+                regexUnconsole = settings.UncensoredKeyWords
                 # 如果query裡已存在title這個key 用$and將兩個查詢組起來 再把title這個key刪掉
                 if 'title' in query:
                     query['$and'] = [{'title': {'$regex': regexUnconsole, '$options': 'i'}}]
