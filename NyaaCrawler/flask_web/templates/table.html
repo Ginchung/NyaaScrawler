@@ -142,12 +142,32 @@
 
 </body>
 	<script type='text/javascript'>
+
+	<!--設定ajax pool 當執行其他動作時 abort所有的ajax request 避免系統卡死在ajax request-->
+		$(function() {
+			$.xhrPool = [];
+			$.xhrPool.abortAll = function() {
+				$(this).each(function(i, jqXHR) {   //  cycle through list of recorded connection
+					jqXHR.abort();  //  aborts connection
+					$.xhrPool.splice(i, 1); //  removes from list by index
+				});
+			}
+			$.ajaxSetup({
+				beforeSend: function(jqXHR) { $.xhrPool.push(jqXHR); }, //  annd connection to list
+				complete: function(jqXHR) {
+					var i = $.xhrPool.indexOf(jqXHR);   //  get index for current connection completed
+					if (i > -1) $.xhrPool.splice(i, 1); //  removes from list by index
+				}
+			});
+		})
+
 		//所有row的資料
 		var rowData = {}
+		var table=$("#table")
 
 		$(document).ready(function() {
 			//row的預覽圖按鈕點擊 依照點擊的row的index 開啟不同group的gallery
-			 $('#table').on('click', '.fancybox-trigger' , function (event) {
+			 table.on('click', '.fancybox-trigger' , function (event) {
 			     var gallery = $("[data-fancybox='" + $(this).attr('trigger-rel') + "']");
 			     if(gallery.length>0){
                      gallery.eq(0).trigger('click');
@@ -156,9 +176,15 @@
 				 }
 
              });
+
+			  table.on('click-row.bs.table', function (e, row, $element) {
+					$('.success').removeClass('success');
+        			$($element).addClass('success');
+				});
+
              //預載入圖片按鈕點擊
 			$('#loadImage').click(function(){
-
+				$.xhrPool.abortAll();
 				BuildGallery();
 			});
          });
@@ -196,7 +222,7 @@
 		});
 
 
-		$('#table').bootstrapTable({
+		table.bootstrapTable({
 			url:"{{ url_for('post') }}",
 			sidePagination:'server',
 			height:800,
@@ -219,7 +245,7 @@
                         return q;
             },
 			pageSize:20,
-			undefinedText:'<i class="fa fa-spinner" aria-hidden="true"></i>',
+			undefinedText:'<i class="fa fa-question" aria-hidden="true"></i>',
 			pagination:true,
 			pageList:[10,50,100],
 			//當換分頁時 將放預覽圖圖片的div清空
@@ -324,7 +350,8 @@
 		}
 
 		$('#search').click(function () {
-                $("#table").bootstrapTable('refresh');
+		    $.xhrPool.abortAll();
+            table.bootstrapTable('refresh');
         });
 
 		$('#fromDate,#toDate').datepicker({
@@ -339,7 +366,8 @@
 		    if(rowData.length==0)
 		        return;
 		    rowData.forEach(function(rowObj,index) {
-
+//		        呼叫ajax時 將狀態更新為載入中
+				table.bootstrapTable('updateCell',{index:index,field:'ImageStatus',value:'<i class="fa fa-spinner" aria-hidden="true"></i>'});
                 $.ajax({
 					url: "/getImage",
 					type: "POST",
@@ -362,7 +390,7 @@
 						var icon = '<i class="fa fa-check-circle" aria-hidden="true"></i>'
 						if($('*[data-fancybox="'+index+'"]').length==0)
 							icon = '<i class="fa fa-times" aria-hidden="true"></i>'
-						$('#table').bootstrapTable('updateCell',{index:index,field:'ImageStatus',value:icon});
+						table.bootstrapTable('updateCell',{index:index,field:'ImageStatus',value:icon});
 					}
 				});
             });
