@@ -18,7 +18,7 @@ class ArticleList:
     def GetArticleAll(self):
         with app.app_context():
             # 不回傳_id欄位
-            articles = mongo.db.Article.find({}, {'_id': 0}).sort("pubDate", -1)
+            articles = mongo.db.Article.find({}).sort("pubDate", -1)
             return dict(result='success', article=articles)
     '''
     依據關鍵字搜尋文章
@@ -109,7 +109,7 @@ class ArticleList:
                 offset = 0
 
             # 撈出資料
-            article = mongo.db.Article.find(query, {'_id': 0}).sort(sortQuery).skip(int(offset)).limit(int(limit))
+            article = mongo.db.Article.find(query).sort(sortQuery).skip(int(offset)).limit(int(limit))
             if article:
                 return dict(result='success', article=article,total=article.count())
             return dict(result='error', message='No record found')

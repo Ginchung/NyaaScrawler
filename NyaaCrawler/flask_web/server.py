@@ -5,9 +5,9 @@ from flask import render_template
 from flask import request
 import requests
 import base64
-
 from NyaaCrawler.flask_web.model import ArticleList
 from NyaaCrawler.flask_web.ImageParse.ImageHandler import Image
+from JSONEncoder import JSONEncoder
 
 app = Flask(__name__)
 
@@ -37,7 +37,8 @@ def post():
     items = al.GetArticleByKey(**query)
     pagination = {'total': items.get("total")}
     pagination['rows'] = list(items.get("article"))
-    return jsonify(pagination)
+    # 使用自訂的encoder 才能將ObjectID序列化
+    return JSONEncoder().encode(pagination)
 
 # 取得預覽圖連結的陣列 回傳預覽圖片連結的陣列
 @app.route('/getImage', methods=['GET', 'POST'])
@@ -68,6 +69,9 @@ def getImage():
             imgs.append(imgBase64)
     # 回傳base64格式的字串
     return jsonify(imgs)
+
+
+
 
 if __name__=='__main__':
     app.run(debug=True)
