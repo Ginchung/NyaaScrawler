@@ -8,14 +8,16 @@ class hostimg(object):
 
     def get(self):
         BigImgUrl = ''
+        try:
+            if re.match(r".*hostimg.co/i/.*",self.url):
+                r = requests.get(self.url)
+                sel = etree.HTML(r.text)
+                BigImgUrl = sel.xpath('//*[@id="image-viewer-container"]/img/@src')[0]
 
-        if re.match(r".*hostimg.co/i/.*",self.url):
-            r = requests.get(self.url)
-            sel = etree.HTML(r.text)
-            BigImgUrl = sel.xpath('//*[@id="image-viewer-container"]/img/@src')[0]
-
-        else:
-            BigImgUrl = self.url
+            else:
+                BigImgUrl = self.url
+        except Exception as e:
+            print("hostimg錯誤: url=", self.url, " message=", str(e))
 
 
         return BigImgUrl

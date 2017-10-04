@@ -13,16 +13,19 @@ class imgtaxi(object):
         因為如果是縮圖 通常都會搭配圖床連結，就不用重覆抓取了 
         而且縮圖的規則沒辨法replace small to big就能看到大圖
         """
-        if re.match(r"http.*(?=html)",self.url):
-            r = requests.get(self.url)
-            # https://imgadult.com/upload/small/2017/09/26/59ca0e7512c0d.jpg
-            img = re.search(r"(?P<url>https?://[\w\.]+/(images|upload).*.jpe?g)",r.text)
-            if img:
-                BigImgUrl = img["url"].replace("small","big")
-        elif re.match(r"http.*(?=(jpe?g|png))",self.url):
-            BigImgUrl = self.url.replace("small","big")
+        try:
+            if re.match(r"http.*(?=html)",self.url):
+                r = requests.get(self.url)
+                # https://imgadult.com/upload/small/2017/09/26/59ca0e7512c0d.jpg
+                img = re.search(r"(?P<url>https?://[\w\.]+/(images|upload).*.jpe?g)",r.text)
+                if img:
+                    BigImgUrl = img["url"].replace("small","big")
+            elif re.match(r"http.*(?=(jpe?g|png))",self.url):
+                BigImgUrl = self.url.replace("small","big")
 
-        return BigImgUrl
+            return BigImgUrl
+        except Exception as e:
+            print("imgtaxi錯誤: url=",self.url," message=",str(e))
 
 if __name__ == '__main__':
     # imh = imgtaxi("https://imgtaxi.com/img-59cb3bb991980.html")

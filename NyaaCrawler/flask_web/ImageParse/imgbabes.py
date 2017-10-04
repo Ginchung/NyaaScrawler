@@ -9,19 +9,22 @@ class imgbabes(object):
 
     def get(self):
         BigImgUrl = ''
-        r = requests.get(self.url)
+        try:
+            r = requests.get(self.url)
 
-        # 取得js裡 a,b,c三個參數
-        match = re.search(r"a=toNumbers\(\"(?P<input>\w+)\"\).*b=toNumbers\(\"(?P<key>\w+)\"\).*c=toNumbers\(\"(?P<iv>\w+)\"\)",r.text)
-        ctx = execjs.compile(JSCript)
-        # 執行js的slowAES取得key
-        key = ctx.call("GetCookie", match["input"], match["key"],match["iv"])
-        # imgbabes的cookie名稱叫denial   imgflare的cookie叫verifid
-        cookie = {"denial":key,"verifid":key}
-        r = requests.get(self.url,cookies = cookie)
-        sel = etree.HTML(r.text)
-        BigImgUrl = sel.xpath('//*[@id="this_image"]/@src')[0]
-        return BigImgUrl
+            # 取得js裡 a,b,c三個參數
+            match = re.search(r"a=toNumbers\(\"(?P<input>\w+)\"\).*b=toNumbers\(\"(?P<key>\w+)\"\).*c=toNumbers\(\"(?P<iv>\w+)\"\)",r.text)
+            ctx = execjs.compile(JSCript)
+            # 執行js的slowAES取得key
+            key = ctx.call("GetCookie", match["input"], match["key"],match["iv"])
+            # imgbabes的cookie名稱叫denial   imgflare的cookie叫verifid
+            cookie = {"denial":key,"verifid":key}
+            r = requests.get(self.url,cookies = cookie)
+            sel = etree.HTML(r.text)
+            BigImgUrl = sel.xpath('//*[@id="this_image"]/@src')[0]
+            return BigImgUrl
+        except Exception as e:
+            print("imgbabes錯誤: url=",self.url," message=",str(e))
 
 
 JSCript = r"""

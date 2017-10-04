@@ -19,17 +19,20 @@ class imgyt(object):
         
         需要request兩次才能取得到圖片 第一次get 第二次用post
         """
-        if re.match(r"http.*(?=html)",self.url):
-            headers = {'Content-type': 'application/x-www-form-urlencoded'}
-            data = {"imgContinue":self.chooseParam()}
-            r = requests.post(self.url,data=data,headers = headers)
-            img = re.search(r"(?P<url>https?://[^\/]*\/upload\/big\/[^\']*)", r.text)
-            if img:
-                 BigImgUrl = img["url"]
-        elif re.match(r"http.*(?=(jpe?g|png))",self.url):
-            BigImgUrl = self.url.replace("small","big")
+        try:
+            if re.match(r"http.*(?=html)",self.url):
+                headers = {'Content-type': 'application/x-www-form-urlencoded'}
+                data = {"imgContinue":self.chooseParam()}
+                r = requests.post(self.url,data=data,headers = headers)
+                img = re.search(r"(?P<url>https?://[^\/]*\/upload\/big\/[^\']*)", r.text)
+                if img:
+                     BigImgUrl = img["url"]
+            elif re.match(r"http.*(?=(jpe?g|png))",self.url):
+                BigImgUrl = self.url.replace("small","big")
 
-        return BigImgUrl
+            return BigImgUrl
+        except Exception as e:
+            print("imgyt錯誤: url=",self.url," message=",str(e))
 
     # 依據domain 選擇對應的參數
     def chooseParam(self):

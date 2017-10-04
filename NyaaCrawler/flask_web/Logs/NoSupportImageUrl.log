@@ -1171,3 +1171,15 @@ Sun,2017 Oct 01  10:48:18 _internal.py[line:87] INFO 127.0.0.1 - - [01/Oct/2017 
 Sun,2017 Oct 01  10:48:24 _internal.py[line:87] INFO 127.0.0.1 - - [01/Oct/2017 10:48:24] "POST /getImage HTTP/1.1" 200 -
 Sun,2017 Oct 01  10:49:19 _internal.py[line:87] INFO 127.0.0.1 - - [01/Oct/2017 10:49:19] "POST /getImage HTTP/1.1" 200 -
 Sun,2017 Oct 01  10:49:19 _internal.py[line:87] INFO 127.0.0.1 - - [01/Oct/2017 10:49:19] "GET /post?limit=20&offset=0&keyword=%E4%B8%AD%E5%87%BA&fromDate=&toDate=&minSize=&maxSize=&maxage=&sort=leecher&order=asc HTTP/1.1" 200 -
+Wed,2017 Oct 04  14:57:31 NotSupport.py[line:16] WARNING not Support url: https://sukebei.nyaa.si/view/2361203
+Wed,2017 Oct 04  14:57:31 _internal.py[line:87] INFO 127.0.0.1 - - [04/Oct/2017 14:57:31] "POST /getImage HTTP/1.1" 200 -
+Wed,2017 Oct 04  15:07:00 NotSupport.py[line:16] WARNING not Support url: https://sukebei.nyaa.si/view/2361203
+Wed,2017 Oct 04  15:07:00 _internal.py[line:87] INFO 127.0.0.1 - - [04/Oct/2017 15:07:00] "POST /getImage HTTP/1.1" 200 -
+Wed,2017 Oct 04  15:07:14 _internal.py[line:87] INFO 127.0.0.1 - - [04/Oct/2017 15:07:14] "POST /getImage HTTP/1.1" 200 -
+Wed,2017 Oct 04  15:07:44 NotSupport.py[line:16] WARNING not Support url: https://sukebei.nyaa.si/view/2361152
+Wed,2017 Oct 04  15:07:44 _internal.py[line:87] INFO 127.0.0.1 - - [04/Oct/2017 15:07:44] "POST /getImage HTTP/1.1" 200 -
+Wed,2017 Oct 04  15:09:40 NotSupport.py[line:16] WARNING not Support url: https://sukebei.nyaa.si/view/2361141
+Wed,2017 Oct 04  15:09:40 _internal.py[line:87] INFO 127.0.0.1 - - [04/Oct/2017 15:09:40] "POST /getImage HTTP/1.1" 200 -
+Wed,2017 Oct 04  15:10:09 _internal.py[line:87] INFO 127.0.0.1 - - [04/Oct/2017 15:10:09] "POST /getImage HTTP/1.1" 200 -
+Wed,2017 Oct 04  15:10:14 _internal.py[line:87] INFO 127.0.0.1 - - [04/Oct/2017 15:10:14] "POST /getImage HTTP/1.1" 200 -
+Wed,2017 Oct 04  15:10:17 _internal.py[line:87] INFO  * Detected change in 'E:\\MyProjects\\NyaaScrawler\\NyaaCrawler\\flask_web\\ImageParse\\imgchili.py', reloading
