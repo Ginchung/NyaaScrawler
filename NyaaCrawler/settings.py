@@ -18,4 +18,4 @@ MONGODB_COLLECTION = "Article"
 DATETIME_FORMAT = "%Y-%m-%d %H:%M:%S"
 
 # 當勾選無碼的checkbox時 要搜尋的關鍵字 用 |  分隔 ，因為會直接拿來當regex字串
-UncensoredKeyWords = "fc2|carib|10musume|加勒比|Heydouga|kin8tengoku|tokyo|1pondo|Heyzo|一本道|金8天國|東京熱|アジア天國|asiatengoku|1000giri|無碼|gachi"
+UncensoredKeyWords = "fc2|carib|10musume|加勒比|Heydouga|kin8tengoku|tokyo|1pondo|Heyzo|カリビアンコム|Tokyo-Hot|無修正|一本道|金8天國|東京熱|アジア天國|asiatengoku|1000giri|無碼|gachi"
