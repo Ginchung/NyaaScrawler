@@ -11,7 +11,7 @@ class imgtaxi(object):
         """
         只request pixsense.net/site/v/xxxxxx的網址
         因為如果是縮圖 通常都會搭配圖床連結，就不用重覆抓取了 
-        而且縮圖的規則沒辨法replace small to big就能看到大圖
+        imgtaxi類都可以replace small to big看到大圖
         """
         try:
             if re.match(r"http.*(?=html)",self.url):
