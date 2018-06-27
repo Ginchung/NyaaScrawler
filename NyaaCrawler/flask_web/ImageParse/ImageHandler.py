@@ -47,6 +47,7 @@ class Image:
             "imgdrive.net": "imgtaxi",
             "imgadult.com": "imgtaxi",
             "imgwallet.com": "imgtaxi",
+            "hotimg.site": "imgtaxi",
             # =========================
             # 有鎖continue to image  點擊button挾帶參數post
             "img.yt": "imgyt",
